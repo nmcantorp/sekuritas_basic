@@ -45,15 +45,15 @@ var companies = (function () {
 
     var findCompanyInfo = function (id) {
         $.ajax( {
-            url: "../ajax/companiesajax.php",            
+            url: "../ajax/companiesajax.php",
             data: {
                 ac: 'find',
                 id: id
             },
             success: function( data ) {
                 $('#nom_emp').text(data);
-            }             
-        }); 
+            }
+        });
     }
 
     var addEventCompanies = function () {
@@ -69,7 +69,7 @@ var companies = (function () {
 
     return{
         loadAutocomplete: function () {
-            loadAjaxAllCompanies();            
+            loadAjaxAllCompanies();
         }
     }
 })();
@@ -78,14 +78,13 @@ var country = (function(){
     var loadAjaxAllCountries = function () {
         $.ajax( {
             url: "../ajax/ciudadajax.php",
-            
             data: {
                 ac: 'allCiudades'
             },
             success: function( data ) {
                 $('#ciudad').html(data);
-            }             
-        });     
+            }
+        });
     };
 
     return{
@@ -166,7 +165,7 @@ var formulario = (function(){
                          'centro_costos',
                          'deporte'
                         ];
-
+    var inputMaxText = [];
     var resultadoValidacion = [];
     var idForm = 21;//////////////////////////////////// pasar a cero ////////////////////////////////////////////
 
@@ -178,7 +177,7 @@ var formulario = (function(){
             success: function( data ) {
                 idForm = data;
                 $('#print_form').show();
-            }             
+            }
         });
     }
     var saveForm = function () {
@@ -191,7 +190,7 @@ var formulario = (function(){
     var validateInputRequired = function () {
         resultadoValidacion = [];
         for (var i = inputRequired.length - 1; i >= 0; i--) {
-            
+
             if( $('input[name="'+inputRequired[i]+'"]').val() == '' || 
                 $('input[name="'+inputRequired[i]+'"]').val() == 'undefined'
 
@@ -218,18 +217,103 @@ var formulario = (function(){
                      $('select[name="'+inputRequired[i]+'"]').val() == 'undefined'   ))
             {
                 resultadoValidacion.push(inputRequired[i]);
-            }            
+            }
         }
         if(resultadoValidacion.length>0)
         {
             return false;
         }else{
             return true;
-        }        
+        }
     };
 
     var printForm = function () {
         window.location.href = 'print_vida.php?id='+idForm;
+    }
+
+    var eventUser = function () {
+        $('[name="doc_usuario"]').on('change',function () {
+            var user = $(this).val();
+            if(user!='' && user != null)
+            {
+                $.ajax( {
+                    url: "../ajax/formularioajax.php",
+                    method: 'POST',
+                    dataType: 'JSON',
+                    data: {
+                        ac:'findUser',
+                        uid: user
+                    },
+                    success: function( data ) {
+                        if(data != null)
+                        {
+                            var dataFin = data[0];
+                            $('input[name="nombre"]').val(dataFin.prim_nom_per);
+                            $('input[name="primer_apellido"]').val(dataFin.prim_ape_per);
+                            $('input[name="segundo_apellido"]').val(dataFin.seg_ape_per);
+                            $('input[name="segundo_apellido"]').val(dataFin.seg_ape_per);
+                            $('input[type="checkbox"][id="'+dataFin.id_tip_doc+'"]').attr('checked', true);
+                            $('input[name="dia"]').val(dataFin.dia_nac_per);
+                            $('input[name="mes"]').val(dataFin.mes_nac_per);
+                            $('input[name="anio"]').val(dataFin.anio_nac_per);
+                            $('input[type="checkbox"][name="gen"][value="'+dataFin.gen_per+'"]').attr('checked', true);
+                            $('input[name="direccion"]').val(dataFin.dir_per);
+                            $('input[name="telefono"]').val(dataFin.tel_per);
+                            $('select[name="ciudad"]').val(dataFin.id_ciu_nac);
+                            $('input[name="estatura"]').val(dataFin.est_per);
+                            $('input[name="peso"]').val(dataFin.pes_per);
+                        }else{
+                            $('input[name="nombre"]').val(null);
+                            $('input[name="primer_apellido"]').val(null);
+                            $('input[name="segundo_apellido"]').val(null);
+                            $('input[name="segundo_apellido"]').val(null);
+                            $('input[type="checkbox"]').prop('checked', false);
+                            $('input[name="dia"]').val(null);
+                            $('input[name="mes"]').val(null);
+                            $('input[name="anio"]').val(null);
+                            $('input[name="direccion"]').val(null);
+                            $('input[name="telefono"]').val(null);
+                            $('select[name="ciudad"]').val('');
+                            $('input[name="estatura"]').val(null);
+                            $('input[name="peso"]').val(null);
+                        }
+                    }
+                });
+            }
+
+        });
+    };
+
+    var validaCant = function (tag, cantidad) {
+        var input = $('[name="'+tag+'"]'); //console.log(input);
+        input.each(function () {
+            $(this).on('keyup', function (e) {
+                e.preventDefault();
+                var valor = $(this).val();
+                if(valor > cantidad)
+                {
+                    $(this).val(valor.substr(0, cantidad));
+                    return false;
+                }
+            });
+        })
+    };
+
+    var assignedValidation = function () {
+        inputMaxText.forEach(function (value, index) {
+            validaCant(value.tag, value.cantidad);
+        });
+    };
+
+    var loadParameters = function(tag, cantidad) {
+        var parameter = { tag: tag, cantidad: cantidad}
+        inputMaxText.push(parameter);
+    };
+
+    var loadAllParameters = function () {
+        loadParameters('dia', 2);
+        loadParameters('mes', 2);
+        loadParameters('anio', 4);
     }
 
     return{
@@ -248,8 +332,12 @@ var formulario = (function(){
                 }
                 return false;
             });
-
+            eventUser();
             //$('#print_form').hide();
+        },
+        addEventValidationInput: function () {
+            loadAllParameters();
+            assignedValidation();
         }
     }
 })();
@@ -259,4 +347,5 @@ var formulario = (function(){
     country.getAllCountries();
     eventRadio.addEvent();
     formulario.addEventSaveButton();
+    formulario.addEventValidationInput();
 })();

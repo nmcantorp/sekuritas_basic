@@ -24,9 +24,12 @@
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
  * @version    1.8.0, 2014-03-02
  */
-
+require_once('../class/formulario.php');
+require_once('../class/novedad.php');
+require_once('../class/persona.php');
+require_once('../class/enfermedad.php');
 /** Error reporting */
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 ini_set('display_errors', TRUE);
 ini_set('display_startup_errors', TRUE);
 
@@ -36,6 +39,12 @@ date_default_timezone_set('America/Bogota');
 
 /** Include PHPExcel */
 require_once dirname(__FILE__) . '/../class/phpexcel/Classes/PHPExcel.php';
+
+
+$objFormulario = new ClassFormulario();
+$objNovedad = new ClassNovedad();
+$objPersona = new ClassPersona();
+$objEnfermedad = new ClassEnfermedad();
 
 // Create new PHPExcel object
 $objPHPExcel = new PHPExcel();
@@ -162,7 +171,8 @@ $activeSheet->mergeCells('B38:AH40');
 $activeSheet->mergeCells('B43:X45');
 $activeSheet->mergeCells('Z41:AG41');
 $activeSheet->mergeCells('B42:X42');
-$activeSheet->mergeCells('AA44:AC44');
+$activeSheet->mergeCells('AD42:AG42');
+$activeSheet->mergeCells('AA44:AF44');
 $activeSheet->mergeCells('B47:AH47');
 
 /*Formatos*/
@@ -270,6 +280,194 @@ $activeSheet->setCellValue('B4', 'Fecha de diligenciamiento')
             ->setCellValue('B46', 'En constancia de comprensión y conformidad con lo anterior, firma')
             ->setCellValue('B47', 'El diligenciamiento y suscripción de la presente solicitud  individual de seguro no compromete de ningún modo a la Aseguradora, ni implica obligación alguna de otorgar el Seguro de Vida al que accede. La Aseguradora se reserva el derecho de otorgar la cobertura una vez evaluada y verificada la información aquí consignada por el solicitante del seguro. ')
             ;
+
+
+
+
+/* Volcando la información */
+
+$formulario       = $objFormulario->findForm($_REQUEST['id']);
+$novedad          = $objNovedad->findByIdForm($_REQUEST['id']);
+$beneficiarios    = $objPersona->findBeneficiariesByForm($_REQUEST['id']);
+$enfermedad       = $objEnfermedad->findNovedadByForm($_REQUEST['id']);
+$tratamiento      = $objEnfermedad->findTratamientoByForm($_REQUEST['id']);
+
+$fecha = $formulario[0]['fech_creacion'];
+$fecha = explode(' ', $fecha);
+$fecha = explode('-', $fecha[0]);
+/*var_dump($fecha[0]);
+var_dump($formulario);
+*/
+$activeSheet->setCellValue('B6', substr($fecha[2], 0,1));
+$activeSheet->setCellValue('C6', substr($fecha[2], 1,1));
+$activeSheet->setCellValue('D6', substr($fecha[1], 0,1));
+$activeSheet->setCellValue('E6', substr($fecha[1], 1,1));
+$activeSheet->setCellValue('F6', substr($fecha[0], 0,1));
+$activeSheet->setCellValue('G6', substr($fecha[0], 1,1));
+$activeSheet->setCellValue('H6', substr($fecha[0], 2,1));
+$activeSheet->setCellValue('I6', substr($fecha[0], 3,1));
+$activeSheet->setCellValue('Z6', $formulario[0]['pol_form']);
+$activeSheet->setCellValue('B8', $formulario[0]['nom_emp']);
+$activeSheet->setCellValue('Z8', $formulario[0]['nit_emp']);
+
+switch ($formulario[0]['id_tip_doc']) {
+      case 'cc':
+            $activeSheet->setCellValue('R9', 'X');
+            break;
+
+      case 'nuip':
+            $activeSheet->setCellValue('V9', 'X');
+            break;
+
+      case 'ce':
+            $activeSheet->setCellValue('T9', 'X');
+            break;
+      
+      default:
+            # code...
+            break;
+}
+
+$activeSheet->setCellValue('B11', $formulario[0]['prim_nom_per']);
+$activeSheet->setCellValue('K11', $formulario[0]['prim_ape_per']);
+$activeSheet->setCellValue('N11', $formulario[0]['seg_ape_per']);
+$activeSheet->setCellValue('S11', $formulario[0]['doc_per']);
+$activeSheet->setCellValue('Z11', (string)( strlen($formulario[0]['dia_nac_per']) ==1 )? '0'.$formulario[0]['dia_nac_per']: $formulario[0]['dia_nac_per']);
+$activeSheet->setCellValue('AB11', (string)( strlen($formulario[0]['mes_nac_per']) ==1 )? '0'.$formulario[0]['mes_nac_per']: $formulario[0]['mes_nac_per']);
+$activeSheet->setCellValue('AD11', (string)$formulario[0]['anio_nac_per']);
+$activeSheet->setCellValue('B13', $formulario[0]['dir_per']);
+$activeSheet->setCellValue('K13', $formulario[0]['tel_per']);
+$activeSheet->setCellValue('N13', $formulario[0]['nom_ciu']);
+$activeSheet->setCellValue('Z13', $formulario[0]['solic_increm_form']);
+
+switch ($formulario[0]['gen_per']) {
+      case 'm':
+            $activeSheet->setCellValue('D14', 'X');
+            break;
+
+      case 'f':
+            $activeSheet->setCellValue('D15', 'X');
+            break;
+      default:
+            # code...
+            break;
+}
+$activeSheet->setCellValue('F15', $formulario[0]['est_per']);
+$activeSheet->setCellValue('I15', $formulario[0]['pes_per']);
+$activeSheet->setCellValue('L15', $formulario[0]['ocupacion']);
+$activeSheet->setCellValue('Z15', $formulario[0]['desc_dep']);
+
+for ($i=0; $i < count($novedad) ; $i++) { 
+      switch ($novedad[$i]['id_nov']) {
+            case '1':
+                  $activeSheet->setCellValue('J4', 'X');
+                  break;
+            case '2':
+                  $activeSheet->setCellValue('O4', 'X');
+                  break;
+            case '3':
+                  $activeSheet->setCellValue('J3', 'X');
+                  break;
+            case '4':
+                  $activeSheet->setCellValue('O6', 'X');
+                  break;
+            default:
+                  # code...
+                  break;
+      }
+}
+
+$benInicial = 18;
+for ($i=0; $i < count($beneficiarios); $i++) { 
+      $activeSheet->setCellValue('B'.$benInicial, $beneficiarios[$i]['prim_ape_per']);
+      $activeSheet->setCellValue('G'.$benInicial, $beneficiarios[$i]['seg_ape_per']);
+      $activeSheet->setCellValue('M'.$benInicial, $beneficiarios[$i]['prim_nom_per']);
+      $activeSheet->setCellValue('R'.$benInicial, $beneficiarios[$i]['doc_per']);
+      $activeSheet->setCellValue('Y'.$benInicial, $beneficiarios[$i]['porcentaje']);
+      $activeSheet->setCellValue('AC'.$benInicial, $beneficiarios[$i]['parentezco']);
+      $benInicial++;
+}
+
+for ($i=0; $i < count($novedad) ; $i++) { 
+      switch ($novedad[$i]['id_nov']) {
+            case '1':
+                  $activeSheet->setCellValue('C26', 'X');
+                  break;
+            case '2':
+                  $activeSheet->setCellValue('J26', 'X');
+                  break;
+            case '3':
+                  $activeSheet->setCellValue('N26', 'X');
+                  break;
+            case '4':
+                  $activeSheet->setCellValue('T26', 'X');
+                  break;
+            case '5':
+                  $activeSheet->setCellValue('AB26', 'X');
+                  break;
+            case '6':
+                  $activeSheet->setCellValue('C27', 'X');
+                  break;
+            case '7':
+                  $activeSheet->setCellValue('J27', 'X');
+                  break;
+            case '8':
+                  $activeSheet->setCellValue('N27', 'X');
+                  break;
+            case '9':
+                  $activeSheet->setCellValue('T28', 'X');
+                  break;
+            case '10':
+                  $activeSheet->setCellValue('AB28', 'X');
+                  break;
+            case '11':
+                  $activeSheet->setCellValue('C28', 'X');
+                  break;
+            case '12':
+                  $activeSheet->setCellValue('J28', 'X');
+                  break;
+            case '13':
+                  $activeSheet->setCellValue('N28', 'X');
+                  break;
+            case '14':
+                  $activeSheet->setCellValue('Y28', 'X');
+                  break;
+            case '15':
+                  $activeSheet->setCellValue('AE28', 'X');
+                  break;
+            case '16':
+                  $activeSheet->setCellValue('C29', 'X');
+                  break;
+            case '17':
+                  $activeSheet->setCellValue('J29', 'X');
+                  break;
+            case '18':
+                  $activeSheet->setCellValue('N29', 'X');
+                  break;
+            case '19':
+                  $activeSheet->setCellValue('T29', 'X');
+                  break;
+            case '20':
+                  $activeSheet->setCellValue('AB29', 'X');
+                  break;
+            
+            default:
+                  # code...
+                  break;
+      }
+}
+
+$tratamientoLinea = 33;
+
+for ($i=0; $i < count($tratamiento) ; $i++) { 
+      $activeSheet->setCellValue('C'.$tratamientoLinea,$tratamiento[$i]['enfermedad']);
+      $activeSheet->setCellValue('M'.$tratamientoLinea,$tratamiento[$i]['anio_diag']);
+      $activeSheet->setCellValue('Q'.$tratamientoLinea,$tratamiento[$i]['tratamiento']);
+      $tratamientoLinea++;
+}
+
+$activeSheet->setCellValue('AA44', $formulario[0]['doc_per']);
+//die($_REQUEST['id']);
 
 // Miscellaneous glyphs, UTF-8
 /*$objPHPExcel->setActiveSheetIndex(0)

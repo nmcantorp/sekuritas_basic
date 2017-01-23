@@ -323,7 +323,7 @@ $fech_actual = Date('d-m-Y');
 
                                   <td class="text-center"><input type="text" name="dia"/></td>
 
-                                  <td class="text-center"><input type="text" name="mes"/></td>
+                                  <td class="text-center"><input type="mes" name="mes"/></td>
 
                                   <td class="text-center"><input type="text" name="anio"/></td>
 
@@ -350,7 +350,7 @@ $fech_actual = Date('d-m-Y');
                                   <td colspan="2"><input type="text"  name="telefono"/></td>
 
                                   <td>
-                                  <select name="ciudad" id="ciudad">
+                                  <select name="ciudad" id="ciudad" style="width: 100%">
                                     
                                   </select>
                                   <!--<input type="text"  /></td>-->
