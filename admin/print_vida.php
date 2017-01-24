@@ -86,7 +86,7 @@ $activeSheet->getColumnDimension('U')->setWidth(3);
 $activeSheet->getColumnDimension('V')->setWidth(2);
 $activeSheet->getColumnDimension('W')->setWidth(2);
 $activeSheet->getColumnDimension('X')->setWidth(2);
-$activeSheet->getColumnDimension('Y')->setWidth(2);
+$activeSheet->getColumnDimension('Y')->setWidth(3);
 $activeSheet->getColumnDimension('Z')->setWidth(3);
 $activeSheet->getColumnDimension('AA')->setWidth(3);
 $activeSheet->getColumnDimension('AB')->setWidth(3);
@@ -108,10 +108,10 @@ $activeSheet->mergeCells('B4:I4');
 $activeSheet->mergeCells('B5:C5');
 $activeSheet->mergeCells('D5:E5');
 $activeSheet->mergeCells('F5:I5');
-$activeSheet->mergeCells('J4:J5');
+//$activeSheet->mergeCells('J4:J5');
 $activeSheet->mergeCells('K4:N5');
 $activeSheet->mergeCells('K6:N6');
-$activeSheet->mergeCells('O4:O5');
+//$activeSheet->mergeCells('O4:O5');
 $activeSheet->mergeCells('P4:Y5');
 $activeSheet->mergeCells('P6:Y6');
 $activeSheet->mergeCells('Z6:AH6');
@@ -201,7 +201,7 @@ $styleTextMini = array(
 $styleTituloAzul = array(
     'font'  => array(
         'bold'  => true,
-        'color' => array('rgb' => '000066'),
+        'color' => array('rgb' => '1F4E78'),
         'size'  => 10,
         'name'  => 'Calibri'
     ));
@@ -209,7 +209,7 @@ $styleTituloAzul = array(
 $styleTituloAzulLittle = array(
     'font'  => array(
         'bold'  => true,
-        'color' => array('rgb' => '000066'),
+        'color' => array('rgb' => '1F4E78'),
         'size'  => 6,
         'name'  => 'Calibri'
     ));
@@ -217,7 +217,7 @@ $styleTituloAzulLittle = array(
 $styleTituloAzulHuella = array(
     'font'  => array(
         'bold'  => true,
-        'color' => array('rgb' => '000066'),
+        'color' => array('rgb' => '1F4E78'),
         'size'  => 7,
         'name'  => 'Calibri'
     ));
@@ -226,12 +226,24 @@ $styleTituloAzulTabla = array(
     'font'  => array(
         'bold'  => true,
         'color' => array('rgb' => 'FFFFFF'),
-        'size'  => 7,
-        'name'  => 'Calibri',
-        'fill' => array(
-            'type' => PHPExcel_Style_Fill::FILL_SOLID,
-            'color' => array('rgb'=>'CCC'),
-        )
+        'size'  => 11,
+        'name'  => 'Calibri'
+    ));
+
+$styleTituloAzulTabla2 = array(
+    'font'  => array(
+        'bold'  => true,
+        'color' => array('rgb' => '#324A7C'),
+        'size'  => 11,
+        'name'  => 'Calibri'
+    ));
+
+$styleTituloAzulTabla3 = array(
+    'font'  => array(
+        'bold'  => true,
+        'color' => array('rgb' => '#324A7C'),
+        'size'  => 9,
+        'name'  => 'Calibri'
     ));
 
 $styleTituloTabla = array(
@@ -239,6 +251,14 @@ $styleTituloTabla = array(
         'bold'  => false,
         //'color' => array('rgb' => '000066'),
         'size'  => 8,
+        'name'  => 'Calibri'
+    ));
+
+$styleTextData = array(
+    'font'  => array(
+        'bold'  => false,
+        //'color' => array('rgb' => '000066'),
+        'size'  => 10,
         'name'  => 'Calibri'
     ));
 
@@ -260,13 +280,35 @@ $objPHPExcel->getActiveSheet()->getStyle('B2:AI48')->applyFromArray($styleTitulo
 $objPHPExcel->getActiveSheet()->getStyle('B16:AH16')->applyFromArray($styleTituloAzulTabla);
 $objPHPExcel->getActiveSheet()->getStyle('B16:AH16')->applyFromArray(
     array(
-    	'color' => array('rgb' => 'FFFFFF'),
+      'color' => array('rgb' => 'FFFFFF'),
         'size'  => 7,
         'name'  => 'Calibri',
         'fill' => array(
             'type' => PHPExcel_Style_Fill::FILL_SOLID,
-            'color' => array('rgb' => '0066CC')
+            'color' => array('rgb' => '1F4E78')
         )
+    )
+);
+$objPHPExcel->getActiveSheet()->getStyle('Z4:AH6')->applyFromArray(
+    array(
+      'color' => array('rgb' => 'FFFFFF'),
+        'size'  => 7,
+        'name'  => 'Calibri',
+        'fill' => array(
+            'type' => PHPExcel_Style_Fill::FILL_SOLID,
+            'color' => array('rgb' => 'D9D9D9')
+        )
+    )
+);
+
+$objPHPExcel->getActiveSheet()->getStyle('B17:AH17')->applyFromArray($styleTituloAzulTabla2);
+$objPHPExcel->getActiveSheet()->getStyle('R17')->applyFromArray($styleTituloAzulTabla3);
+$objPHPExcel->getActiveSheet()->getStyle('B17:AH17')->applyFromArray(
+    array(
+      'fill' => array(
+            'type' => PHPExcel_Style_Fill::FILL_SOLID,
+            'color' => array('rgb' => 'D9D9D9')
+      )
     )
 );
 
@@ -287,6 +329,27 @@ $objPHPExcel->getActiveSheet()->getStyle('B46')->applyFromArray($styleTituloAzul
 
 $objPHPExcel->getActiveSheet()->getStyle('Z41')->applyFromArray($styleTituloAzulHuella);
 
+
+$objPHPExcel->getActiveSheet()->getStyle('B6:I6')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('Z6')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('B8:AH8')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('B11:AH11')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('B13:AH13')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('F15')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('I15')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('L15:AH15')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('D26:D29')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('K26:K29')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('O26:O29')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('U26:O30')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('Z28')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('AC26:AC29')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('AF28')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('B33:R33')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('B35:R35')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('J5:J6')->applyFromArray($styleTextData);
+$objPHPExcel->getActiveSheet()->getStyle('O5:O6')->applyFromArray($styleTextData);
+
 /*Alineacion*/
 $objPHPExcel->getActiveSheet()->getStyle('B4:I6')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 $objPHPExcel->getActiveSheet()->getStyle('Z6')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
@@ -302,10 +365,43 @@ $objPHPExcel->getActiveSheet()->getStyle('B16:AH21')->getAlignment()->setHorizon
 
 /*Color*/
 
-$objPHPExcel->getActiveSheet()->getStyle('B16:AH16')->getFill()->getStartColor()->getRGB('000066');
+$objPHPExcel->getActiveSheet()->getStyle('B16:AH16')->getFill()->getStartColor()->getRGB('1F4E78');
 /*$activeSheet->getStyle('B42:X42')
 ->getAlignment()->setWrapText(true);*/
 
+/*Bordes*/
+
+$styleArray = array(
+      'borders' => array(
+          'allborders' => array(
+              'style' => PHPExcel_Style_Border::BORDER_THIN
+          )
+      )
+  );
+$objPHPExcel->getActiveSheet()->getStyle('B4:AH4')->getBorders()->getTop()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('B4:B47')->getBorders()->getLeft()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('B47:AH47')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('AH4:AH47')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('B4:I4')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('J5:J6')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('O5:O6')->applyFromArray($styleArray);
+
+$objPHPExcel->getActiveSheet()->getStyle('B5:C6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('D5:E6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('F5:I6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('B6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('C6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('D6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('E6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('F6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('G6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('H6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('H6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('B6:I6')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('J5:Y5')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('J6:AH6')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Z4:Z6')->getBorders()->getLeft()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+//$objPHPExcel->getActiveSheet()->getStyle('B6:I6')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 
 // Agregando texto de los titulos
 $activeSheet->setCellValue('B3', 'Le recordamos la importancia de declarar el verdadero estado de salud al momento de diligenciar la solicitud de seguro. Favor leer con detenimiento la declaración de asegurabilidad contenida en el presente documento.')
@@ -479,13 +575,13 @@ $activeSheet->setCellValue('Z15', $formulario[0]['desc_dep']);
 for ($i=0; $i < count($novedad) ; $i++) { 
       switch ($novedad[$i]['id_nov']) {
             case '1':
-                  $activeSheet->setCellValue('J4', 'X');
+                  $activeSheet->setCellValue('J5', 'X');
                   break;
             case '2':
-                  $activeSheet->setCellValue('O4', 'X');
+                  $activeSheet->setCellValue('O5', 'X');
                   break;
             case '3':
-                  $activeSheet->setCellValue('J3', 'X');
+                  $activeSheet->setCellValue('J6', 'X');
                   break;
             case '4':
                   $activeSheet->setCellValue('O6', 'X');
