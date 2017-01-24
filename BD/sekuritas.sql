@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : Local
-Source Server Version : 50709
+Source Server Version : 50617
 Source Host           : localhost:3306
 Source Database       : sekuritas
 
 Target Server Type    : MYSQL
-Target Server Version : 50709
+Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2017-01-22 23:29:56
+Date: 2017-01-23 20:59:18
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1287,6 +1287,7 @@ CREATE TABLE `formulario` (
   `id_form` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pol_form` int(20) NOT NULL,
   `solic_increm_form` float(14,2) DEFAULT NULL,
+  `ocupacion` mediumtext,
   `id_emp` int(10) unsigned NOT NULL,
   `fech_creacion` datetime NOT NULL,
   `fech_modificacion` datetime DEFAULT NULL,
@@ -1298,27 +1299,27 @@ CREATE TABLE `formulario` (
 -- ----------------------------
 -- Records of formulario
 -- ----------------------------
-INSERT INTO `formulario` VALUES ('1', '1', '2000000.00', '2', '2017-01-21 23:52:04', '2017-01-21 23:52:04');
-INSERT INTO `formulario` VALUES ('2', '1', '2000000.00', '2', '2017-01-21 23:53:58', '2017-01-21 23:53:58');
-INSERT INTO `formulario` VALUES ('3', '1', '2000000.00', '2', '2017-01-21 23:56:57', '2017-01-21 23:56:57');
-INSERT INTO `formulario` VALUES ('4', '1', '2000000.00', '2', '2017-01-21 23:57:38', '2017-01-21 23:57:38');
-INSERT INTO `formulario` VALUES ('5', '1', '2000000.00', '2', '2017-01-21 23:58:16', '2017-01-21 23:58:16');
-INSERT INTO `formulario` VALUES ('6', '1', '2000000.00', '2', '2017-01-22 00:00:57', '2017-01-22 00:00:57');
-INSERT INTO `formulario` VALUES ('7', '1', '2000000.00', '2', '2017-01-22 00:01:20', '2017-01-22 00:01:20');
-INSERT INTO `formulario` VALUES ('8', '1', '2000000.00', '2', '2017-01-22 00:02:22', '2017-01-22 00:02:22');
-INSERT INTO `formulario` VALUES ('9', '1', '2000000.00', '2', '2017-01-22 00:02:52', '2017-01-22 00:02:52');
-INSERT INTO `formulario` VALUES ('10', '1', '2000000.00', '2', '2017-01-22 00:03:19', '2017-01-22 00:03:19');
-INSERT INTO `formulario` VALUES ('11', '1', '2000000.00', '2', '2017-01-22 00:03:39', '2017-01-22 00:03:39');
-INSERT INTO `formulario` VALUES ('12', '1', '2000000.00', '2', '2017-01-22 00:04:46', '2017-01-22 00:04:46');
-INSERT INTO `formulario` VALUES ('13', '1', '2000000.00', '2', '2017-01-22 00:05:37', '2017-01-22 00:05:37');
-INSERT INTO `formulario` VALUES ('14', '1', '2000000.00', '2', '2017-01-22 00:08:01', '2017-01-22 00:08:01');
-INSERT INTO `formulario` VALUES ('15', '1', '2000000.00', '2', '2017-01-22 09:36:57', '2017-01-22 09:36:57');
-INSERT INTO `formulario` VALUES ('16', '1', '2000000.00', '2', '2017-01-22 09:43:48', '2017-01-22 09:43:48');
-INSERT INTO `formulario` VALUES ('17', '1', '2000000.00', '2', '2017-01-22 09:50:08', '2017-01-22 09:50:08');
-INSERT INTO `formulario` VALUES ('18', '1', '2000000.00', '2', '2017-01-22 09:50:37', '2017-01-22 09:50:37');
-INSERT INTO `formulario` VALUES ('19', '1', '2000000.00', '2', '2017-01-22 09:51:58', '2017-01-22 09:51:58');
-INSERT INTO `formulario` VALUES ('20', '1', '2000000.00', '2', '2017-01-22 09:52:20', '2017-01-22 09:52:20');
-INSERT INTO `formulario` VALUES ('21', '1', '2000000.00', '2', '2017-01-22 09:53:52', '2017-01-22 09:53:52');
+INSERT INTO `formulario` VALUES ('1', '1', '2000000.00', null, '2', '2017-01-21 23:52:04', '2017-01-21 23:52:04');
+INSERT INTO `formulario` VALUES ('2', '1', '2000000.00', null, '2', '2017-01-21 23:53:58', '2017-01-21 23:53:58');
+INSERT INTO `formulario` VALUES ('3', '1', '2000000.00', null, '2', '2017-01-21 23:56:57', '2017-01-21 23:56:57');
+INSERT INTO `formulario` VALUES ('4', '1', '2000000.00', null, '2', '2017-01-21 23:57:38', '2017-01-21 23:57:38');
+INSERT INTO `formulario` VALUES ('5', '1', '2000000.00', null, '2', '2017-01-21 23:58:16', '2017-01-21 23:58:16');
+INSERT INTO `formulario` VALUES ('6', '1', '2000000.00', null, '2', '2017-01-22 00:00:57', '2017-01-22 00:00:57');
+INSERT INTO `formulario` VALUES ('7', '1', '2000000.00', null, '2', '2017-01-22 00:01:20', '2017-01-22 00:01:20');
+INSERT INTO `formulario` VALUES ('8', '1', '2000000.00', null, '2', '2017-01-22 00:02:22', '2017-01-22 00:02:22');
+INSERT INTO `formulario` VALUES ('9', '1', '2000000.00', null, '2', '2017-01-22 00:02:52', '2017-01-22 00:02:52');
+INSERT INTO `formulario` VALUES ('10', '1', '2000000.00', null, '2', '2017-01-22 00:03:19', '2017-01-22 00:03:19');
+INSERT INTO `formulario` VALUES ('11', '1', '2000000.00', null, '2', '2017-01-22 00:03:39', '2017-01-22 00:03:39');
+INSERT INTO `formulario` VALUES ('12', '1', '2000000.00', null, '2', '2017-01-22 00:04:46', '2017-01-22 00:04:46');
+INSERT INTO `formulario` VALUES ('13', '1', '2000000.00', null, '2', '2017-01-22 00:05:37', '2017-01-22 00:05:37');
+INSERT INTO `formulario` VALUES ('14', '1', '2000000.00', null, '2', '2017-01-22 00:08:01', '2017-01-22 00:08:01');
+INSERT INTO `formulario` VALUES ('15', '1', '2000000.00', null, '2', '2017-01-22 09:36:57', '2017-01-22 09:36:57');
+INSERT INTO `formulario` VALUES ('16', '1', '2000000.00', null, '2', '2017-01-22 09:43:48', '2017-01-22 09:43:48');
+INSERT INTO `formulario` VALUES ('17', '1', '2000000.00', null, '2', '2017-01-22 09:50:08', '2017-01-22 09:50:08');
+INSERT INTO `formulario` VALUES ('18', '1', '2000000.00', null, '2', '2017-01-22 09:50:37', '2017-01-22 09:50:37');
+INSERT INTO `formulario` VALUES ('19', '1', '2000000.00', null, '2', '2017-01-22 09:51:58', '2017-01-22 09:51:58');
+INSERT INTO `formulario` VALUES ('20', '1', '2000000.00', null, '2', '2017-01-22 09:52:20', '2017-01-22 09:52:20');
+INSERT INTO `formulario` VALUES ('21', '1', '2000000.00', 'Prueba', '2', '2017-01-22 09:53:52', '2017-01-22 09:53:52');
 
 -- ----------------------------
 -- Table structure for form_pers
@@ -1506,6 +1507,7 @@ CREATE TABLE `persona` (
   `mes_nac_per` int(2) DEFAULT NULL,
   `anio_nac_per` int(4) DEFAULT NULL,
   `dir_per` varchar(100) DEFAULT NULL,
+  `tel_per` varchar(60) DEFAULT NULL,
   `email_per` varchar(100) DEFAULT NULL,
   `gen_per` varchar(1) DEFAULT NULL,
   `est_per` int(3) DEFAULT NULL,
@@ -1525,11 +1527,11 @@ CREATE TABLE `persona` (
 -- ----------------------------
 -- Records of persona
 -- ----------------------------
-INSERT INTO `persona` VALUES ('1', '1022323548', 'Mauricio', null, 'Cantor', 'Puentes', '22', '4', '1986', 'Cl 59 A sur # 47 - 35', null, 'm', '178', '83.00', '2017-01-21 23:52:04', '2017-01-21 23:52:04', '111', 'cc');
-INSERT INTO `persona` VALUES ('2', '1029199383', 'Juan ', null, 'Cantor', 'Quiceno ', null, null, null, null, null, null, null, null, '2017-01-21 23:52:05', '2017-01-21 23:52:05', '111', 'cc');
-INSERT INTO `persona` VALUES ('3', '19283741', 'Edenia', null, 'Puentes', 'Ardila ', null, null, null, null, null, null, null, null, '2017-01-21 23:52:05', '2017-01-21 23:52:05', '111', 'cc');
-INSERT INTO `persona` VALUES ('4', '1029374635', 'Juan Felipe', null, 'Cantor ', 'Quiceno', null, null, null, null, null, null, null, null, '2017-01-22 09:50:08', '2017-01-22 09:50:08', '111', 'cc');
-INSERT INTO `persona` VALUES ('5', '28198626', 'Edenia', null, 'Puentes', 'Ardila ', null, null, null, null, null, null, null, null, '2017-01-22 09:50:09', '2017-01-22 09:50:09', '111', 'cc');
+INSERT INTO `persona` VALUES ('1', '1022323548', 'Mauricio', null, 'Cantor', 'Puentes', '22', '4', '1986', 'Cl 59 A sur # 47 - 35', '7158282', null, 'm', '178', '83.00', '2017-01-21 23:52:04', '2017-01-21 23:52:04', '111', 'cc');
+INSERT INTO `persona` VALUES ('2', '1029199383', 'Juan ', null, 'Cantor', 'Quiceno ', null, null, null, null, null, null, null, null, null, '2017-01-21 23:52:05', '2017-01-21 23:52:05', '111', 'cc');
+INSERT INTO `persona` VALUES ('3', '19283741', 'Edenia', null, 'Puentes', 'Ardila ', null, null, null, null, null, null, null, null, null, '2017-01-21 23:52:05', '2017-01-21 23:52:05', '111', 'cc');
+INSERT INTO `persona` VALUES ('4', '1029374635', 'Juan Felipe', null, 'Cantor ', 'Quiceno', null, null, null, null, null, null, null, null, null, '2017-01-22 09:50:08', '2017-01-22 09:50:08', '111', 'cc');
+INSERT INTO `persona` VALUES ('5', '28198626', 'Edenia', null, 'Puentes', 'Ardila ', null, null, null, null, null, null, null, null, null, '2017-01-22 09:50:09', '2017-01-22 09:50:09', '111', 'cc');
 
 -- ----------------------------
 -- Table structure for tipo_documento
