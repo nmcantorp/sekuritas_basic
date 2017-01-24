@@ -97,8 +97,11 @@ $activeSheet->getColumnDimension('AF')->setWidth(4);
 $activeSheet->getColumnDimension('AG')->setWidth(4);
 $activeSheet->getColumnDimension('AH')->setWidth(2);
 $activeSheet->getColumnDimension('AI')->setWidth(3);
-$activeSheet->getRowDimension('42')->setRowHeight(82);
+$activeSheet->getRowDimension('42')->setRowHeight(95);
 $activeSheet->getRowDimension('47')->setRowHeight(25);
+$activeSheet->getRowDimension('38')->setRowHeight(20);
+$activeSheet->getRowDimension('39')->setRowHeight(20);
+$activeSheet->getRowDimension('40')->setRowHeight(20);
 
 /*Combinando Celdas*/
 $activeSheet->mergeCells('B4:I4');
@@ -172,7 +175,7 @@ $activeSheet->mergeCells('B43:X45');
 $activeSheet->mergeCells('Z41:AG41');
 $activeSheet->mergeCells('B42:X42');
 $activeSheet->mergeCells('AD42:AG42');
-$activeSheet->mergeCells('AA44:AF44');
+$activeSheet->mergeCells('AA44:AD44');
 $activeSheet->mergeCells('B47:AH47');
 
 /*Formatos*/
@@ -185,12 +188,128 @@ $objPHPExcel->getActiveSheet()->getStyle('B47:AH47')
 $objPHPExcel->getActiveSheet()->getStyle('B38:AH40')
 ->getAlignment()->setWrapText(true);
 
+
+
+$styleTextMini = array(
+    'font'  => array(
+        'bold'  => false,
+        //'color' => array('rgb' => 'fff'),
+        'size'  => 6,
+        'name'  => 'Calibri'
+    ));
+
+$styleTituloAzul = array(
+    'font'  => array(
+        'bold'  => true,
+        'color' => array('rgb' => '000066'),
+        'size'  => 10,
+        'name'  => 'Calibri'
+    ));
+
+$styleTituloAzulLittle = array(
+    'font'  => array(
+        'bold'  => true,
+        'color' => array('rgb' => '000066'),
+        'size'  => 6,
+        'name'  => 'Calibri'
+    ));
+
+$styleTituloAzulHuella = array(
+    'font'  => array(
+        'bold'  => true,
+        'color' => array('rgb' => '000066'),
+        'size'  => 7,
+        'name'  => 'Calibri'
+    ));
+
+$styleTituloAzulTabla = array(
+    'font'  => array(
+        'bold'  => true,
+        'color' => array('rgb' => 'FFFFFF'),
+        'size'  => 7,
+        'name'  => 'Calibri',
+        'fill' => array(
+            'type' => PHPExcel_Style_Fill::FILL_SOLID,
+            'color' => array('rgb'=>'CCC'),
+        )
+    ));
+
+$styleTituloTabla = array(
+    'font'  => array(
+        'bold'  => false,
+        //'color' => array('rgb' => '000066'),
+        'size'  => 8,
+        'name'  => 'Calibri'
+    ));
+
+$styleTituloTablaCenter = array(
+    'font'  => array(
+        'bold'  => false,
+        //'color' => array('rgb' => '000066'),
+        'size'  => 8,
+        'name'  => 'Calibri',
+        'alignment' => array(
+            'horizontal' => PHPExcel_Style_Alignment::HORIZONTAL_CENTER,
+        )
+    ));
+
+
+$objPHPExcel->getActiveSheet()->getStyle('B2:AI48')->applyFromArray($styleTituloTabla);
+
+
+$objPHPExcel->getActiveSheet()->getStyle('B16:AH16')->applyFromArray($styleTituloAzulTabla);
+$objPHPExcel->getActiveSheet()->getStyle('B16:AH16')->applyFromArray(
+    array(
+    	'color' => array('rgb' => 'FFFFFF'),
+        'size'  => 7,
+        'name'  => 'Calibri',
+        'fill' => array(
+            'type' => PHPExcel_Style_Fill::FILL_SOLID,
+            'color' => array('rgb' => '0066CC')
+        )
+    )
+);
+
+$objPHPExcel->getActiveSheet()->getStyle('B3')->applyFromArray($styleTextMini);
+
+$objPHPExcel->getActiveSheet()->getStyle('B36')->applyFromArray($styleTextMini);
+$objPHPExcel->getActiveSheet()->getStyle('B38')->applyFromArray($styleTextMini);
+$objPHPExcel->getActiveSheet()->getStyle('B42:B43')->applyFromArray($styleTextMini);
+$objPHPExcel->getActiveSheet()->getStyle('B47')->applyFromArray($styleTextMini);
+
+
+$objPHPExcel->getActiveSheet()->getStyle('B37')->applyFromArray($styleTituloAzul);
+$objPHPExcel->getActiveSheet()->getStyle('B41')->applyFromArray($styleTituloAzul);
+
+
+$objPHPExcel->getActiveSheet()->getStyle('B46')->applyFromArray($styleTituloAzulLittle);
+
+
+$objPHPExcel->getActiveSheet()->getStyle('Z41')->applyFromArray($styleTituloAzulHuella);
+
+/*Alineacion*/
+$objPHPExcel->getActiveSheet()->getStyle('B4:I6')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+$objPHPExcel->getActiveSheet()->getStyle('Z6')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+$objPHPExcel->getActiveSheet()->getStyle('B8')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+$objPHPExcel->getActiveSheet()->getStyle('Z8')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+$objPHPExcel->getActiveSheet()->getStyle('Z10:AH10')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+$objPHPExcel->getActiveSheet()->getStyle('B11:AH11')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+$objPHPExcel->getActiveSheet()->getStyle('B13:AH13')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+$objPHPExcel->getActiveSheet()->getStyle('L15:AH15')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+$objPHPExcel->getActiveSheet()->getStyle('D14:D15')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+$objPHPExcel->getActiveSheet()->getStyle('B16:AH21')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+
+
+/*Color*/
+
+$objPHPExcel->getActiveSheet()->getStyle('B16:AH16')->getFill()->getStartColor()->getRGB('000066');
 /*$activeSheet->getStyle('B42:X42')
 ->getAlignment()->setWrapText(true);*/
 
 
 // Agregando texto de los titulos
-$activeSheet->setCellValue('B4', 'Fecha de diligenciamiento')
+$activeSheet->setCellValue('B3', 'Le recordamos la importancia de declarar el verdadero estado de salud al momento de diligenciar la solicitud de seguro. Favor leer con detenimiento la declaración de asegurabilidad contenida en el presente documento.')
+			->setCellValue('B4', 'Fecha de diligenciamiento')
             ->setCellValue('B5', 'D')
             ->setCellValue('D5', 'M')
             ->setCellValue('F5', 'A')
@@ -476,11 +595,11 @@ $activeSheet->setCellValue('AA44', $formulario[0]['doc_per']);
 
 // Rename worksheet
 $objPHPExcel->getActiveSheet()->setTitle('Vida');
+$objPHPExcel->getActiveSheet()->setShowGridlines(false);
 
 
 // Set active sheet index to the first sheet, so Excel opens this as the first sheet
 $objPHPExcel->setActiveSheetIndex(0);
-
 
 // Redirect output to a client’s web browser (Excel5)
 header('Content-Type: application/vnd.ms-excel');
