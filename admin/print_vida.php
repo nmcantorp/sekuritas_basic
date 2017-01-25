@@ -83,13 +83,13 @@ $activeSheet->getColumnDimension('R')->setWidth(4);
 $activeSheet->getColumnDimension('S')->setWidth(3);
 $activeSheet->getColumnDimension('T')->setWidth(3);
 $activeSheet->getColumnDimension('U')->setWidth(3);
-$activeSheet->getColumnDimension('V')->setWidth(2);
-$activeSheet->getColumnDimension('W')->setWidth(2);
-$activeSheet->getColumnDimension('X')->setWidth(2);
+$activeSheet->getColumnDimension('V')->setWidth(3);
+$activeSheet->getColumnDimension('W')->setWidth(3);
+$activeSheet->getColumnDimension('X')->setWidth(3);
 $activeSheet->getColumnDimension('Y')->setWidth(3);
-$activeSheet->getColumnDimension('Z')->setWidth(3);
-$activeSheet->getColumnDimension('AA')->setWidth(3);
-$activeSheet->getColumnDimension('AB')->setWidth(3);
+$activeSheet->getColumnDimension('Z')->setWidth(3.5);
+$activeSheet->getColumnDimension('AA')->setWidth(3.5);
+$activeSheet->getColumnDimension('AB')->setWidth(3.5);
 $activeSheet->getColumnDimension('AC')->setWidth(3);
 $activeSheet->getColumnDimension('AD')->setWidth(4);
 $activeSheet->getColumnDimension('AE')->setWidth(3);
@@ -385,6 +385,22 @@ $objPHPExcel->getActiveSheet()->getStyle('AH4:AH47')->getBorders()->getRight()->
 $objPHPExcel->getActiveSheet()->getStyle('B4:I4')->applyFromArray($styleArray);
 $objPHPExcel->getActiveSheet()->getStyle('J5:J6')->applyFromArray($styleArray);
 $objPHPExcel->getActiveSheet()->getStyle('O5:O6')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('T9')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('V9')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('Y9')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('Z10:AH11')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('D14:D15')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('B16:AH21')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('C26:C29')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('J26:J29')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('N26:N29')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('T26')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('T28:T29')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('Y28')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('AB26')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('AB28:AB29')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('Z41:AG41')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('AD42:AG42')->applyFromArray($styleArray);
 
 $objPHPExcel->getActiveSheet()->getStyle('B5:C6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 $objPHPExcel->getActiveSheet()->getStyle('D5:E6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
@@ -401,7 +417,74 @@ $objPHPExcel->getActiveSheet()->getStyle('B6:I6')->getBorders()->getBottom()->se
 $objPHPExcel->getActiveSheet()->getStyle('J5:Y5')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 $objPHPExcel->getActiveSheet()->getStyle('J6:AH6')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 $objPHPExcel->getActiveSheet()->getStyle('Z4:Z6')->getBorders()->getLeft()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
-//$objPHPExcel->getActiveSheet()->getStyle('B6:I6')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('B6:AH6')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Y7:Y6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('B11:AH11')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('B8:AH8')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('J9:J11')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Y7:Y8')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('M9:M11')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('R9:R11')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Y9:Y11')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Z9:AH9')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('B13:AH13')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('J12:J13')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('M12:M13')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('R12:R13')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Y12:Y13')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Z12:AH12')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('E14:E15')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('H14:H15')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('K14:K15')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('S14:S15')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Y14:Y15')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Z14:AH14')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('B32:V32')->getBorders()->getTop()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('B33:V33')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('B35:V35')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('K32:K35')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('O32:O35')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('V32:V35')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Z42:Z45')->getBorders()->getLeft()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Z45:AG45')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('AG42:AG45')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Z44:AE44')->getBorders()->getTop()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+
+/*Imagenes*/
+$allianz = imagecreatefrompng('../images/allianz_excel.png');
+$logo = imagecreatefrompng('../images/logo_excel.png');
+$sekuritas = imagecreatefrompng('../images/sekuritas_excel.png'); 
+
+$objDrawing = new PHPExcel_Worksheet_MemoryDrawing();
+$objDrawing->setName('Allianz Logo'); 
+$objDrawing->setDescription('Allianz Logo');
+$objDrawing->setImageResource($allianz);
+$objDrawing->setRenderingFunction(PHPExcel_Worksheet_MemoryDrawing::RENDERING_JPEG);
+$objDrawing->setMimeType(PHPExcel_Worksheet_MemoryDrawing::MIMETYPE_DEFAULT);
+$objDrawing->setHeight(35);
+$objDrawing->setCoordinates('B1');
+$objDrawing->setWorksheet($objPHPExcel->getActiveSheet());
+
+$objDrawing = new PHPExcel_Worksheet_MemoryDrawing();
+$objDrawing->setName('Logo'); 
+$objDrawing->setDescription('Logo');
+$objDrawing->setImageResource($logo);
+$objDrawing->setRenderingFunction(PHPExcel_Worksheet_MemoryDrawing::RENDERING_JPEG);
+$objDrawing->setMimeType(PHPExcel_Worksheet_MemoryDrawing::MIMETYPE_DEFAULT);
+$objDrawing->setHeight(40);
+$objDrawing->setCoordinates('N1');
+$objDrawing->setWorksheet($objPHPExcel->getActiveSheet());
+
+$objDrawing = new PHPExcel_Worksheet_MemoryDrawing();
+$objDrawing->setName('Sekuritas'); 
+$objDrawing->setDescription('Sekuritas');
+$objDrawing->setImageResource($sekuritas);
+$objDrawing->setRenderingFunction(PHPExcel_Worksheet_MemoryDrawing::RENDERING_JPEG);
+$objDrawing->setMimeType(PHPExcel_Worksheet_MemoryDrawing::MIMETYPE_DEFAULT);
+$objDrawing->setHeight(45);
+$objDrawing->setCoordinates('Z1');
+$objDrawing->setWorksheet($objPHPExcel->getActiveSheet());
+
 
 // Agregando texto de los titulos
 $activeSheet->setCellValue('B3', 'Le recordamos la importancia de declarar el verdadero estado de salud al momento de diligenciar la solicitud de seguro. Favor leer con detenimiento la declaración de asegurabilidad contenida en el presente documento.')
@@ -527,15 +610,15 @@ $activeSheet->setCellValue('Z8', $formulario[0]['nit_emp']);
 
 switch ($formulario[0]['id_tip_doc']) {
       case 'cc':
-            $activeSheet->setCellValue('R9', 'X');
+            $activeSheet->setCellValue('T9', 'X');
             break;
 
       case 'nuip':
-            $activeSheet->setCellValue('V9', 'X');
+            $activeSheet->setCellValue('Y9', 'X');
             break;
 
       case 'ce':
-            $activeSheet->setCellValue('T9', 'X');
+            $activeSheet->setCellValue('V9', 'X');
             break;
       
       default:
@@ -692,7 +775,11 @@ $activeSheet->setCellValue('AA44', $formulario[0]['doc_per']);
 // Rename worksheet
 $objPHPExcel->getActiveSheet()->setTitle('Vida');
 $objPHPExcel->getActiveSheet()->setShowGridlines(false);
-
+$objPHPExcel->getActiveSheet()->getPageSetup()->setPrintArea('A1:AI48');
+$objPHPExcel->getActiveSheet()->getPageSetup()->setFitToWidth(1);
+$objPHPExcel->getActiveSheet()->getPageSetup()->setFitToHeight(1);
+$objPHPExcel->getActiveSheet()->getPageSetup()->setScale(100);
+$objPHPExcel->getActiveSheet()->getPageSetup()->setFitToPage(true);
 
 // Set active sheet index to the first sheet, so Excel opens this as the first sheet
 $objPHPExcel->setActiveSheetIndex(0);

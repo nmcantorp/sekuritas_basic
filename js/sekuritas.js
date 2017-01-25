@@ -167,7 +167,7 @@ var formulario = (function(){
                         ];
     var inputMaxText = [];
     var resultadoValidacion = [];
-    var idForm = 21;//////////////////////////////////// pasar a cero ////////////////////////////////////////////
+    var idForm = 0;//////////////////////////////////// pasar a cero ////////////////////////////////////////////
 
     var sendInformation = function () {
         $.ajax( {
@@ -333,7 +333,7 @@ var formulario = (function(){
                 return false;
             });
             eventUser();
-            //$('#print_form').hide();
+            $('#print_form').hide();
         },
         addEventValidationInput: function () {
             loadAllParameters();
