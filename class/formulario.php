@@ -53,7 +53,7 @@ class ClassFormulario extends ClassConexion
 					];
 
 		$query = "	INSERT INTO formulario (solic_increm_form, pol_form, id_emp, fech_creacion, fech_modificacion, ocupacion)
-					VALUES (".$formulario['incremento_solic'].", 1, ".$formulario['nit'].", NOW(), NOW(), ".$formulario['ocupacion'].")";
+					VALUES ('".$formulario['incremento_solic']."', 1, ".$formulario['nit'].", NOW(), NOW(), '".$formulario['ocupacion']."')";
 
 		$consulta = $db->consulta($query);
 		$id_formulario = $db->insert_id();

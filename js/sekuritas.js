@@ -187,6 +187,20 @@ var formulario = (function(){
         return false;
     };
 
+    var requiredInput = function(data){ 
+        console.log(data);
+        for(var i =0 ; i<data.length;i++)
+        {
+            $('[name="'+data[i]+'"]').css('border','1px solid red');
+            $('[name="'+data[i]+'"]').on('change', function(){
+                if( $(this).val() != '' && $(this).val() != null )
+                {
+                    $(this).css('border','0')
+                }
+            });
+        }
+    };
+
     var validateInputRequired = function () {
         resultadoValidacion = [];
         for (var i = inputRequired.length - 1; i >= 0; i--) {
@@ -221,6 +235,7 @@ var formulario = (function(){
         }
         if(resultadoValidacion.length>0)
         {
+            requiredInput(resultadoValidacion);
             return false;
         }else{
             return true;
@@ -248,20 +263,20 @@ var formulario = (function(){
                         if(data != null)
                         {
                             var dataFin = data[0];
-                            $('input[name="nombre"]').val(dataFin.prim_nom_per);
-                            $('input[name="primer_apellido"]').val(dataFin.prim_ape_per);
-                            $('input[name="segundo_apellido"]').val(dataFin.seg_ape_per);
-                            $('input[name="segundo_apellido"]').val(dataFin.seg_ape_per);
+                            $('input[name="nombre"]').val(dataFin.prim_nom_per).trigger('change');
+                            $('input[name="primer_apellido"]').val(dataFin.prim_ape_per).trigger('change');
+                            $('input[name="segundo_apellido"]').val(dataFin.seg_ape_per).trigger('change');
+                            $('input[name="segundo_apellido"]').val(dataFin.seg_ape_per).trigger('change');
                             $('input[type="checkbox"][id="'+dataFin.id_tip_doc+'"]').attr('checked', true);
-                            $('input[name="dia"]').val(dataFin.dia_nac_per);
-                            $('input[name="mes"]').val(dataFin.mes_nac_per);
-                            $('input[name="anio"]').val(dataFin.anio_nac_per);
+                            $('input[name="dia"]').val(dataFin.dia_nac_per).trigger('change');
+                            $('input[name="mes"]').val(dataFin.mes_nac_per).trigger('change');
+                            $('input[name="anio"]').val(dataFin.anio_nac_per).trigger('change');
                             $('input[type="checkbox"][name="gen"][value="'+dataFin.gen_per+'"]').attr('checked', true);
-                            $('input[name="direccion"]').val(dataFin.dir_per);
-                            $('input[name="telefono"]').val(dataFin.tel_per);
-                            $('select[name="ciudad"]').val(dataFin.id_ciu_nac);
-                            $('input[name="estatura"]').val(dataFin.est_per);
-                            $('input[name="peso"]').val(dataFin.pes_per);
+                            $('input[name="direccion"]').val(dataFin.dir_per).trigger('change');
+                            $('input[name="telefono"]').val(dataFin.tel_per).trigger('change');
+                            $('select[name="ciudad"]').val(dataFin.id_ciu_nac).trigger('change');
+                            $('input[name="estatura"]').val(dataFin.est_per).trigger('change');
+                            $('input[name="peso"]').val(dataFin.pes_per).trigger('change');
                         }else{
                             $('input[name="nombre"]').val(null);
                             $('input[name="primer_apellido"]').val(null);
