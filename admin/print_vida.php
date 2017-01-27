@@ -687,13 +687,13 @@ for ($i=0; $i < count($beneficiarios); $i++) {
       $benInicial++;
 }
 
-if(count($novedad)<=0)
+if(count($enfermedad)<=0)
 {
       $activeSheet->setCellValue('B24', 'X');
 }
 
-for ($i=0; $i < count($novedad) ; $i++) { 
-      switch ($novedad[$i]['id_nov']) {
+for ($i=0; $i < count($enfermedad) ; $i++) { 
+      switch ($enfermedad[$i]['id_enf']) {
             case '1':
                   $activeSheet->setCellValue('C26', 'X');
                   break;
