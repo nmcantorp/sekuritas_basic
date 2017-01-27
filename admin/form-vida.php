@@ -106,43 +106,45 @@ $fech_actual = Date('d-m-Y');
 
 <div class="bg-body">
 
-    <div class="container">
-
-        <div class="row margin0 padding0">
-
-              <div class="col-md-12 pull-right margin0 padding0">
-
-                <div class="main_menu margin0 padding0">
-
-                <div class="menu_mobile"> <a class="mobile_menu" id="menuMobile"></a> </div>
-
-                    <ul class="menu_items" id="menuP_mobile">
-
-                        <li> <a href="#" class="active">INF.CLIENTE</a> </li>
-
-                        <li> <a href="#">CARTERA</a> </li>
-
-                        <li> <a href="#">CUENTAS</a> </li>
-
-                        <li> <a href="#">PAGOS</a> </li>
-
-                        <li> <a href="#">ASEGURADOS</a> </li>
-
-                        <li> <a href="#">POLIZAS</a> </li>
-
-                        <li> <a href="#">RECLAMACIONES</a> </li>
-
-                        <li class="linea"> <a href="#">SALIR</a> </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
+<div class="container">
+            <div class="row padding0"> 
+                <div class="col-md-12 pull-right col-xs-12">
+                    <div class="main_menu">      
+                            <ul class="menu_items" id="menuP_mobile">
+                                <li>
+                                    <a href="#" class="active">INICIO</a> 
+                                </li>
+                                <li>
+                                    <a href="quienes_somos.html">QUIENES SOMOS</a> 
+                                </li>
+                                <li>
+                                    <a href="personas.html">PERSONAS</a> 
+                                </li>
+                                <li>
+                                    <a href="empresas.html">EMPRESAS</a> 
+                                </li>
+                                <li>
+                                    <a href="alianzas.html">ALIANZAS</a> 
+                                </li>
+                                <li>
+                                    <a href="sucis.html">SUCIS</a> 
+                                </li>                                
+                                <li>
+                                    <a href="clientes.html">CLIENTES</a> 
+                                </li>     
+                                <li class="h_desktop">
+                                	<a href="#">
+                                  <div class="link_contacto">
+                                  <img src="images/icons/contacto.png" />
+                                    contacto
+                                  </div> 
+                                  </a> 
+                                </li>
+                            </ul>
+					</div>
+				</div>
+			</div>
         </div>
-
-    </div>
 
     <div class="container_white">
 
@@ -160,13 +162,10 @@ $fech_actual = Date('d-m-Y');
 
                     </div>
 
-                    <div class="main_title_text light f14"> 
+                    <div class="main_title_text light f14 padding0"> 
 
                         Le recordamos la importancia de declarar el verdadero estado de salud al momento de diligenciar la solicitud de seguro. Favor leer con detenimiento la declaración de asegurabilidad contenida en el presente documento. 
 
-                    </div>
-                    <div class="main_title_text">
-                      <button type="" onclick="javascript:void(0)" id="print_form">Imprimir</button>
                     </div>
 
                     <div class="separator"></div>
@@ -208,7 +207,7 @@ $fech_actual = Date('d-m-Y');
                                     <tr>
 
                                       <td colspan="2">
-                                      <div class="d-tc"><input type="text" value="<?php echo $fech_actual ?>" name="fech_solicutud" readonly="readonly" /></div>
+                                      <div class="d-tc"><input type="text" value="<?php echo $fech_actual ?>" name="fech_solicutud" readonly /></div>
                                       <!--<input type="text" class="" id="datepicker"></td>-->
                                       <td colspan="2"><div class="content_checkboxes">
 
@@ -517,15 +516,18 @@ $fech_actual = Date('d-m-Y');
 
                                     Yo, el abajo firmante, declaro que:<br>
 
-                                    (  ) En la fecha me encuentro en buen estado de salud y mi habilidad no se encuentra de alguna manera reducida.<br>
+                                    <div class="content_checkboxes">
+                                    <input type="checkbox" name="careGood" id="careGood"/><label for="careGood" ><span>En la fecha me encuentro en buen estado de salud y mi habilidad no se encuentra de alguna manera reducida.</span></label>
+                                    </div>
+                                    <br>
 
-                                    (  ) Padezco o he padecido las lesiones o enfermedades que a continuación marco con x: 
+                                    Padezco o he padecido las lesiones o enfermedades que a continuación marco: 
 
                                 </div>
 
                                 <div class="main_table">
 
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_enfer">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_enfer" id="table_enfer">
 
                                     <tbody>
 
@@ -669,7 +671,7 @@ $fech_actual = Date('d-m-Y');
 
                                         <td><div class="content_checkboxes">
 
-                                            <input type="checkbox" id="RenalesRenales" name="enferm[]" value="renales"/>
+                                            <input type="checkbox" id="Renales" name="enferm[]" value="renales"/>
 
                                             <label for="Renales" ><span>Renales</span></label>
 
@@ -838,11 +840,17 @@ $fech_actual = Date('d-m-Y');
                         
 
                         </div>
-                        <div class="row">
-                          <button type="input" id="saveContrato">Acepta Contrato</button>
-                        </div>
 
-                    </div>                  
+
+                    </div>   
+                        <div class="row">
+                        	<div class="col-lg-2 marginbottom30 mmargintop30">
+                          		<button type="input" id="saveContrato" class="button-generic">Actualizar</button>
+                            </div>
+                            <div class="col-lg-9 marginbottom30 mmargintop30 padding0">
+                      			<button type="" onclick="javascript:void(0)" id="print_form" class="button-generic">Imprimir</button>
+                            </div>
+                        </div>                                   
 
                 </div>
 

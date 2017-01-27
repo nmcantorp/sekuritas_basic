@@ -135,10 +135,29 @@ var eventRadio = (function () {
         });
     }
 
+    var careValidation = function () {
+        console.log( $('#careGood'));
+        $('#careGood').on('click', function () {
+            var allChecks = $('#table_enfer input[type="checkbox"]');
+            if($(this).is(':checked'))
+            {
+                allChecks.each(function(){
+                    $(this).attr('disabled', true);
+                    $(this).attr('checked', false);
+                });
+            }else{
+                allChecks.each(function(){
+                    $(this).attr('disabled', false);
+                });
+            }
+        });
+    }
+
     return{
         addEvent: function () {
             findTag('identificacion');
             findTag('genero');
+            careValidation();
         }
     }
 })();
@@ -167,7 +186,7 @@ var formulario = (function(){
                         ];
     var inputMaxText = [];
     var resultadoValidacion = [];
-    var idForm = 0;//////////////////////////////////// pasar a cero ////////////////////////////////////////////
+    var idForm = 0;
 
     var sendInformation = function () {
         $.ajax( {

@@ -1,150 +1,150 @@
-/**
- * Example Print Preview site
- *
- *	print.css
- *	author: Tim Connell
- */
-
-/* -- Hide screen specific elements -- */
-#nav,
-#footer .footer-links,
-#feature a.prev,
-#feature a.next,
-a.print-preview {
-    display: none;
-}
-
-
-/* -- Typography -- */
-body {
-    background: #FFF;
-    color: #000;
-    font-family: Verdana, Arial;
-    line-height: 1.2;
-}
-
-
-/* -- Style site heading -- */
-#header strong {
-    color: #000;
-    display: block;
-    font-weight: normal;
-    font-size: 3em;
-    margin: 0 0 1em;
-    padding: 0;
-    text-shadow: rgba(0, 0, 0, 0.44) 1px 1px 2px;
-}
-ul{
-	margin:0;
-	padding:0;
-	}
-
-.img-pantalla{
-	display:none;
-	}
-.logo_print {
-	margin:20px 0;
-	display:block;
-	background-image:url(../images/logosekuritas.jpg);
-	width:408px;
-	height:80px;
-	}
-.main_menu {display:none;}	
-.buttons-below {display:none;}
-.main_title {
-	font-size:26px;
-	color:#3c3c3c;
-	margin:30px 0;
-	display:table;
-	}	
-.main_title_icon {
-	display:table-cell;
-	}
-.main_title_text {
-	display:table-cell;
-	vertical-align:middle;
-	padding-left:20px;
-	}
-.title_generic {
-	font-size:26px;
-	margin:30px 0;
-	}	
-.content_info ul, .content_info_2 ul{
-	width:100%;
-	list-style:none;
-	overflow:hidden;
-	}
-.content_info ul li{
-	width:100%;
-	margin-bottom:10px;
-	font-size:12px;
-	}
-.content_info_2 ul li{
-	width:33.3%;
-	float:left;
-	padding-bottom:10px;
-	font-size:12px;
-	height:30px;
-	}	
-.content_info ul li a, .content_info_2 ul li a{
-	color:#c10d11;
-	}	
-	.main_title {
-	font-size:20px;
-	color:#3c3c3c;
-	margin:30px 0;
-	display:table;
-	}	
-.main_title_icon {
-	display:table-cell;
-    width:63px;
-	height:63px; 
-	}
-.main_title_text {
-	display:table-cell;
-	vertical-align:middle;
-	padding-left:20px;
-	}	
-.main_info_lt {
-	display:inline;
-	font-size:14px;
-	}
-.main_info_rg {
-	display:inline;
-	color:#929292;
-	}		
-.separator {
-	height:1px;
-	width:100%;
-	background-color:#a6a6a6;
-	margin:20px 0;
-	}	
-.table_info {
-	 border: solid #D9D9D9;
-	 border-width: 0px 1px 1px 0px;
-	 font-size: 12px;
-	}
-.table_info td {
-	border: solid #D9D9D9;
-	border-width: 1px 0 0 1px;
-	padding:8px 5px;
-	}	
-.table_info thead {
-	 border:1px solid #000000;
-	 font-size: 13px;
-	 background-color:#D9D9D9;
-	 color:#3c3c3c;
-	}		
-.table_info	a {
-	color: #c80e12;
-	font-size: 12px;	
-	}		
-.text_impresion	{
-	font-size:14px;
-	text-align:center;
-	padding: 20px 0;
-	}
-.overflow		{
-	overflow:hidden;
-	}
+/**
+ * Example Print Preview site
+ *
+ *	print.css
+ *	author: Tim Connell
+ */
+
+/* -- Hide screen specific elements -- */
+#nav,
+#footer .footer-links,
+#feature a.prev,
+#feature a.next,
+a.print-preview {
+    display: none;
+}
+
+
+/* -- Typography -- */
+body {
+    background: #FFF;
+    color: #000;
+    font-family: Verdana, Arial;
+    line-height: 1.2;
+}
+
+
+/* -- Style site heading -- */
+#header strong {
+    color: #000;
+    display: block;
+    font-weight: normal;
+    font-size: 3em;
+    margin: 0 0 1em;
+    padding: 0;
+    text-shadow: rgba(0, 0, 0, 0.44) 1px 1px 2px;
+}
+ul{
+	margin:0;
+	padding:0;
+	}
+
+.img-pantalla{
+	display:none;
+	}
+.logo_print {
+	margin:20px 0;
+	display:block;
+	background-image:url(../images/logosekuritas.jpg);
+	width:408px;
+	height:80px;
+	}
+.main_menu {display:none;}	
+.buttons-below {display:none;}
+.main_title {
+	font-size:26px;
+	color:#3c3c3c;
+	margin:30px 0;
+	display:table;
+	}	
+.main_title_icon {
+	display:table-cell;
+	}
+.main_title_text {
+	display:table-cell;
+	vertical-align:middle;
+	padding-left:20px;
+	}
+.title_generic {
+	font-size:26px;
+	margin:30px 0;
+	}	
+.content_info ul, .content_info_2 ul{
+	width:100%;
+	list-style:none;
+	overflow:hidden;
+	}
+.content_info ul li{
+	width:100%;
+	margin-bottom:10px;
+	font-size:12px;
+	}
+.content_info_2 ul li{
+	width:33.3%;
+	float:left;
+	padding-bottom:10px;
+	font-size:12px;
+	height:30px;
+	}	
+.content_info ul li a, .content_info_2 ul li a{
+	color:#c10d11;
+	}	
+	.main_title {
+	font-size:20px;
+	color:#3c3c3c;
+	margin:30px 0;
+	display:table;
+	}	
+.main_title_icon {
+	display:table-cell;
+    width:63px;
+	height:63px; 
+	}
+.main_title_text {
+	display:table-cell;
+	vertical-align:middle;
+	padding-left:20px;
+	}	
+.main_info_lt {
+	display:inline;
+	font-size:14px;
+	}
+.main_info_rg {
+	display:inline;
+	color:#929292;
+	}		
+.separator {
+	height:1px;
+	width:100%;
+	background-color:#a6a6a6;
+	margin:20px 0;
+	}	
+.table_info {
+	 border: solid #D9D9D9;
+	 border-width: 0px 1px 1px 0px;
+	 font-size: 12px;
+	}
+.table_info td {
+	border: solid #D9D9D9;
+	border-width: 1px 0 0 1px;
+	padding:8px 5px;
+	}	
+.table_info thead {
+	 border:1px solid #000000;
+	 font-size: 13px;
+	 background-color:#D9D9D9;
+	 color:#3c3c3c;
+	}		
+.table_info	a {
+	color: #c80e12;
+	font-size: 12px;	
+	}		
+.text_impresion	{
+	font-size:14px;
+	text-align:center;
+	padding: 20px 0;
+	}
+.overflow		{
+	overflow:hidden;
+	}
 	

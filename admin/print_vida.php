@@ -401,6 +401,7 @@ $objPHPExcel->getActiveSheet()->getStyle('AB26')->applyFromArray($styleArray);
 $objPHPExcel->getActiveSheet()->getStyle('AB28:AB29')->applyFromArray($styleArray);
 $objPHPExcel->getActiveSheet()->getStyle('Z41:AG41')->applyFromArray($styleArray);
 $objPHPExcel->getActiveSheet()->getStyle('AD42:AG42')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('B24')->applyFromArray($styleArray);
 
 $objPHPExcel->getActiveSheet()->getStyle('B5:C6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 $objPHPExcel->getActiveSheet()->getStyle('D5:E6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
@@ -534,8 +535,8 @@ $activeSheet->setCellValue('B3', 'Le recordamos la importancia de declarar el ve
             ->setCellValue('AC17', 'Parentesco')
             ->setCellValue('B22', 'Marque X')
             ->setCellValue('B23', 'Yo, el abajo firmante, declaro que:')
-            ->setCellValue('B24', '(  ) En la fecha me encuentro en buen estado de salud y mi habilidad no se encuentra de alguna manera reducida.')
-            ->setCellValue('B25', '(  ) Padezco o he padecido las lesiones o enfermedades que a continuación marco con x:')
+            ->setCellValue('C24', 'En la fecha me encuentro en buen estado de salud y mi habilidad no se encuentra de alguna manera reducida.')
+            ->setCellValue('B25', 'Padezco o he padecido las lesiones o enfermedades que a continuación marco con x:')
             ->setCellValue('D26', 'Mentales - psiquiátricas')
             ->setCellValue('K26', 'Gastrointestinales')
             ->setCellValue('O26', 'Drogadicción')
@@ -686,6 +687,11 @@ for ($i=0; $i < count($beneficiarios); $i++) {
       $benInicial++;
 }
 
+if(count($novedad)<=0)
+{
+      $activeSheet->setCellValue('B24', 'X');
+}
+
 for ($i=0; $i < count($novedad) ; $i++) { 
       switch ($novedad[$i]['id_nov']) {
             case '1':
@@ -750,7 +756,7 @@ for ($i=0; $i < count($novedad) ; $i++) {
                   break;
             
             default:
-                  # code...
+                  
                   break;
       }
 }
