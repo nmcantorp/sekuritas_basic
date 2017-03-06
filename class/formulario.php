@@ -52,11 +52,36 @@ class ClassFormulario extends ClassConexion
 						'seisveintealc'=>'6 a 20 Alc',
 					];
 
-		$query = "	INSERT INTO formulario (solic_increm_form, pol_form, id_emp, fech_creacion, fech_modificacion, ocupacion)
+		if( isset($formulario['number_form']) && $formulario['number_form'] != '' && !is_null($formulario['number_form']) )
+		{
+			$query = "UPDATE formulario SET solic_increm_form = '".$formulario['incremento_solic']."', pol_form = 1, id_emp = ".$formulario['nit'].", fech_creacion = NOW(), fech_modificacion = NOW(), ocupacion = '".$formulario['ocupacion']."'
+					WHERE id_form = '".$formulario['number_form']."'";
+
+			$consulta = $db->consulta($query);
+			$id_formulario = $formulario['number_form'];
+
+			$query = "DELETE FROM novedad_x_formulario WHERE formulario_id_form = '".$id_formulario."'";
+			$db->consulta($query);
+
+			$query = "DELETE FROM enfermedad_x_persona WHERE id_form = '".$id_formulario."'";
+			$db->consulta($query);
+
+			$query = "DELETE FROM tratamiento_enfermedad WHERE id_form = '".$id_formulario."'";
+			$db->consulta($query);
+
+			/*$query = "DELETE FROM form_pers WHERE id_form = '".$id_formulario."' AND id_tip_usua = 2";
+			$db->consulta($query);*/
+
+
+		}else
+		{
+			$query = "	INSERT INTO formulario (solic_increm_form, pol_form, id_emp, fech_creacion, fech_modificacion, ocupacion)
 					VALUES ('".$formulario['incremento_solic']."', 1, ".$formulario['nit'].", NOW(), NOW(), '".$formulario['ocupacion']."')";
 
-		$consulta = $db->consulta($query);
-		$id_formulario = $db->insert_id();
+			$consulta = $db->consulta($query);
+			$id_formulario = $db->insert_id();
+		}
+		
 
 		$persona = $objPersona->findPersona($formulario['doc_usuario']);
 
@@ -67,13 +92,37 @@ class ClassFormulario extends ClassConexion
 
 			$consulta = $db->consulta($query);
 			$id_persona = $db->insert_id();
+
+			$query = " INSERT INTO form_pers(id_form, id_per, id_tip_usua) VALUES ($id_formulario, $id_persona, 1)";
+			$consulta = $db->consulta($query);
+			$id_form_persona = $db->insert_id();
+
+			$query = " INSERT INTO deporte(desc_dep, id_form_pers) VALUES ('".$formulario['deporte']."', $id_form_persona)";
+			$consulta = $db->consulta($query);
+
 		}else{
+			$query = "UPDATE persona SET 
+			 			prim_nom_per = '".$formulario['nombre']."', 
+			 			prim_ape_per = '".$formulario['primer_apellido']."', 
+			 			seg_ape_per = '".$formulario['segundo_apellido']."', 
+			 			dia_nac_per = '".$formulario['dia']."', 
+			 			mes_nac_per = '".$formulario['mes']."', 
+			 			anio_nac_per = '".$formulario['anio']."', 
+			 			dir_per ='".$formulario['direccion']."', 
+			 			gen_per = '".$formulario['gen']."', 
+			 			est_per = '".$formulario['estatura']."', 
+			 			pes_per = '".$formulario['peso']."', 
+			 			fech_creacion = NOW(), 
+			 			fech_modificacion = NOW(), 
+			 			id_ciu_nac = '".$formulario['ciudad']."', 
+			 			id_tip_doc = '".$formulario['doc']."', 
+			 			tel_per = '".$formulario['telefono']."'
+			 			WHERE doc_per =  '".$formulario['doc_usuario']."'";
+
+			$consulta = $db->consulta($query);
+
 			$id_persona = $persona[0]['id_per'];
 		}
-
-		$query = " INSERT INTO form_pers(id_form, id_per, id_tip_usua) VALUES ($id_formulario, $id_persona, 1)";
-		$consulta = $db->consulta($query);
-		$id_form_persona = $db->insert_id();
 
 		for ($i=0; $i < count($formulario['nov']); $i++) { 
 			$nombreNov = $arrayNov[$formulario['nov'][$i]];
@@ -82,9 +131,6 @@ class ClassFormulario extends ClassConexion
 			$consulta = $db->consulta($query);
 		}
 		
-		$query = " INSERT INTO deporte(desc_dep, id_form_pers) VALUES ('".$formulario['deporte']."', $id_form_persona)";
-		$consulta = $db->consulta($query);
-
 		/**
 		 * Beneficiarios
 		 */
@@ -107,13 +153,16 @@ class ClassFormulario extends ClassConexion
 
 					$consulta = $db->consulta($query);
 					$id_persona_ben = $db->insert_id();
+
+					$query = " INSERT INTO form_pers(id_form, id_per, id_tip_usua, parentezco, porcentaje) VALUES ($id_formulario, $id_persona_ben, 2, '".$formulario['parentezco'.$i]."', '".$formulario['porcentaje'.$i]."')";
+					$consulta = $db->consulta($query);
+					$id_form_persona = $db->insert_id();
+				
 				}else{
 					$id_persona_ben = $persona[0]['id_per'];
 				}
 
-				$query = " INSERT INTO form_pers(id_form, id_per, id_tip_usua, parentezco, porcentaje) VALUES ($id_formulario, $id_persona_ben, 2, '".$formulario['parentezco'.$i]."', '".$formulario['porcentaje'.$i]."')";
-				$consulta = $db->consulta($query);
-				$id_form_persona = $db->insert_id();
+				
 			}
 		}
 

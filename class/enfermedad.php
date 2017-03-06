@@ -61,7 +61,7 @@ class ClassEnfermedad extends ClassConexion
 		if($db->num_rows($consulta)>0){ $conteo=0;
 		  while($resultados = $db->fetch_array($consulta)){
 		  	$this->resultado[$conteo]['id_enf']=$resultados['id_enf'];
-		  	$this->resultado[$conteo]['nom_enf']=$resultados['nom_enf'];
+		  	$this->resultado[$conteo]['nom_enf']=utf8_encode($resultados['nom_enf']);
 		  	$conteo++;
 		 }
 		   return $this->resultado;
@@ -87,12 +87,12 @@ class ClassEnfermedad extends ClassConexion
 		
 		if($db->num_rows($consulta)>0){ $conteo=0;
 		  while($resultados = $db->fetch_array($consulta)){
-		  	$this->resultado[$conteo]['enfermedad']=$resultados['enfermedad'];
-		  	$this->resultado[$conteo]['anio_diag']=$resultados['anio_diag'];
-		  	$this->resultado[$conteo]['tratamiento']=$resultados['tratamiento'];
+		  	$resultado[$conteo]['enfermedad']=$resultados['enfermedad'];
+		  	$resultado[$conteo]['anio_diag']=$resultados['anio_diag'];
+		  	$resultado[$conteo]['tratamiento']=$resultados['tratamiento'];
 		  	$conteo++;
 		 }
-		   return $this->resultado;
+		   return $resultado;
 		}
 	}
 

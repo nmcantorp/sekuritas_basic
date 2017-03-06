@@ -4,6 +4,8 @@ session_start();
 * Clase para la funcionalidad del logueo de los usuarios 
 */
 include_once('conexion.php');
+include_once('enfermedad.php');
+include_once('novedad.php');
 
 class ClassPersona extends ClassConexion
 {	
@@ -17,11 +19,24 @@ class ClassPersona extends ClassConexion
 	function findPersona($id)
 	{
 		$db = new ClassConexion();
+		$objEnfermedad = new ClassEnfermedad();
+		$objNovedad = new ClassNovedad();
 		$db->MySQL();
 
 		$query = "	SELECT
-					*
-					FROM persona
+					persona.*,
+					empresa.id_emp,
+					empresa.nom_emp,
+					formulario.id_form,
+					formulario.ocupacion,
+					formulario.solic_increm_form,
+					deporte.desc_dep
+					FROM
+					persona
+					INNER JOIN form_pers ON form_pers.id_per = persona.id_per
+					INNER JOIN formulario ON form_pers.id_form = formulario.id_form
+					INNER JOIN empresa ON formulario.id_emp = empresa.id_emp
+					LEFT JOIN deporte ON deporte.id_form_pers = form_pers.id_form_pers
 					WHERE
 					persona.doc_per = '$id'
 					";
@@ -31,6 +46,7 @@ class ClassPersona extends ClassConexion
 		if($db->num_rows($consulta)>0){ $conteo=0;
 		  while($resultados = $db->fetch_array($consulta)){ 
 		  	$this->resultado[$conteo]['id_per']=$resultados['id_per'];
+		  	$this->resultado[$conteo]['id_form']=$resultados['id_form'];
 		  	$this->resultado[$conteo]['doc_per']=$resultados['doc_per'];
 		  	$this->resultado[$conteo]['prim_nom_per']=$resultados['prim_nom_per'];
 		  	$this->resultado[$conteo]['seg_nom_per']=$resultados['seg_nom_per'];
@@ -49,6 +65,15 @@ class ClassPersona extends ClassConexion
 		  	$this->resultado[$conteo]['fech_modificacion']=$resultados['fech_modificacion'];
 		  	$this->resultado[$conteo]['id_ciu_nac']=$resultados['id_ciu_nac'];
 		  	$this->resultado[$conteo]['id_tip_doc']=$resultados['id_tip_doc'];
+		  	$this->resultado[$conteo]['id_emp']=$resultados['id_emp'];
+		  	$this->resultado[$conteo]['nom_emp']=$resultados['nom_emp'];
+		  	$this->resultado[$conteo]['ocupacion']=$resultados['ocupacion'];
+		  	$this->resultado[$conteo]['solic_increm_form']=$resultados['solic_increm_form'];
+		  	$this->resultado[$conteo]['desc_dep']=$resultados['desc_dep'];
+		  	$this->resultado[$conteo]['beneficiarios'] = $this->findBeneficiariesByForm($resultados['id_form']);
+		  	$this->resultado[$conteo]['enfermedades'] = $objEnfermedad->findNovedadByForm($resultados['id_form']);
+		  	$this->resultado[$conteo]['novedades'] = $objNovedad->findByIdForm($resultados['id_form']);
+		  	$this->resultado[$conteo]['tratamiento'] = $objEnfermedad->findTratamientoByForm($resultados['id_form']);		  	
 		  	$conteo++;
 		 }
 		   return $this->resultado;
@@ -81,18 +106,18 @@ class ClassPersona extends ClassConexion
 		$consulta = $db->consulta($query);
 		if($db->num_rows($consulta)>0){ $conteo=0;
 		  while($resultados = $db->fetch_array($consulta)){ 
-		  	$this->resultado[$conteo]['id_per']=$resultados['id_per'];
-		  	$this->resultado[$conteo]['doc_per']=$resultados['doc_per'];
-		  	$this->resultado[$conteo]['prim_nom_per']=$resultados['prim_nom_per'];
-		  	$this->resultado[$conteo]['seg_nom_per']=$resultados['seg_nom_per'];
-		  	$this->resultado[$conteo]['prim_ape_per']=$resultados['prim_ape_per'];
-		  	$this->resultado[$conteo]['seg_ape_per']=$resultados['seg_ape_per'];
-		  	$this->resultado[$conteo]['parentezco']=$resultados['parentezco'];
-		  	$this->resultado[$conteo]['porcentaje']=$resultados['porcentaje'];
+		  	$resultado[$conteo]['id_per']=$resultados['id_per'];
+		  	$resultado[$conteo]['doc_per']=$resultados['doc_per'];
+		  	$resultado[$conteo]['prim_nom_per']=$resultados['prim_nom_per'];
+		  	$resultado[$conteo]['seg_nom_per']=$resultados['seg_nom_per'];
+		  	$resultado[$conteo]['prim_ape_per']=$resultados['prim_ape_per'];
+		  	$resultado[$conteo]['seg_ape_per']=$resultados['seg_ape_per'];
+		  	$resultado[$conteo]['parentezco']=$resultados['parentezco'];
+		  	$resultado[$conteo]['porcentaje']=$resultados['porcentaje'];
 		  	
 		  	$conteo++;
 		 }
-		   return $this->resultado;
+		   return $resultado;
 		}
 	}
 

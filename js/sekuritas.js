@@ -136,7 +136,6 @@ var eventRadio = (function () {
     }
 
     var careValidation = function () {
-        console.log( $('#careGood'));
         $('#careGood').on('click', function () {
             var allChecks = $('#table_enfer input[type="checkbox"]');
             if($(this).is(':checked'))
@@ -278,11 +277,12 @@ var formulario = (function(){
                         ac:'findUser',
                         uid: user
                     },
-                    success: function( data ) {
+                    success: function( data ) {  
                         if(data != null)
                         {
-                            var dataFin = data[0];
+                            var dataFin = data[0];console.log(dataFin);
                             $('input[name="nombre"]').val(dataFin.prim_nom_per).trigger('change');
+                            $('input[name="number_form"]').val(dataFin.id_form).trigger('change');
                             $('input[name="primer_apellido"]').val(dataFin.prim_ape_per).trigger('change');
                             $('input[name="segundo_apellido"]').val(dataFin.seg_ape_per).trigger('change');
                             $('input[name="segundo_apellido"]').val(dataFin.seg_ape_per).trigger('change');
@@ -296,7 +296,39 @@ var formulario = (function(){
                             $('select[name="ciudad"]').val(dataFin.id_ciu_nac).trigger('change');
                             $('input[name="estatura"]').val(dataFin.est_per).trigger('change');
                             $('input[name="peso"]').val(dataFin.pes_per).trigger('change');
+                            $('input[name="ocupacion"]').val(dataFin.ocupacion).trigger('change');
+                            $('input[name="deporte"]').val(dataFin.desc_dep).trigger('change');
+                            $('input[name="cantidad_asignada"]').val(dataFin.solic_increm_form).trigger('change');
+                            $('input[name="incremento_solic"]').val(dataFin.solic_increm_form).trigger('change');
+                            $('input[name="centro_costos"]').val(11001).trigger('change');
+                            $('select[name="nit"]').val(dataFin.id_emp).trigger('change');
+
+                            for (var i=0; i<dataFin.novedades.length ; i++)
+                            {
+                                $('input[type="checkbox"]#box'+dataFin.novedades[i].id_nov).attr('checked', true);
+                            }
+
+                            for (var i=0; i<dataFin.enfermedades.length ; i++)
+                            {
+                                $('input[type="checkbox"][class="enf_'+dataFin.enfermedades[i].id_enf+'"]').attr('checked', true);
+                            }
+                            for (var i=0; i<dataFin.beneficiarios.length ; i++)
+                            {
+                                $('input[type="text"][name="primer_ap'+(i+1)+'"]').val(dataFin.beneficiarios[i].prim_ape_per);
+                                $('input[type="text"][name="segundo_ap'+(i+1)+'"]').val(dataFin.beneficiarios[i].seg_ape_per);
+                                $('input[type="text"][name="nombre'+(i+1)+'"]').val(dataFin.beneficiarios[i].prim_nom_per);
+                                $('input[type="text"][name="documento_ap'+(i+1)+'"]').val(dataFin.beneficiarios[i].doc_per);
+                                $('input[type="text"][name="porcentaje'+(i+1)+'"]').val(dataFin.beneficiarios[i].porcentaje);
+                                $('input[type="text"][name="parentezco'+(i+1)+'"]').val(dataFin.beneficiarios[i].parentezco);
+                            }
+                            for (var i=0; i<dataFin.tratamiento.length ; i++)
+                            {
+                                $('input[type="text"][name="enfermedad'+(i+1)+'"]').val(dataFin.tratamiento[i].enfermedad);
+                                $('input[type="text"][name="anio_diag'+(i+1)+'"]').val(dataFin.tratamiento[i].anio_diag);
+                                $('input[type="text"][name="tratamiento'+(i+1)+'"]').val(dataFin.tratamiento[i].tratamiento);                                
+                            }
                         }else{
+                            $('input[name="number_form"]').val(null);
                             $('input[name="nombre"]').val(null);
                             $('input[name="primer_apellido"]').val(null);
                             $('input[name="segundo_apellido"]').val(null);
@@ -310,7 +342,27 @@ var formulario = (function(){
                             $('select[name="ciudad"]').val('');
                             $('input[name="estatura"]').val(null);
                             $('input[name="peso"]').val(null);
+                            $('input[name="ocupacion"]').val(null);
+                            $('input[name="deporte"]').val(null);
+                            $('input[name="cantidad_asignada"]').val(null);
+                            $('select[name="nit"]').val('');
+                            $('input[type="text"][name^="enfermedad"]').val(null);
+                            $('input[type="text"][name^="anio_diag"]').val(null);
+                            $('input[type="text"][name^="tratamiento"]').val(null);
+                            $('input[type="text"][name^="primer_ap"]').val(null);
+                            $('input[type="text"][name^="segundo_ap"]').val(null);
+                            $('input[type="text"][name^="nombre"]').val(null);
+                            $('input[type="text"][name^="documento_ap"]').val(null);
+                            $('input[type="text"][name^="porcentaje"]').val(null);
+                            $('input[type="text"][name^="parentezco"]').val(null);
+                            $('input[name="centro_costos"]').val(null);
+                            $('input[type="checkbox"][class^="enf_"]').prop('checked', false);
+                            $('input[type="checkbox"][id^="box"]').prop('checked', false);
+                            $('input[name="incremento_solic"]').val(null);
                         }
+                    },
+                    error: function (x,y,z) {
+                        console.log(x,y,z);
                     }
                 });
             }

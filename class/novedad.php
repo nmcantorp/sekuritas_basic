@@ -63,8 +63,8 @@ class ClassNovedad extends ClassConexion
 			if($db->num_rows($consulta)>0){ $conteo=0;
 			  while($resultados = $db->fetch_array($consulta)){ 
 			  	$this->resultado[$conteo]['id_nov']=$resultados['id_nov'];
-			  	$this->resultado[$conteo]['nom_nov']=$resultados['nom_nov'];
-			  	$this->resultado[$conteo]['desc_nov']=$resultados['desc_nov'];
+			  	$this->resultado[$conteo]['nom_nov']=utf8_encode($resultados['nom_nov']);
+			  	$this->resultado[$conteo]['desc_nov']=utf8_encode($resultados['desc_nov']);
 			  	$conteo++;
 			 }
 		   	return $this->resultado;
