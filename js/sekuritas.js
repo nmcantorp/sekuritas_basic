@@ -251,6 +251,17 @@ var formulario = (function(){
                 resultadoValidacion.push(inputRequired[i]);
             }
         }
+        moment().format('YYYY-MM-DD');
+        if( !moment($('nacimiento_ben1').val()).isValid() ) { resultadoValidacion.push('nacimiento_ben1') }
+        if( !moment($('nacimiento_ben2').val()).isValid()) {resultadoValidacion.push('nacimiento_ben2')}
+        if( !moment($('nacimiento_ben3').val()).isValid()) {resultadoValidacion.push('nacimiento_ben3')}
+        if( !moment($('nacimiento_ben4').val()).isValid()) {resultadoValidacion.push('nacimiento_ben4')}
+        if( !moment($('nacimiento_ben_exc1').val()).isValid() ) {resultadoValidacion.push('nacimiento_ben_exc1')}
+        if( !moment($('nacimiento_ben_exc2').val()).isValid() ) {resultadoValidacion.push('nacimiento_ben_exc2')}
+        if( !moment($('nacimiento_ben_exc3').val()).isValid() ) {resultadoValidacion.push('nacimiento_ben_exc3')}
+        if( !moment($('nacimiento_ben_exc4').val()).isValid() ) {resultadoValidacion.push('nacimiento_ben_exc4')}
+        if( !moment($('nacimiento_ben_exc5').val()).isValid() ) {resultadoValidacion.push('nacimiento_ben_exc5')}
+        if( !moment($('nacimiento_ben_exc6').val()).isValid() ) {resultadoValidacion.push('nacimiento_ben_exc6')}
         if(resultadoValidacion.length>0)
         {
             requiredInput(resultadoValidacion);

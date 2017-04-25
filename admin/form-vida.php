@@ -423,213 +423,65 @@ $fech_actual = Date('d-m-Y');
 
 
                             <div class="main_table">
-
-
-
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info">
-
-
-
                                       <tbody>
-
-
-
                                     <tr>
-
-
-
-                                          <td colspan="6" class="bg-gray text-center f15"><strong>CUADRO DE BENEFICIARIOS</strong></td>
-
-
-
+                                          <td colspan="7" class="bg-gray text-center f15"><strong>CUADRO DE BENEFICIARIOS</strong></td>
                                         </tr>
-
-
-
                                     <tr>
-
-
-
                                           <td class="text-center"><strong>PRIMER APELLIDO</strong></td>
-
-
-
                                           <td class="text-center"><strong>SEGUNDO APELLIDO</strong></td>
-
-
-
                                           <td class="text-center"><strong>NOMBRES</strong></td>
-
-
-
                                           <td class="text-center"><strong>No. DOCUMENTO IdDENTIDAD</strong></td>
-
-
-
                                           <td class="text-center"><strong>% PARTICIPACIÓN</strong></td>
-
-
-
+                                          <td class="text-center"><strong>FECHA DE NACIMIENTO <br>(AAAA-MM-DD)</strong></td>
                                           <td class="text-center"><strong>PARENTESCO</strong></td>
-
-
-
                                         </tr>
-
-
-
                                     <tr>
-
-
-
                                           <td><input type="text"  name="primer_ap1"/></td>
-
-
-
                                           <td><input type="text"  name="segundo_ap1"/></td>
-
-
-
                                           <td><input type="text"  name="nombre1"/></td>
-
-
-
                                           <td><input type="text"  name="documento_ap1"/></td>
-
-
-
                                           <td><input type="text"  name="porcentaje1"/></td>
-
-
-
+                                          <td><input type="text"  name="nacimiento_ben1"/></td>
                                           <td><input type="text"  name="parentezco1"/></td>
-
-
-
                                         </tr>
-
-
-
                                     <tr>
-
-
-
                                           <td><input type="text"  name="primer_ap2"/></td>
-
-
-
                                           <td><input type="text"  name="segundo_ap2"/></td>
-
-
-
                                           <td><input type="text"  name="nombre2"/></td>
-
-
-
                                           <td><input type="text"  name="documento_ap2"/></td>
-
-
-
                                           <td><input type="text"  name="porcentaje2"/></td>
-
-
-
+                                          <td><input type="text"  name="nacimiento_ben2"/></td>
                                           <td><input type="text"  name="parentezco2"/></td>
-
-
-
                                         </tr>
-
-
-
                                     <tr>
-
-
-
                                           <td><input type="text"  name="primer_ap3"/></td>
-
-
-
                                           <td><input type="text"  name="segundo_ap3"/></td>
-
-
-
                                           <td><input type="text"  name="nombre3"/></td>
-
-
-
                                           <td><input type="text"  name="documento_ap3"/></td>
-
-
-
                                           <td><input type="text"  name="porcentaje3"/></td>
-
-
-
+                                          <td><input type="text"  name="nacimiento_ben3"/></td>
                                           <td><input type="text"  name="parentezco3"/></td>
-
-
-
                                         </tr>
-
-
-
                                     <tr>
-
-
-
                                           <td><input type="text"  name="primer_ap4"/></td>
-
-
-
                                           <td><input type="text"  name="segundo_ap4"/></td>
-
-
-
                                           <td><input type="text"  name="nombre4"/></td>
-
-
-
                                           <td><input type="text"  name="documento_ap4"/></td>
-
-
-
                                           <td><input type="text"  name="porcentaje4"/></td>
-
-
-
+                                          <td><input type="text"  name="nacimiento_ben4"/></td>
                                           <td><input type="text"  name="parentezco4"/></td>
-
-
-
                                         </tr>
-
-
-
                                   </tbody>
-
-
-
-                                    </table>
-
-
-
+                                 </table>
                             </div>
-
-
-
                             <div>
 
 
 
                                 <div class="f14 text-gray marginbottom10" style="font-weight:normal;"> Marque X<br>
-
-
-
                                     Yo, el abajo firmante, declaro que:<br>
-
-
-
                                     <div class="content_checkboxes">
 
                                     <input type="checkbox" name="careGood" id="careGood"/><label for="careGood" ><span>En la fecha me encuentro en buen estado de salud y mi habilidad no se encuentra de alguna manera reducida.</span></label>
@@ -1105,6 +957,72 @@ $fech_actual = Date('d-m-Y');
 
 
                                 </div>
+                           <hr>
+                                <div class="main_table">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info">
+                                      <tbody>
+                                    <tr>
+                                          <td colspan="6" class="bg-gray text-center f15"><strong>CUADRO DE BENEFICIARIOS EXCEQUIAS</strong></td>
+                                        </tr>
+                                    <tr>
+                                          <td class="text-center"><strong>PRIMER APELLIDO</strong></td>
+                                          <td class="text-center"><strong>SEGUNDO APELLIDO</strong></td>
+                                          <td class="text-center"><strong>NOMBRES</strong></td>
+                                          <td class="text-center"><strong>No. DOCUMENTO IdDENTIDAD</strong></td>
+                                          <td class="text-center"><strong>FECHA NACIMIENTO <br>(AAAA-MM-DD)</strong></td>
+                                          <td class="text-center"><strong>PARENTESCO</strong></td>
+                                        </tr>
+                                    <tr>
+                                          <td><input type="text"  name="primer_ap_exc1"/></td>
+                                          <td><input type="text"  name="segundo_ap_exc1"/></td>
+                                          <td><input type="text"  name="nombre_exc1"/></td>
+                                          <td><input type="text"  name="documento_ap_exc1"/></td>
+                                          <td><input type="text"  name="nacimiento_exc1"/></td>
+                                          <td><input type="text"  name="parentezco_exc1"/></td>
+                                        </tr>
+                                    <tr>
+                                          <td><input type="text"  name="primer_ap_exc2"/></td>
+                                          <td><input type="text"  name="segundo_ap_exc2"/></td>
+                                          <td><input type="text"  name="nombre_exc2"/></td>
+                                          <td><input type="text"  name="documento_ap_exc2"/></td>
+                                          <td><input type="text"  name="nacimiento_exc2"/></td>
+                                          <td><input type="text"  name="parentezco_exc2"/></td>
+                                        </tr>
+                                    <tr>
+                                          <td><input type="text"  name="primer_ap_exc3"/></td>
+                                          <td><input type="text"  name="segundo_ap_exc3"/></td>
+                                          <td><input type="text"  name="nombre_exc3"/></td>
+                                          <td><input type="text"  name="documento_ap_exc3"/></td>
+                                          <td><input type="text"  name="nacimiento_exc3"/></td>
+                                          <td><input type="text"  name="parentezco_exc3"/></td>
+                                        </tr>
+                                       <tr>
+                                          <td><input type="text"  name="primer_ap_exc4"/></td>
+                                          <td><input type="text"  name="segundo_ap_exc4"/></td>
+                                          <td><input type="text"  name="nombre_exc4"/></td>
+                                          <td><input type="text"  name="documento_ap_exc4"/></td>
+                                          <td><input type="text"  name="nacimiento_exc4"/></td>
+                                          <td><input type="text"  name="parentezco_exc4"/></td>
+                                        </tr>
+                                        <tr>
+                                          <td><input type="text"  name="primer_ap_exc5"/></td>
+                                          <td><input type="text"  name="segundo_ap_exc5"/></td>
+                                          <td><input type="text"  name="nombre_exc5"/></td>
+                                          <td><input type="text"  name="documento_ap_exc5"/></td>
+                                          <td><input type="text"  name="nacimiento_exc5"/></td>
+                                          <td><input type="text"  name="parentezco_exc5"/></td>
+                                        </tr>
+                                        <tr>
+                                          <td><input type="text"  name="primer_ap_exc6"/></td>
+                                          <td><input type="text"  name="segundo_ap_exc6"/></td>
+                                          <td><input type="text"  name="nombre_exc6"/></td>
+                                          <td><input type="text"  name="documento_ap_exc6"/></td>
+                                          <td><input type="text"  name="nacimiento_exc6"/></td>
+                                          <td><input type="text"  name="parentezco_exc6"/></td>
+                                        </tr>
+                                  </tbody>
+                                 </table>
+                              </div>
 
 
 
@@ -1430,6 +1348,7 @@ $fech_actual = Date('d-m-Y');
 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+<script src="../js/moment-with-locales.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="../js/sekuritas.js" type="text/javascript" charset="utf-8"></script>
 
 

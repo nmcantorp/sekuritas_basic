@@ -141,20 +141,60 @@ class ClassFormulario extends ClassConexion
 				$formulario['nombre'.$i] != '' &&
 				$formulario['documento_ap'.$i] != '' && 
 				$formulario['porcentaje'.$i] != '' &&
+				$formulario['nacimiento_ben'.$i] != '' &&
 				$formulario['parentezco'.$i] != '' 
 				)
 			{
 				$persona = $objPersona->findPersona($formulario['documento_ap'.$i]);
 
+				$nacimiento = explode('-',$formulario['nacimiento_ben'.$i]);
+
 				if(count($persona)<=0)
 				{
-					$query = " INSERT INTO persona(doc_per, prim_nom_per, prim_ape_per, seg_ape_per, fech_creacion, fech_modificacion)
-								VALUES ('".$formulario['documento_ap'.$i]."', '".$formulario['nombre'.$i]."','".$formulario['primer_ap'.$i]."','".$formulario['segundo_ap'.$i]."',NOW(),NOW())";
+					$query = " INSERT INTO persona(doc_per, prim_nom_per, prim_ape_per, seg_ape_per, fech_creacion, fech_modificacion, dia_nac_per, mes_nac_per, anio_nac_per)
+								VALUES ('".$formulario['documento_ap'.$i]."', '".$formulario['nombre'.$i]."','".$formulario['primer_ap'.$i]."','".$formulario['segundo_ap'.$i]."',NOW(),NOW(),'".$nacimiento[2]."','".$nacimiento[1]."','".$nacimiento[3]."')";
 
 					$consulta = $db->consulta($query);
 					$id_persona_ben = $db->insert_id();
 
 					$query = " INSERT INTO form_pers(id_form, id_per, id_tip_usua, parentezco, porcentaje) VALUES ($id_formulario, $id_persona_ben, 2, '".$formulario['parentezco'.$i]."', '".$formulario['porcentaje'.$i]."')";
+					$consulta = $db->consulta($query);
+					$id_form_persona = $db->insert_id();
+				
+				}else{
+					$id_persona_ben = $persona[0]['id_per'];
+				}
+
+				
+			}
+		}
+
+		/**
+		 * Beneficiarios excequias
+		 */
+		
+		for ($i=1; $i <= 6; $i++) { 
+			if( $formulario['primer_ap_exc'.$i] != '' &&
+				$formulario['segundo_ap_exc'.$i] != '' &&
+				$formulario['nombre_exc'.$i] != '' &&
+				$formulario['documento_ap_exc'.$i] != '' && 
+				$formulario['nacimiento_ben_exc'.$i] != '' &&
+				$formulario['parentezco_exc'.$i] != '' 
+				)
+			{
+				$persona = $objPersona->findPersona($formulario['documento_ap_exc'.$i]);
+
+				$nacimiento = explode('-',$formulario['nacimiento_ben'.$i]);
+
+				if(count($persona)<=0)
+				{
+					$query = " INSERT INTO persona(doc_per, prim_nom_per, prim_ape_per, seg_ape_per, fech_creacion, fech_modificacion, dia_nac_per, mes_nac_per, anio_nac_per)
+								VALUES ('".$formulario['documento_ap_exc'.$i]."', '".$formulario['nombre_exc'.$i]."','".$formulario['primer_ap_exc'.$i]."','".$formulario['segundo_ap_exc'.$i]."',NOW(),NOW(),'".$nacimiento[2]."','".$nacimiento[1]."','".$nacimiento[3]."')";
+
+					$consulta = $db->consulta($query);
+					$id_persona_ben = $db->insert_id();
+
+					$query = " INSERT INTO form_pers(id_form, id_per, id_tip_usua, parentezco, porcentaje) VALUES ($id_formulario, $id_persona_ben, 3, '".$formulario['parentezco_exc'.$i]."', '0')";
 					$consulta = $db->consulta($query);
 					$id_form_persona = $db->insert_id();
 				
