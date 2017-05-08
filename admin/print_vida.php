@@ -97,11 +97,16 @@ $activeSheet->getColumnDimension('AF')->setWidth(4);
 $activeSheet->getColumnDimension('AG')->setWidth(4);
 $activeSheet->getColumnDimension('AH')->setWidth(2);
 $activeSheet->getColumnDimension('AI')->setWidth(3);
-$activeSheet->getRowDimension('42')->setRowHeight(95);
-$activeSheet->getRowDimension('47')->setRowHeight(25);
+$activeSheet->getRowDimension('48')->setRowHeight(95);
+$activeSheet->getRowDimension('50')->setRowHeight(32);
+$activeSheet->getRowDimension('51')->setRowHeight(32);
+$activeSheet->getRowDimension('52')->setRowHeight(32);
+//$activeSheet->getRowDimension('47')->setRowHeight(25);
 $activeSheet->getRowDimension('38')->setRowHeight(20);
 $activeSheet->getRowDimension('39')->setRowHeight(20);
-$activeSheet->getRowDimension('40')->setRowHeight(20);
+//$activeSheet->getRowDimension('40')->setRowHeight(20);
+$activeSheet->getRowDimension('45')->setRowHeight(25.5);
+$activeSheet->getRowDimension('46')->setRowHeight(25.5);
 
 /*Combinando Celdas*/
 $activeSheet->mergeCells('B4:I4');
@@ -142,52 +147,112 @@ $activeSheet->mergeCells('Z15:AH15');
 $activeSheet->mergeCells('B16:AH16');
 $activeSheet->mergeCells('B17:F17');
 $activeSheet->mergeCells('G17:L17');
-$activeSheet->mergeCells('M17:Q17');
+$activeSheet->mergeCells('M17:O17');
+$activeSheet->mergeCells('P17:Q17');
 $activeSheet->mergeCells('R17:X17');
 $activeSheet->mergeCells('Y17:AB17');
 $activeSheet->mergeCells('AC17:AH17');
 $activeSheet->mergeCells('B18:F18');
 $activeSheet->mergeCells('G18:L18');
-$activeSheet->mergeCells('M18:Q18');
+$activeSheet->mergeCells('M18:O18');
+$activeSheet->mergeCells('P18:Q18');
 $activeSheet->mergeCells('R18:X18');
 $activeSheet->mergeCells('Y18:AB18');
 $activeSheet->mergeCells('AC18:AH18');
 $activeSheet->mergeCells('B19:F19');
 $activeSheet->mergeCells('G19:L19');
-$activeSheet->mergeCells('M19:Q19');
+$activeSheet->mergeCells('M19:O19');
+$activeSheet->mergeCells('P19:Q19');
 $activeSheet->mergeCells('R19:X19');
 $activeSheet->mergeCells('Y19:AB19');
 $activeSheet->mergeCells('AC19:AH19');
 $activeSheet->mergeCells('B20:F20');
 $activeSheet->mergeCells('G20:L20');
-$activeSheet->mergeCells('M20:Q20');
+$activeSheet->mergeCells('M20:O20');
+$activeSheet->mergeCells('P20:Q20');
 $activeSheet->mergeCells('R20:X20');
 $activeSheet->mergeCells('Y20:AB20');
 $activeSheet->mergeCells('AC20:AH20');
 $activeSheet->mergeCells('B21:F21');
 $activeSheet->mergeCells('G21:L21');
-$activeSheet->mergeCells('M21:Q21');
+$activeSheet->mergeCells('M21:O21');
+$activeSheet->mergeCells('P21:Q21');
 $activeSheet->mergeCells('R21:X21');
 $activeSheet->mergeCells('Y21:AB21');
 $activeSheet->mergeCells('AC21:AH21');
-$activeSheet->mergeCells('B38:AH40');
-$activeSheet->mergeCells('B43:X45');
-$activeSheet->mergeCells('Z41:AG41');
-$activeSheet->mergeCells('B42:X42');
-$activeSheet->mergeCells('AD42:AG42');
-$activeSheet->mergeCells('AA44:AD44');
+$activeSheet->mergeCells('B57:AH58');
+$activeSheet->mergeCells('B49:X49');
+$activeSheet->mergeCells('B50:X52');
+//$activeSheet->mergeCells('Z41:AG41');
+$activeSheet->mergeCells('B48:AH48');
+//$activeSheet->mergeCells('AD42:AG42');
+$activeSheet->mergeCells('AA53:AD53');
 $activeSheet->mergeCells('B47:AH47');
+$activeSheet->mergeCells('B53:X55');
+$activeSheet->mergeCells('B56:X56');
+$activeSheet->mergeCells('B45:AH46');
+
+$activeSheet->mergeCells('AE50:AG52');
+
+$activeSheet->mergeCells('B36:AH36');
+$activeSheet->mergeCells('B37:AH37');
+$activeSheet->mergeCells('B38:F38');
+$activeSheet->mergeCells('G38:L38');
+$activeSheet->mergeCells('M38:O38');
+$activeSheet->mergeCells('P38:S38');
+$activeSheet->mergeCells('T38:X38');
+$activeSheet->mergeCells('Y38:AH38');
+$activeSheet->mergeCells('B39:F39');
+$activeSheet->mergeCells('G39:L39');
+$activeSheet->mergeCells('M39:O39');
+$activeSheet->mergeCells('P39:S39');
+$activeSheet->mergeCells('T39:X39');
+$activeSheet->mergeCells('Y39:AH39');
+$activeSheet->mergeCells('B40:F40');
+$activeSheet->mergeCells('G40:L40');
+$activeSheet->mergeCells('M40:O40');
+$activeSheet->mergeCells('P40:S40');
+$activeSheet->mergeCells('T40:X40');
+$activeSheet->mergeCells('Y40:AH40');
+$activeSheet->mergeCells('B41:F41');
+$activeSheet->mergeCells('G41:L41');
+$activeSheet->mergeCells('M41:O41');
+$activeSheet->mergeCells('P41:S41');
+$activeSheet->mergeCells('T41:X41');
+$activeSheet->mergeCells('Y41:AH41');
+$activeSheet->mergeCells('B42:F42');
+$activeSheet->mergeCells('G42:L42');
+$activeSheet->mergeCells('M42:O42');
+$activeSheet->mergeCells('P42:S42');
+$activeSheet->mergeCells('T42:X42');
+$activeSheet->mergeCells('Y42:AH42');
+$activeSheet->mergeCells('B43:F43');
+$activeSheet->mergeCells('G43:L43');
+$activeSheet->mergeCells('M43:O43');
+$activeSheet->mergeCells('P43:S43');
+$activeSheet->mergeCells('T43:X43');
+$activeSheet->mergeCells('Y43:AH43');
+$activeSheet->mergeCells('B44:F44');
+$activeSheet->mergeCells('G44:L44');
+$activeSheet->mergeCells('M44:O44');
+$activeSheet->mergeCells('P44:S44');
+$activeSheet->mergeCells('T44:X44');
+$activeSheet->mergeCells('Y44:AH44');
 
 /*Formatos*/
 $objPHPExcel->getActiveSheet()->getStyle('B42:X42')
 ->getAlignment()->setWrapText(true);
-$objPHPExcel->getActiveSheet()->getStyle('B43:X45')
+
+$objPHPExcel->getActiveSheet()->getStyle('B45:AH46')
+->getAlignment()->setWrapText(true);
+$objPHPExcel->getActiveSheet()->getStyle('B48:X50')
 ->getAlignment()->setWrapText(true);
 $objPHPExcel->getActiveSheet()->getStyle('B47:AH47')
 ->getAlignment()->setWrapText(true);
-$objPHPExcel->getActiveSheet()->getStyle('B38:AH40')
+$objPHPExcel->getActiveSheet()->getStyle('B55:AH57')
 ->getAlignment()->setWrapText(true);
-
+$objPHPExcel->getActiveSheet()->getStyle('B53:X55')
+->getAlignment()->setWrapText(true);
 
 
 $styleTextMini = array(
@@ -289,6 +354,18 @@ $objPHPExcel->getActiveSheet()->getStyle('B16:AH16')->applyFromArray(
         )
     )
 );
+$objPHPExcel->getActiveSheet()->getStyle('B37:AH37')->applyFromArray($styleTituloAzulTabla);
+$objPHPExcel->getActiveSheet()->getStyle('B37:AH37')->applyFromArray(
+    array(
+      'color' => array('rgb' => 'FFFFFF'),
+        'size'  => 7,
+        'name'  => 'Calibri',
+        'fill' => array(
+            'type' => PHPExcel_Style_Fill::FILL_SOLID,
+            'color' => array('rgb' => '1F4E78')
+        )
+    )
+);
 $objPHPExcel->getActiveSheet()->getStyle('Z4:AH6')->applyFromArray(
     array(
       'color' => array('rgb' => 'FFFFFF'),
@@ -302,8 +379,18 @@ $objPHPExcel->getActiveSheet()->getStyle('Z4:AH6')->applyFromArray(
 );
 
 $objPHPExcel->getActiveSheet()->getStyle('B17:AH17')->applyFromArray($styleTituloAzulTabla2);
+$objPHPExcel->getActiveSheet()->getStyle('B38:AH38')->applyFromArray($styleTituloAzulTabla2);
 $objPHPExcel->getActiveSheet()->getStyle('R17')->applyFromArray($styleTituloAzulTabla3);
 $objPHPExcel->getActiveSheet()->getStyle('B17:AH17')->applyFromArray(
+    array(
+      'fill' => array(
+            'type' => PHPExcel_Style_Fill::FILL_SOLID,
+            'color' => array('rgb' => 'D9D9D9')
+      )
+    )
+);
+
+$objPHPExcel->getActiveSheet()->getStyle('B38:AH38')->applyFromArray(
     array(
       'fill' => array(
             'type' => PHPExcel_Style_Fill::FILL_SOLID,
@@ -315,19 +402,24 @@ $objPHPExcel->getActiveSheet()->getStyle('B17:AH17')->applyFromArray(
 $objPHPExcel->getActiveSheet()->getStyle('B3')->applyFromArray($styleTextMini);
 
 $objPHPExcel->getActiveSheet()->getStyle('B36')->applyFromArray($styleTextMini);
-$objPHPExcel->getActiveSheet()->getStyle('B38')->applyFromArray($styleTextMini);
-$objPHPExcel->getActiveSheet()->getStyle('B42:B43')->applyFromArray($styleTextMini);
-$objPHPExcel->getActiveSheet()->getStyle('B47')->applyFromArray($styleTextMini);
+//$objPHPExcel->getActiveSheet()->getStyle('B38')->applyFromArray($styleTextMini);
+$objPHPExcel->getActiveSheet()->getStyle('B49:B50')->applyFromArray($styleTextMini);
+
 
 
 $objPHPExcel->getActiveSheet()->getStyle('B37')->applyFromArray($styleTituloAzul);
 $objPHPExcel->getActiveSheet()->getStyle('B41')->applyFromArray($styleTituloAzul);
 
 
-$objPHPExcel->getActiveSheet()->getStyle('B46')->applyFromArray($styleTituloAzulLittle);
+$objPHPExcel->getActiveSheet()->getStyle('B47')->applyFromArray($styleTituloAzulLittle);
+$objPHPExcel->getActiveSheet()->getStyle('B49')->applyFromArray($styleTituloAzulLittle);
+$objPHPExcel->getActiveSheet()->getStyle('B56')->applyFromArray($styleTituloAzulLittle);
+$objPHPExcel->getActiveSheet()->getStyle('Z49')->applyFromArray($styleTituloAzulLittle);
+$objPHPExcel->getActiveSheet()->getStyle('B50')->applyFromArray($styleTextMini);
+$objPHPExcel->getActiveSheet()->getStyle('B53')->applyFromArray($styleTextMini);
+$objPHPExcel->getActiveSheet()->getStyle('B57')->applyFromArray($styleTextMini);
 
-
-$objPHPExcel->getActiveSheet()->getStyle('Z41')->applyFromArray($styleTituloAzulHuella);
+$objPHPExcel->getActiveSheet()->getStyle('Z53')->applyFromArray($styleTituloAzulHuella);
 
 
 $objPHPExcel->getActiveSheet()->getStyle('B6:I6')->applyFromArray($styleTextData);
@@ -361,11 +453,12 @@ $objPHPExcel->getActiveSheet()->getStyle('B13:AH13')->getAlignment()->setHorizon
 $objPHPExcel->getActiveSheet()->getStyle('L15:AH15')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 $objPHPExcel->getActiveSheet()->getStyle('D14:D15')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 $objPHPExcel->getActiveSheet()->getStyle('B16:AH21')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-
+$objPHPExcel->getActiveSheet()->getStyle('B37:AH44')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 
 /*Color*/
 
 $objPHPExcel->getActiveSheet()->getStyle('B16:AH16')->getFill()->getStartColor()->getRGB('1F4E78');
+$objPHPExcel->getActiveSheet()->getStyle('B37:AH37')->getFill()->getStartColor()->getRGB('1F4E78');
 /*$activeSheet->getStyle('B42:X42')
 ->getAlignment()->setWrapText(true);*/
 
@@ -379,9 +472,9 @@ $styleArray = array(
       )
   );
 $objPHPExcel->getActiveSheet()->getStyle('B4:AH4')->getBorders()->getTop()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
-$objPHPExcel->getActiveSheet()->getStyle('B4:B47')->getBorders()->getLeft()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
-$objPHPExcel->getActiveSheet()->getStyle('B47:AH47')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
-$objPHPExcel->getActiveSheet()->getStyle('AH4:AH47')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('B4:B58')->getBorders()->getLeft()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('B58:AH58')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('AH4:AH58')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 $objPHPExcel->getActiveSheet()->getStyle('B4:I4')->applyFromArray($styleArray);
 $objPHPExcel->getActiveSheet()->getStyle('J5:J6')->applyFromArray($styleArray);
 $objPHPExcel->getActiveSheet()->getStyle('O5:O6')->applyFromArray($styleArray);
@@ -399,9 +492,10 @@ $objPHPExcel->getActiveSheet()->getStyle('T28:T29')->applyFromArray($styleArray)
 $objPHPExcel->getActiveSheet()->getStyle('Y28')->applyFromArray($styleArray);
 $objPHPExcel->getActiveSheet()->getStyle('AB26')->applyFromArray($styleArray);
 $objPHPExcel->getActiveSheet()->getStyle('AB28:AB29')->applyFromArray($styleArray);
-$objPHPExcel->getActiveSheet()->getStyle('Z41:AG41')->applyFromArray($styleArray);
-$objPHPExcel->getActiveSheet()->getStyle('AD42:AG42')->applyFromArray($styleArray);
+//$objPHPExcel->getActiveSheet()->getStyle('Z53:AG53')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('AE50:AG52')->applyFromArray($styleArray);
 $objPHPExcel->getActiveSheet()->getStyle('B24')->applyFromArray($styleArray);
+$objPHPExcel->getActiveSheet()->getStyle('B37:AH44')->applyFromArray($styleArray);
 
 $objPHPExcel->getActiveSheet()->getStyle('B5:C6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 $objPHPExcel->getActiveSheet()->getStyle('D5:E6')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
@@ -446,10 +540,11 @@ $objPHPExcel->getActiveSheet()->getStyle('B35:V35')->getBorders()->getBottom()->
 $objPHPExcel->getActiveSheet()->getStyle('K32:K35')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 $objPHPExcel->getActiveSheet()->getStyle('O32:O35')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 $objPHPExcel->getActiveSheet()->getStyle('V32:V35')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
-$objPHPExcel->getActiveSheet()->getStyle('Z42:Z45')->getBorders()->getLeft()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
-$objPHPExcel->getActiveSheet()->getStyle('Z45:AG45')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
-$objPHPExcel->getActiveSheet()->getStyle('AG42:AG45')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
-$objPHPExcel->getActiveSheet()->getStyle('Z44:AE44')->getBorders()->getTop()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Z50:Z54')->getBorders()->getLeft()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Z54:AG54')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('AG50:AG54')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Z50:AE50')->getBorders()->getTop()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel->getActiveSheet()->getStyle('Z53:AD53')->getBorders()->getTop()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 
 /*Imagenes*/
 $allianz = imagecreatefrompng('../images/allianz_excel.png');
@@ -526,13 +621,21 @@ $activeSheet->setCellValue('B3', 'Le recordamos la importancia de declarar el ve
             ->setCellValue('Z14', 'Deportes que practica')
             ->setCellValue('H15', 'Mts')
             ->setCellValue('K15', 'Kgs')
-            ->setCellValue('B16', 'CUADRO DE BENEFICIARIOS')
+            ->setCellValue('B16', 'CUADRO DE BENEFICIARIOS VIDA')
             ->setCellValue('B17', 'PRIMER APELLIDO')
             ->setCellValue('G17', 'SEGUNDO APELLIDO')
             ->setCellValue('M17', 'NOMBRES')
+            ->setCellValue('P17', 'FECHA NAC.')
             ->setCellValue('R17', 'No. Documento Identidad')
             ->setCellValue('Y17', '% Participación')
             ->setCellValue('AC17', 'Parentesco')
+            ->setCellValue('B37', 'CUADRO DE BENEFICIARIOS EXEQUIAS')
+            ->setCellValue('B38', 'PRIMER APELLIDO')
+            ->setCellValue('G38', 'SEGUNDO APELLIDO')
+            ->setCellValue('M38', 'NOMBRES')
+            ->setCellValue('P38', 'FECHA NAC.')
+            ->setCellValue('T38', 'No. Documento Identidad')
+            ->setCellValue('Y38', 'Parentesco')
             ->setCellValue('B22', 'Marque X')
             ->setCellValue('B23', 'Yo, el abajo firmante, declaro que:')
             ->setCellValue('C24', 'En la fecha me encuentro en buen estado de salud y mi habilidad no se encuentra de alguna manera reducida.')
@@ -569,15 +672,16 @@ $activeSheet->setCellValue('B3', 'Le recordamos la importancia de declarar el ve
             ->setCellValue('L34', 'Año diagnostico')
             ->setCellValue('P34', 'Tratamiento')
             ->setCellValue('B36', '*En caso de no haber marcado ninguna de las enfermedades entonces se entenderá que me encuentro en buen estado de salud.')
-            ->setCellValue('B37', 'DECLARACION DE AUTORIZACION')
-            ->setCellValue('B38', 'Declaro que he leído, entiendo y acepto la información contenida en la presente solicitud individual de seguro, que tengo conocimiento que la póliza se otorgará en consideración a la veracidad de estas declaraciones; y que en el evento de no coincidir ellas  estrictamente con la realidad, el seguro otorgado quedará viciado de nulidad en los términos del artículo 1058 del código de comercio. Autorizo a la aseguradora para que use, consulte y/o reporte a las centrales de información de riesgos , cualquier información relativa a mis hábitos de pago, al cumplimiento que se he dado a mis obligaciones y mi información comercial disponible. Sin perjuicio de lo estipulado por el artículo 34 de la ley 23  de 1981, autorizo a la aseguradora para acceder a mis historias clínicas y demás documentos sobre mi estado de salud, y a los médicos y entidades hospitalarias para que suministren a dicha aseguradora tales documentos, aun después de mi fallecimiento.  Declaro que desarrollo en forma normal mis actividades, que mi profesión u oficio son lícitos y que no tengo ni he tenido amenaza de secuestro o en contra de mi integridad personal en los últimos tres (3) años. declaro que conozco y acepto las condiciones particulares y generales de la póliza de vida grupo a que accede  esta solicitud.')
-            ->setCellValue('B41', 'TRATAMIENTO DE DATOS PERSONALES')
-            ->setCellValue('Z41', 'Firma y Huella Solicitante del seguro')
-            ->setCellValue('B42', 'Autorizo de manera expresa a Allianz Seguros de vida S.A. y las Compañías del Grupo Allianz para tratar mis datos personales, es decir, realizar operaciones sobre los mismos, como recolección, almacenamiento, uso, reporte, circulación o transferencia. Así mismo, las autorizo para que permitan su tratamiento a: Quiénes sean sus representantes o con quienes celebre contratos de transmisión de datos; Intermediarios, reaseguradores, coaseguradores, FASECOLDA, y sus filiales, operadores y prestadores necesarios para el cumplimiento de los contratos; Encargados dentro y fuera del territorio nacional. Autorizo el tratamiento de mis datos sensibles, en especial, los relativos a la salud y biométricos y entiendo que las preguntas que me hagan sobre estos datos o los de niños (as) y adolecentes, tienen carácter facultativo. Declaro que conozco los fines para los cuales serán tratados mis datos o los de la persona que represento así: (i) Atención de solicitudes, gestión del seguro y de contratos con las compañías; (ii)Control y prevención del fraude; (iii) Oferta de productos o servicios de las compañías o terceros vinculados, encuestas y otros fines comerciales, financieros o publicitarios a través de mensajes de texto, correo electrónico, SMS, entre otros; (iv) Fines estadísticos, de consulta, gremiales y técnicos, así como para fines tributarios, incluidas las autoridades de otros países. Como titular de la información, conozco que me asisten los derechos previstos en la ley, en especial, conocer, actualizar y solicitar la supresión de mis datos. Los responsables del tratamiento son las compañías de Grupo Allianz, ubicadas en la carrera 13A No. 29-24, piso 16 de Bogotá: teléfono en Bogotá 6065903 y a nivel nacional: 018000514405 - opción 2.')
-            ->setCellValue('B43', 'DECLARACION: Todos los datos aquí consignados son ciertos, la información que adjunto es veraz y verificable y autorizo su verificación ante cualquier persona, sin limitación alguna, y me obligo a actualizar o confirmar la información una vez al año o cada vez que un producto o servicio lo amerite. Autorizo irrevocablemente durante la vigencia del contrato del seguro que llegare a celebrar con Allianz Seguros de Vida S.A. y por diez años mas después de finalizada la vigencia del mismo a los médicos, clínicas, hospitales, EPS y demás establecimientos que me hayan brindado atención en servicio de salud, para suministrar la información sobre mi historia clínica y/o estado de salud que Allianz Seguros de Vida S.A. les solicite, aun después de mi fallecimiento.')
-            ->setCellValue('Z44', 'C.C.')
-            ->setCellValue('B46', 'En constancia de comprensión y conformidad con lo anterior, firma')
-            ->setCellValue('B47', 'El diligenciamiento y suscripción de la presente solicitud  individual de seguro no compromete de ningún modo a la Aseguradora, ni implica obligación alguna de otorgar el Seguro de Vida al que accede. La Aseguradora se reserva el derecho de otorgar la cobertura una vez evaluada y verificada la información aquí consignada por el solicitante del seguro. ')
+            ->setCellValue('B45', 'YO___________________________________________, MAYOR DE EDAD, IDENTIFICADO CON LA CEDULA DE CIUDADANÍA No. ________________ DE ___________________ACTUANDO EN NOMBRE PROPIO, CONFORME A LOS TÉRMINOS DEL ARTICULO 1634, INCISO 1 DEL CÓDIGO CIVIL COLOMBIANO, AUTORIZO A ASEGURADORA DE  VIDA COLSEGUROS S. A. A PAGAR  LA INDEMNIZACIÓN QUE SE GENERE A  MI NOMBRE O DE MI GRUPO FAMILIAR POR LA OCURRENCIA DEL SINIESTRO AMPARADO POR EL ANEXO FUNERARIO DE LA PÓLIZA DE VIDA GRUPO No. ___________________A ASISTENCIA EXEQUIAL S. A.')
+            ->setCellValue('B47', 'DECLARACION DE AUTORIZACION')
+            ->setCellValue('B48', 'Declaro que he leído, entiendo y acepto la información contenida en la presente solicitud individual de seguro, que tengo conocimiento que la póliza se otorgará en consideración a la veracidad de estas declaraciones; y que en el evento de no coincidir ellas  estrictamente con la realidad, el seguro otorgado quedará viciado de nulidad en los términos del artículo 1058 del código de comercio. Autorizo a la aseguradora para que use, consulte y/o reporte a las centrales de información de riesgos , cualquier información relativa a mis hábitos de pago, al cumplimiento que se he dado a mis obligaciones y mi información comercial disponible. Sin perjuicio de lo estipulado por el artículo 34 de la ley 23  de 1981, autorizo a la aseguradora para acceder a mis historias clínicas y demás documentos sobre mi estado de salud, y a los médicos y entidades hospitalarias para que suministren a dicha aseguradora tales documentos, aun después de mi fallecimiento.  Declaro que desarrollo en forma normal mis actividades, que mi profesión u oficio son lícitos y que no tengo ni he tenido amenaza de secuestro o en contra de mi integridad personal en los últimos tres (3) años. declaro que conozco y acepto las condiciones particulares y generales de la póliza de vida grupo a que accede  esta solicitud.')
+            ->setCellValue('B49', 'TRATAMIENTO DE DATOS PERSONALES')
+            ->setCellValue('Z49', 'Firma y Huella Solicitante del seguro')
+            ->setCellValue('B50', 'Autorizo de manera expresa a Allianz Seguros de vida S.A. y las Compañías del Grupo Allianz para tratar mis datos personales, es decir, realizar operaciones sobre los mismos, como recolección, almacenamiento, uso, reporte, circulación o transferencia. Así mismo, las autorizo para que permitan su tratamiento a: Quiénes sean sus representantes o con quienes celebre contratos de transmisión de datos; Intermediarios, reaseguradores, coaseguradores, FASECOLDA, y sus filiales, operadores y prestadores necesarios para el cumplimiento de los contratos; Encargados dentro y fuera del territorio nacional. Autorizo el tratamiento de mis datos sensibles, en especial, los relativos a la salud y biométricos y entiendo que las preguntas que me hagan sobre estos datos o los de niños (as) y adolecentes, tienen carácter facultativo. Declaro que conozco los fines para los cuales serán tratados mis datos o los de la persona que represento así: (i) Atención de solicitudes, gestión del seguro y de contratos con las compañías; (ii)Control y prevención del fraude; (iii) Oferta de productos o servicios de las compañías o terceros vinculados, encuestas y otros fines comerciales, financieros o publicitarios a través de mensajes de texto, correo electrónico, SMS, entre otros; (iv) Fines estadísticos, de consulta, gremiales y técnicos, así como para fines tributarios, incluidas las autoridades de otros países. Como titular de la información, conozco que me asisten los derechos previstos en la ley, en especial, conocer, actualizar y solicitar la supresión de mis datos. Los responsables del tratamiento son las compañías de Grupo Allianz, ubicadas en la carrera 13A No. 29-24, piso 16 de Bogotá: teléfono en Bogotá 6065903 y a nivel nacional: 018000514405 - opción 2.')
+            ->setCellValue('B53', 'DECLARACION: Todos los datos aquí consignados son ciertos, la información que adjunto es veraz y verificable y autorizo su verificación ante cualquier persona, sin limitación alguna, y me obligo a actualizar o confirmar la información una vez al año o cada vez que un producto o servicio lo amerite. Autorizo irrevocablemente durante la vigencia del contrato del seguro que llegare a celebrar con Allianz Seguros de Vida S.A. y por diez años mas después de finalizada la vigencia del mismo a los médicos, clínicas, hospitales, EPS y demás establecimientos que me hayan brindado atención en servicio de salud, para suministrar la información sobre mi historia clínica y/o estado de salud que Allianz Seguros de Vida S.A. les solicite, aun después de mi fallecimiento.')
+            ->setCellValue('Z53', 'C.C.')
+            ->setCellValue('B56', 'En constancia de comprensión y conformidad con lo anterior, firma')
+            ->setCellValue('B57', 'El diligenciamiento y suscripción de la presente solicitud  individual de seguro no compromete de ningún modo a la Aseguradora, ni implica obligación alguna de otorgar el Seguro de Vida al que accede. La Aseguradora se reserva el derecho de otorgar la cobertura una vez evaluada y verificada la información aquí consignada por el solicitante del seguro. ')
             ;
 
 
@@ -588,6 +692,7 @@ $activeSheet->setCellValue('B3', 'Le recordamos la importancia de declarar el ve
 $formulario       = $objFormulario->findForm($_REQUEST['id']);
 $novedad          = $objNovedad->findByIdForm($_REQUEST['id']);
 $beneficiarios    = $objPersona->findBeneficiariesByForm($_REQUEST['id']);
+$beneficiariosExc = $objPersona->findBeneficiariesByForm($_REQUEST['id'], 3);
 $enfermedad       = $objEnfermedad->findNovedadByForm($_REQUEST['id']);
 $tratamiento      = $objEnfermedad->findTratamientoByForm($_REQUEST['id']);
 
@@ -684,6 +789,19 @@ for ($i=0; $i < count($beneficiarios); $i++) {
       $activeSheet->setCellValue('R'.$benInicial, $beneficiarios[$i]['doc_per']);
       $activeSheet->setCellValue('Y'.$benInicial, $beneficiarios[$i]['porcentaje']);
       $activeSheet->setCellValue('AC'.$benInicial, $beneficiarios[$i]['parentezco']);
+      $activeSheet->setCellValue('P'.$benInicial, $beneficiarios[$i]['nacimiento']);
+      $benInicial++;
+}
+
+$benInicial = 39;
+for ($i=0; $i < count($beneficiariosExc); $i++) { 
+      $activeSheet->setCellValue('B'.$benInicial, $beneficiariosExc[$i]['prim_ape_per']);
+      $activeSheet->setCellValue('G'.$benInicial, $beneficiariosExc[$i]['seg_ape_per']);
+      $activeSheet->setCellValue('M'.$benInicial, $beneficiariosExc[$i]['prim_nom_per']);
+      $activeSheet->setCellValue('T'.$benInicial, $beneficiariosExc[$i]['doc_per']);
+      //$activeSheet->setCellValue('Y'.$benInicial, $beneficiariosExc[$i]['porcentaje']);
+      $activeSheet->setCellValue('Y'.$benInicial, $beneficiariosExc[$i]['parentezco']);
+      $activeSheet->setCellValue('P'.$benInicial, $beneficiariosExc[$i]['nacimiento']);
       $benInicial++;
 }
 
@@ -770,7 +888,7 @@ for ($i=0; $i < count($tratamiento) ; $i++) {
       $tratamientoLinea++;
 }
 
-$activeSheet->setCellValue('AA44', $formulario[0]['doc_per']);
+$activeSheet->setCellValue('AA53', $formulario[0]['doc_per']);
 //die($_REQUEST['id']);
 
 // Miscellaneous glyphs, UTF-8
@@ -781,7 +899,7 @@ $activeSheet->setCellValue('AA44', $formulario[0]['doc_per']);
 // Rename worksheet
 $objPHPExcel->getActiveSheet()->setTitle('Vida');
 $objPHPExcel->getActiveSheet()->setShowGridlines(false);
-$objPHPExcel->getActiveSheet()->getPageSetup()->setPrintArea('A1:AI48');
+$objPHPExcel->getActiveSheet()->getPageSetup()->setPrintArea('A1:AI55');
 $objPHPExcel->getActiveSheet()->getPageSetup()->setFitToWidth(1);
 $objPHPExcel->getActiveSheet()->getPageSetup()->setFitToHeight(1);
 $objPHPExcel->getActiveSheet()->getPageSetup()->setScale(100);

@@ -331,6 +331,17 @@ var formulario = (function(){
                                 $('input[type="text"][name="documento_ap'+(i+1)+'"]').val(dataFin.beneficiarios[i].doc_per);
                                 $('input[type="text"][name="porcentaje'+(i+1)+'"]').val(dataFin.beneficiarios[i].porcentaje);
                                 $('input[type="text"][name="parentezco'+(i+1)+'"]').val(dataFin.beneficiarios[i].parentezco);
+                                $('input[type="text"][name="nacimiento_ben'+(i+1)+'"]').val(dataFin.beneficiarios[i].nacimiento);
+                            }
+                            for (var i=0; i<dataFin.beneficiariosExc.length ; i++)
+                            {
+                                $('input[type="text"][name="primer_ap_exc'+(i+1)+'"]').val(dataFin.beneficiarios[i].prim_ape_per);
+                                $('input[type="text"][name="segundo_ap_exc'+(i+1)+'"]').val(dataFin.beneficiarios[i].seg_ape_per);
+                                $('input[type="text"][name="nombre_exc'+(i+1)+'"]').val(dataFin.beneficiarios[i].prim_nom_per);
+                                $('input[type="text"][name="documento_ap_exc'+(i+1)+'"]').val(dataFin.beneficiarios[i].doc_per);
+                                //$('input[type="text"][name="porcentaje'+(i+1)+'"]').val(dataFin.beneficiarios[i].porcentaje);
+                                $('input[type="text"][name="parentezco_exc'+(i+1)+'"]').val(dataFin.beneficiarios[i].parentezco);
+                                $('input[type="text"][name="nacimiento_exc'+(i+1)+'"]').val(dataFin.beneficiarios[i].nacimiento);
                             }
                             for (var i=0; i<dataFin.tratamiento.length ; i++)
                             {
@@ -411,6 +422,16 @@ var formulario = (function(){
         loadParameters('dia', 2);
         loadParameters('mes', 2);
         loadParameters('anio', 4);
+    };
+
+    var loadDatePicker = function () {
+    
+        $( ".datepicker" ).datepicker({
+            dateFormat: "yy-mm-dd",
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "1880:2100"
+        });
     }
 
     return{
@@ -431,6 +452,7 @@ var formulario = (function(){
             });
             eventUser();
             $('#print_form').hide();
+            loadDatePicker();
         },
         addEventValidationInput: function () {
             loadAllParameters();

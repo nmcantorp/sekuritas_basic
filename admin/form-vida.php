@@ -443,7 +443,7 @@ $fech_actual = Date('d-m-Y');
                                           <td><input type="text"  name="nombre1"/></td>
                                           <td><input type="text"  name="documento_ap1"/></td>
                                           <td><input type="text"  name="porcentaje1"/></td>
-                                          <td><input type="text"  name="nacimiento_ben1"/></td>
+                                          <td><input type="text"  name="nacimiento_ben1" class="datepicker" readonly /></td>
                                           <td><input type="text"  name="parentezco1"/></td>
                                         </tr>
                                     <tr>
@@ -452,7 +452,7 @@ $fech_actual = Date('d-m-Y');
                                           <td><input type="text"  name="nombre2"/></td>
                                           <td><input type="text"  name="documento_ap2"/></td>
                                           <td><input type="text"  name="porcentaje2"/></td>
-                                          <td><input type="text"  name="nacimiento_ben2"/></td>
+                                          <td><input type="text"  name="nacimiento_ben2" class="datepicker" readonly/></td>
                                           <td><input type="text"  name="parentezco2"/></td>
                                         </tr>
                                     <tr>
@@ -461,7 +461,7 @@ $fech_actual = Date('d-m-Y');
                                           <td><input type="text"  name="nombre3"/></td>
                                           <td><input type="text"  name="documento_ap3"/></td>
                                           <td><input type="text"  name="porcentaje3"/></td>
-                                          <td><input type="text"  name="nacimiento_ben3"/></td>
+                                          <td><input type="text"  name="nacimiento_ben3" class="datepicker" readonly/></td>
                                           <td><input type="text"  name="parentezco3"/></td>
                                         </tr>
                                     <tr>
@@ -470,7 +470,7 @@ $fech_actual = Date('d-m-Y');
                                           <td><input type="text"  name="nombre4"/></td>
                                           <td><input type="text"  name="documento_ap4"/></td>
                                           <td><input type="text"  name="porcentaje4"/></td>
-                                          <td><input type="text"  name="nacimiento_ben4"/></td>
+                                          <td><input type="text"  name="nacimiento_ben4" class="datepicker" readonly/></td>
                                           <td><input type="text"  name="parentezco4"/></td>
                                         </tr>
                                   </tbody>
@@ -977,7 +977,7 @@ $fech_actual = Date('d-m-Y');
                                           <td><input type="text"  name="segundo_ap_exc1"/></td>
                                           <td><input type="text"  name="nombre_exc1"/></td>
                                           <td><input type="text"  name="documento_ap_exc1"/></td>
-                                          <td><input type="text"  name="nacimiento_exc1"/></td>
+                                          <td><input type="text"  name="nacimiento_exc1" class="datepicker" readonly/></td>
                                           <td><input type="text"  name="parentezco_exc1"/></td>
                                         </tr>
                                     <tr>
@@ -985,7 +985,7 @@ $fech_actual = Date('d-m-Y');
                                           <td><input type="text"  name="segundo_ap_exc2"/></td>
                                           <td><input type="text"  name="nombre_exc2"/></td>
                                           <td><input type="text"  name="documento_ap_exc2"/></td>
-                                          <td><input type="text"  name="nacimiento_exc2"/></td>
+                                          <td><input type="text"  name="nacimiento_exc2" class="datepicker" readonly/></td>
                                           <td><input type="text"  name="parentezco_exc2"/></td>
                                         </tr>
                                     <tr>
@@ -993,7 +993,7 @@ $fech_actual = Date('d-m-Y');
                                           <td><input type="text"  name="segundo_ap_exc3"/></td>
                                           <td><input type="text"  name="nombre_exc3"/></td>
                                           <td><input type="text"  name="documento_ap_exc3"/></td>
-                                          <td><input type="text"  name="nacimiento_exc3"/></td>
+                                          <td><input type="text"  name="nacimiento_exc3" class="datepicker" readonly/></td>
                                           <td><input type="text"  name="parentezco_exc3"/></td>
                                         </tr>
                                        <tr>
@@ -1001,7 +1001,7 @@ $fech_actual = Date('d-m-Y');
                                           <td><input type="text"  name="segundo_ap_exc4"/></td>
                                           <td><input type="text"  name="nombre_exc4"/></td>
                                           <td><input type="text"  name="documento_ap_exc4"/></td>
-                                          <td><input type="text"  name="nacimiento_exc4"/></td>
+                                          <td><input type="text"  name="nacimiento_exc4" class="datepicker" readonly/></td>
                                           <td><input type="text"  name="parentezco_exc4"/></td>
                                         </tr>
                                         <tr>
@@ -1009,7 +1009,7 @@ $fech_actual = Date('d-m-Y');
                                           <td><input type="text"  name="segundo_ap_exc5"/></td>
                                           <td><input type="text"  name="nombre_exc5"/></td>
                                           <td><input type="text"  name="documento_ap_exc5"/></td>
-                                          <td><input type="text"  name="nacimiento_exc5"/></td>
+                                          <td><input type="text"  name="nacimiento_exc5" class="datepicker" readonly/></td>
                                           <td><input type="text"  name="parentezco_exc5"/></td>
                                         </tr>
                                         <tr>
@@ -1017,7 +1017,7 @@ $fech_actual = Date('d-m-Y');
                                           <td><input type="text"  name="segundo_ap_exc6"/></td>
                                           <td><input type="text"  name="nombre_exc6"/></td>
                                           <td><input type="text"  name="documento_ap_exc6"/></td>
-                                          <td><input type="text"  name="nacimiento_exc6"/></td>
+                                          <td><input type="text"  name="nacimiento_exc6" class="datepicker" readonly/></td>
                                           <td><input type="text"  name="parentezco_exc6"/></td>
                                         </tr>
                                   </tbody>

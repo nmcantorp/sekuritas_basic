@@ -70,7 +70,8 @@ class ClassPersona extends ClassConexion
 		  	$this->resultado[$conteo]['ocupacion']=$resultados['ocupacion'];
 		  	$this->resultado[$conteo]['solic_increm_form']=$resultados['solic_increm_form'];
 		  	$this->resultado[$conteo]['desc_dep']=$resultados['desc_dep'];
-		  	$this->resultado[$conteo]['beneficiarios'] = $this->findBeneficiariesByForm($resultados['id_form']);
+		  	$this->resultado[$conteo]['beneficiarios'] = $this->findBeneficiariesByForm($resultados['id_form'], 2);
+		  	$this->resultado[$conteo]['beneficiariosExc'] = $this->findBeneficiariesByForm($resultados['id_form'], 3);
 		  	$this->resultado[$conteo]['enfermedades'] = $objEnfermedad->findNovedadByForm($resultados['id_form']);
 		  	$this->resultado[$conteo]['novedades'] = $objNovedad->findByIdForm($resultados['id_form']);
 		  	$this->resultado[$conteo]['tratamiento'] = $objEnfermedad->findTratamientoByForm($resultados['id_form']);		  	
@@ -81,7 +82,7 @@ class ClassPersona extends ClassConexion
 
 	}
 
-	function findBeneficiariesByForm($idForm)
+	function findBeneficiariesByForm($idForm, $type=2)
 	{
 		$db = new ClassConexion();
 		$db->MySQL();
@@ -94,12 +95,13 @@ class ClassPersona extends ClassConexion
 					persona.prim_ape_per,
 					persona.seg_ape_per,
 					form_pers.parentezco,
-					form_pers.porcentaje
+					form_pers.porcentaje,
+					CONCAT(persona.anio_nac_per,'-',persona.mes_nac_per,'-',persona.dia_nac_per) as nacimiento
 					FROM
 					persona
 					INNER JOIN form_pers ON form_pers.id_per = persona.id_per
 					WHERE
-					form_pers.id_tip_usua = 2 AND
+					form_pers.id_tip_usua = '$type' AND
 					form_pers.id_form = '$idForm'
 					";
 
@@ -114,6 +116,7 @@ class ClassPersona extends ClassConexion
 		  	$resultado[$conteo]['seg_ape_per']=$resultados['seg_ape_per'];
 		  	$resultado[$conteo]['parentezco']=$resultados['parentezco'];
 		  	$resultado[$conteo]['porcentaje']=$resultados['porcentaje'];
+		  	$resultado[$conteo]['nacimiento']=$resultados['nacimiento'];
 		  	
 		  	$conteo++;
 		 }

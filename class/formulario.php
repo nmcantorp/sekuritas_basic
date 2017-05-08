@@ -69,7 +69,7 @@ class ClassFormulario extends ClassConexion
 			$query = "DELETE FROM tratamiento_enfermedad WHERE id_form = '".$id_formulario."'";
 			$db->consulta($query);
 
-			/*$query = "DELETE FROM form_pers WHERE id_form = '".$id_formulario."' AND id_tip_usua = 2";
+			/*$query = "DELETE FROM form_pers WHERE id_form = '".$id_formulario."' AND id_tip_usua IN (2,3)";
 			$db->consulta($query);*/
 
 
@@ -82,7 +82,6 @@ class ClassFormulario extends ClassConexion
 			$id_formulario = $db->insert_id();
 		}
 		
-
 		$persona = $objPersona->findPersona($formulario['doc_usuario']);
 
 		if(count($persona)<=0)
@@ -96,7 +95,7 @@ class ClassFormulario extends ClassConexion
 			$query = " INSERT INTO form_pers(id_form, id_per, id_tip_usua) VALUES ($id_formulario, $id_persona, 1)";
 			$consulta = $db->consulta($query);
 			$id_form_persona = $db->insert_id();
-
+			
 			$query = " INSERT INTO deporte(desc_dep, id_form_pers) VALUES ('".$formulario['deporte']."', $id_form_persona)";
 			$consulta = $db->consulta($query);
 
@@ -152,7 +151,7 @@ class ClassFormulario extends ClassConexion
 				if(count($persona)<=0)
 				{
 					$query = " INSERT INTO persona(doc_per, prim_nom_per, prim_ape_per, seg_ape_per, fech_creacion, fech_modificacion, dia_nac_per, mes_nac_per, anio_nac_per)
-								VALUES ('".$formulario['documento_ap'.$i]."', '".$formulario['nombre'.$i]."','".$formulario['primer_ap'.$i]."','".$formulario['segundo_ap'.$i]."',NOW(),NOW(),'".$nacimiento[2]."','".$nacimiento[1]."','".$nacimiento[3]."')";
+								VALUES ('".$formulario['documento_ap'.$i]."', '".$formulario['nombre'.$i]."','".$formulario['primer_ap'.$i]."','".$formulario['segundo_ap'.$i]."',NOW(),NOW(),'".$nacimiento[2]."','".$nacimiento[1]."','".$nacimiento[0]."')";
 
 					$consulta = $db->consulta($query);
 					$id_persona_ben = $db->insert_id();
@@ -163,6 +162,13 @@ class ClassFormulario extends ClassConexion
 				
 				}else{
 					$id_persona_ben = $persona[0]['id_per'];
+
+					$query = "DELETE FROM form_pers WHERE id_form = '".$id_formulario."' AND id_per = $id_persona_ben AND id_tip_usua = 2";
+					$db->consulta($query);
+
+					$query = " INSERT INTO form_pers(id_form, id_per, id_tip_usua, parentezco, porcentaje) VALUES ($id_formulario, $id_persona_ben, 2, '".$formulario['parentezco'.$i]."', '".$formulario['porcentaje'.$i]."')";
+					$consulta = $db->consulta($query);
+					$id_form_persona = $db->insert_id();
 				}
 
 				
@@ -172,13 +178,13 @@ class ClassFormulario extends ClassConexion
 		/**
 		 * Beneficiarios excequias
 		 */
-		
+
 		for ($i=1; $i <= 6; $i++) { 
 			if( $formulario['primer_ap_exc'.$i] != '' &&
 				$formulario['segundo_ap_exc'.$i] != '' &&
 				$formulario['nombre_exc'.$i] != '' &&
 				$formulario['documento_ap_exc'.$i] != '' && 
-				$formulario['nacimiento_ben_exc'.$i] != '' &&
+				$formulario['nacimiento_exc'.$i] != '' &&
 				$formulario['parentezco_exc'.$i] != '' 
 				)
 			{
@@ -186,20 +192,27 @@ class ClassFormulario extends ClassConexion
 
 				$nacimiento = explode('-',$formulario['nacimiento_ben'.$i]);
 
-				if(count($persona)<=0)
+				if( count($persona)<=0 )
 				{
 					$query = " INSERT INTO persona(doc_per, prim_nom_per, prim_ape_per, seg_ape_per, fech_creacion, fech_modificacion, dia_nac_per, mes_nac_per, anio_nac_per)
-								VALUES ('".$formulario['documento_ap_exc'.$i]."', '".$formulario['nombre_exc'.$i]."','".$formulario['primer_ap_exc'.$i]."','".$formulario['segundo_ap_exc'.$i]."',NOW(),NOW(),'".$nacimiento[2]."','".$nacimiento[1]."','".$nacimiento[3]."')";
+								VALUES ('".$formulario['documento_ap_exc'.$i]."', '".$formulario['nombre_exc'.$i]."','".$formulario['primer_ap_exc'.$i]."','".$formulario['segundo_ap_exc'.$i]."',NOW(),NOW(),'".$nacimiento[2]."','".$nacimiento[1]."','".$nacimiento[0]."')";
 
 					$consulta = $db->consulta($query);
 					$id_persona_ben = $db->insert_id();
 
-					$query = " INSERT INTO form_pers(id_form, id_per, id_tip_usua, parentezco, porcentaje) VALUES ($id_formulario, $id_persona_ben, 3, '".$formulario['parentezco_exc'.$i]."', '0')";
+					$query = " INSERT INTO form_pers(id_form, id_per, id_tip_usua, parentezco, porcentaje) VALUES ($id_formulario, $id_persona_ben, 3, '".$formulario['parentezco_exc'.$i]."', '100')";
 					$consulta = $db->consulta($query);
 					$id_form_persona = $db->insert_id();
 				
 				}else{
 					$id_persona_ben = $persona[0]['id_per'];
+
+					$query = "DELETE FROM form_pers WHERE id_form = '".$id_formulario."' AND id_per = $id_persona_ben AND id_tip_usua = 3";
+					$db->consulta($query);
+
+					$query = " INSERT INTO form_pers(id_form, id_per, id_tip_usua, parentezco, porcentaje) VALUES ($id_formulario, $id_persona_ben, 3, '".$formulario['parentezco_exc'.$i]."', '100')";
+					$consulta = $db->consulta($query);
+					$id_form_persona = $db->insert_id();
 				}
 
 				
