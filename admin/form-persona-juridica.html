@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sekuritas</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../../css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/960.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/screen.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../css/print.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="../css/print-preview.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/jquery-ui.css" type="text/css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+   WebFontConfig = {
+     google: { families: [ 'Roboto:400,100,300,500,700,900:latin' ] }
+   };
+   (function() {
+     var wf = document.createElement('script');
+     wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+     wf.type = 'text/javascript';
+     wf.async = 'true';
+     var s = document.getElementsByTagName('script')[0];
+     s.parentNode.insertBefore(wf, s);
+   })(); </script>
+    <!-- Estilos para imprimir -->
+
+
+
+    <!-- Fin Estilos para imprimir -->
+
+    <!-- JS para imprimir -->
+
+    <script src="../js/jquery-1.11.3.min.js"></script>
+
+    <script src="../js/jquery.tools.min.js"></script>
+
+    <!--<script src="../js/jquery.print-preview.js" type="text/javascript" charset="utf-8"></script>-->
+    <!-- Fin JS para imprimir -->
+
+    </head>
+
+    <body>
+<?php 
+
+$fech_actual = Date('d-m-Y');
+
+?>
+<form id="form">
+<input type="hidden" name="ac" value="saveFormulario">
+<div class="container">
+  <div class="row marginbottom10 margintop30">
+    <div class="col-md-6 col-md-offset-0 col-sm-8 col-xs-6">
+        <img src="../images/logo.gif" alt="" class="img-responsive" />
+    </div> 
+  </div>
+</div>
+
+<div class="bg-body">
+    <div class="container_gray-3">
+    	<div class="container"> 
+            <div class="row margin0">
+                <div class="col-md-12">
+                    <div class="main_title">
+                        <div class="main_title_icon"> <img src="../images/icon_2.png" class="img-responsive" alt="" /> </div>
+                        <div class="main_title_text bold f26"> Formulario de conocimiento del cliente persona juridica-sector asegurador</div>
+                    </div>
+                    <div class="separator"></div>
+                    
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="main_table">
+							 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info table-responsive">
+								 <tbody>
+								 	<tr>
+										<td>
+											Fecha Diligenciamiento
+										</td> 
+										<td>
+											<input type="text"  name="f-diligenciamiento"/>
+										</td> 
+										<td>
+											Ciudad
+										</td> 
+										<td>
+											<input type="text"  name="ciudad"/>
+										</td> 
+										<td>
+											Sucursal
+										</td> 
+										<td>
+											<input type="text"  name="sucursal"/>
+										</td> 
+										<td>
+											Tipo Solicitud
+										</td> 
+										<td>
+											<select name="tipo-solicitud">
+												<option>Select</option>
+											</select>
+										</td> 		
+								 	</tr>
+								 </tbody>
+							</table>
+							</div>
+							<div class="main_table">
+							 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info table-responsive">
+								 <thead>
+									 <tr>
+									 	<td colspan="9" class="white-n">
+										EN EL EVENTO EN QUE EL POTENCIAL CLIENTE NO CUENTE CON LA INFORMACIÓN SOLICITADA EN ESTE FORMULARIO, DEBERÁ CONSIGNAR DICHA CIRCUNSTANCIA EN EL ESPACIO CORRESPONDIENTE.
+										</td>
+									 </tr>
+								 </thead>
+								 <tbody>
+								 	<tr>
+										<td>
+											CLASE DE VINCULACIÓN:
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="tomador" name="" value="ingreso"/>
+											  <label for="tomador" ><span>Tomador</span></label>
+											</div>
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="asegurado" name="" value="ingreso"/>
+											  <label for="asegurado" ><span>Asegurado</span></label>
+											</div>
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="beneficiario" name="" value="ingreso"/>
+											  <label for="beneficiario" ><span>Beneficiario</span></label>
+											</div>
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="afianzado" name="" value="ingreso"/>
+											  <label for="afianzado" ><span>Afianzado</span></label>
+											</div>
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="proveedor" name="" value="ingreso"/>
+											  <label for="proveedor" ><span>Proveedor</span></label>
+											</div>
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="intermediario" name="" value="ingreso"/>
+											  <label for="intermediario" ><span>Intermediario</span></label>
+											</div>
+										</td> 
+										<td>
+											Otro
+										</td> 	
+										<td>
+											<input type="text" name="otro" />
+										</td> 	
+								 	</tr>
+									 <tr>
+										 <td>Residencia de la Sociedad</td>
+										<td colspan="8">
+											<select name="tipo-solicitud">
+												<option>Seleccionar</option>
+											</select>
+										</td>
+									 </tr>
+								 </tbody>
+							</table>
+							</div>		
+						<div class="main_table">
+							 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info table-responsive">
+								 <thead>
+									 <tr>
+									 	<td colspan="7">
+										INDIQUE LOS VÍNCULOS EXISTENTES ENTRE TOMADOR, ASEGURADO, AFIANZADO Y BENEFICIARIO: (INDIVIDUALIZACION DEL PRODUCTO).
+										</td>
+									 </tr>
+								 </thead>
+								 <tbody>
+								 	<tr>
+										<td class="text-center">
+											Tomador - Asegurado
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="" name="familiar" value="familiar"/>
+											  <label for="familiar" ><span>Familiar</span></label>
+											</div>
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="" name="comercial" value="comercial"/>
+											  <label for="comercial" ><span>Comercial</span></label>
+											</div>
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="" name="laboral" value="laboral"/>
+											  <label for="laboral" ><span>Laboral</span></label>
+											</div>
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="" name="" value="otra"/>
+											  <label for="otra" ><span>Otra</span></label>
+											</div>
+										</td> 
+										<td>
+											Cual
+										</td> 	
+										<td>
+											<input type="text" name="cual" />
+										</td> 	
+								 	</tr>
+								 	<tr>
+										<td class="text-center">
+											Tomador - Beneficiario
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="" name="familiar2" value="familiar2"/>
+											  <label for="familiar2" ><span>Familiar</span></label>
+											</div>
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="" name="comercial2" value="comercial2"/>
+											  <label for="comercial2" ><span>Comercial</span></label>
+											</div>
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="" name="laboral2" value="laboral2"/>
+											  <label for="laboral2" ><span>Laboral</span></label>
+											</div>
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="" name="otra2" value="otra2"/>
+											  <label for="otra2" ><span>Otra</span></label>
+											</div>
+										</td> 
+										<td>
+											Cual
+										</td> 	
+										<td>
+											<input type="text" name="cual2" />
+										</td> 	
+								 	</tr>	
+									<tr>
+										<td class="text-center">
+											Asegurado - Beneficiario
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="" name="familiar3" value="familiar3"/>
+											  <label for="familiar3" ><span>Familiar</span></label>
+											</div>
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="" name="comercial3" value="comercial3"/>
+											  <label for="comercial3" ><span>Comercial</span></label>
+											</div>
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="" name="laboral3" value="laboral3"/>
+											  <label for="laboral3" ><span>Laboral</span></label>
+											</div>
+										</td> 
+										<td>
+											<div class="content_checkboxes">
+											  <input type="radio" id="" name="otra3" value="otra3"/>
+											  <label for="otra3" ><span>Otra</span></label>
+											</div>
+										</td> 
+										<td>
+											Cual
+										</td> 	
+										<td>
+											<input type="text" name="cual3" />
+										</td> 	
+								 	</tr>									 
+								 </tbody>
+							</table>
+							</div>	
+							<div class="main_table">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info table-responsive">
+									<thead>
+										<tr>
+											<td class="text-center">
+												1. INFORMACIÓN BÁSICA
+											</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												NOMBRE O RAZÓN SOCIAL
+											</td>
+											<td>
+												<input type="text" />
+											</td>
+											<td>
+												TIPO DE DOCUMENTO
+											</td>	
+											<td>
+												<select>
+													<option>Seleccionar</option>
+													<option>CC</option>
+												</select>
+											</td>
+										</tr>
+									</tbody>
+								</table> 
+							</div>
+						</div>
+					</div>
+
+
+                       
+
+                        <div class="row">
+
+                        	<div class="col-lg-2 marginbottom30 mmargintop30">
+
+                          		<button type="input" id="saveContrato" class="button-generic">Actualizar</button>
+
+                            </div>
+
+                            <div class="col-lg-9 marginbottom30 mmargintop30 padding0">
+
+                      			<button type="" onclick="javascript:void(0)" id="print_form" class="button-generic">Imprimir</button>
+
+                            </div>
+
+                        </div>                                   
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+  	</div>
+
+
+
+</div>
+
+
+
+    <div class="container_gray2 bordertop">
+
+
+
+        <div class="container">
+
+
+
+            <div class="row">
+
+
+
+                <div class="text-left col-md-12 margintop30 marginbottom30">
+
+
+
+                    <div class="text_privacidad"> 
+
+
+
+                    	En cumplimiento con lo dispuesto por la ley 1581 de 2012 se le informa que todos los datos personales proporcionados a Sekuritas S.A Corredores de Seguros serán tratados estrictamente de acuerdo con nuestra Política de Privacidad en los términos expresados en el  Aviso de Privacidad 
+
+
+
+                    	<a href="http://www.sekuritas.co/index/" target="_blank">www.sekuritas.com.co</a> 
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+<div class="container_black">
+
+
+
+    <div class="container">
+
+
+
+        <div class="row">
+
+
+
+            <div class="text-left col-md-offset-0 col-md-4 margintop30 paddingbottom10"> 					
+
+
+
+                <img src="../images/superintendencia1.jpg" alt="" /> 
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</div>
+
+</form>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+
+
+
+
+
+
+
+<script src="../js/jquery.js"></script> 
+
+
+
+<script src="../js/jquery-ui.js"></script> 
+
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+
+
+
+<script src="../js/bootstrap.js"></script> 
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="../js/moment-with-locales.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/sekuritas.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+<!-- Fin Estilos para imprimir --> 
+
+
+
+<!-- JS para imprimir --> 
+	</body>
+</html>

@@ -56,61 +56,11 @@ $fech_actual = Date('d-m-Y');
   <div class="row marginbottom10 margintop30">
     <div class="col-md-6 col-md-offset-0 col-sm-8 col-xs-6">
         <img src="../images/logo.gif" alt="" class="img-responsive" />
-    </div>
-    <div class="text-right col-xs-4 col-xs-offset-2 col-sm-offset-0 col-md-offset-4 col-md-2">
-      <div class="link_contacto h_mobile">
-      <img src="../../images/icons/contacto.png" />
-      	contacto
-      </div>
-    <div class="menu_mobile">
-    	<a class="mobile_menu" id="menuMobile"></a>
-    </div>  
     </div>    
   </div>
 </div>
 
 <div class="bg-body">
-
-<div class="container">
-            <div class="row padding0"> 
-                <div class="col-md-12 pull-right col-xs-12">
-                    <div class="main_menu">      
-                            <ul class="menu_items" id="menuP_mobile">
-                                <li>
-                                    <a href="#" class="active">INICIO</a> 
-                                </li>
-                                <li>
-                                    <a href="quienes_somos.html">QUIENES SOMOS</a> 
-                                </li>
-                                <li>
-                                    <a href="personas.html">PERSONAS</a> 
-                                </li>
-                                <li>
-                                    <a href="empresas.html">EMPRESAS</a> 
-                                </li>
-                                <li>
-                                    <a href="alianzas.html">ALIANZAS</a> 
-                                </li>
-                                <li>
-                                    <a href="sucis.html">SUCIS</a> 
-                                </li>                                
-                                <li>
-                                    <a href="clientes.html">CLIENTES</a> 
-                                </li>     
-                                <li class="h_desktop">
-                                	<a href="#">
-                                  <div class="link_contacto">
-                                  <img src="../../images/icons/contacto.png" />
-                                    contacto
-                                  </div> 
-                                  </a> 
-                                </li>
-                            </ul>
-					</div>
-				</div>
-			</div>
-        </div>
-
     <div class="container_gray-3">
     	<div class="container"> 
             <div class="row margin0">
@@ -444,7 +394,33 @@ $fech_actual = Date('d-m-Y');
                                           <td><input type="text"  name="documento_ap1"/></td>
                                           <td><input type="text"  name="porcentaje1"/></td>
                                           <td><input type="text"  name="nacimiento_ben1" class="datepicker" readonly /></td>
-                                          <td><input type="text"  name="parentezco1"/></td>
+										<td>
+										<select name="parentezco1" >
+											<option>
+												Select
+											</option>
+											<option>
+												Padres
+											</option>
+											<option>
+												hermano
+											</option>
+											<option>
+												Hijo
+											</option>																			<option>
+												Cónyuge
+											</option>	
+											<option>
+												Abuelo
+											</option>
+											<option>
+												Tíos
+											</option>
+											<option>
+												Sobrino
+											</option>
+										</select>
+									</td>
                                         </tr>
                                     <tr>
                                           <td><input type="text"  name="primer_ap2"/></td>
@@ -453,7 +429,33 @@ $fech_actual = Date('d-m-Y');
                                           <td><input type="text"  name="documento_ap2"/></td>
                                           <td><input type="text"  name="porcentaje2"/></td>
                                           <td><input type="text"  name="nacimiento_ben2" class="datepicker" readonly/></td>
-                                          <td><input type="text"  name="parentezco2"/></td>
+                                          <td>
+											<select name="parentezco2" >
+												<option>
+													Select
+												</option>
+												<option>
+													Padres
+												</option>
+												<option>
+													hermano
+												</option>
+												<option>
+													Hijo
+												</option>																			<option>
+													Cónyuge
+												</option>	
+												<option>
+													Abuelo
+												</option>
+												<option>
+													Tíos
+												</option>
+												<option>
+													Sobrino
+												</option>
+											</select>
+										</td>
                                         </tr>
                                     <tr>
                                           <td><input type="text"  name="primer_ap3"/></td>
@@ -462,7 +464,33 @@ $fech_actual = Date('d-m-Y');
                                           <td><input type="text"  name="documento_ap3"/></td>
                                           <td><input type="text"  name="porcentaje3"/></td>
                                           <td><input type="text"  name="nacimiento_ben3" class="datepicker" readonly/></td>
-                                          <td><input type="text"  name="parentezco3"/></td>
+                                          <td>
+											<select name="parentezco3" >
+												<option>
+													Select
+												</option>
+												<option>
+													Padres
+												</option>
+												<option>
+													hermano
+												</option>
+												<option>
+													Hijo
+												</option>																<option>
+													Cónyuge
+												</option>	
+												<option>
+													Abuelo
+												</option>
+												<option>
+													Tíos
+												</option>
+												<option>
+													Sobrino
+												</option>
+											</select>											  
+										  </td>
                                         </tr>
                                     <tr>
                                           <td><input type="text"  name="primer_ap4"/></td>
@@ -471,7 +499,33 @@ $fech_actual = Date('d-m-Y');
                                           <td><input type="text"  name="documento_ap4"/></td>
                                           <td><input type="text"  name="porcentaje4"/></td>
                                           <td><input type="text"  name="nacimiento_ben4" class="datepicker" readonly/></td>
-                                          <td><input type="text"  name="parentezco4"/></td>
+                                          <td>
+											<select name="parentezco3" >
+												<option>
+													Select
+												</option>
+												<option>
+													Padres
+												</option>
+												<option>
+													hermano
+												</option>
+												<option>
+													Hijo
+												</option>																<option>
+													Cónyuge
+												</option>	
+												<option>
+													Abuelo
+												</option>
+												<option>
+													Tíos
+												</option>
+												<option>
+													Sobrino
+												</option>
+											</select>								
+										  </td>
                                         </tr>
                                   </tbody>
                                  </table>
@@ -962,7 +1016,7 @@ $fech_actual = Date('d-m-Y');
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info">
                                       <tbody>
                                     <tr>
-                                          <td colspan="6" class="bg-gray text-center f15"><strong>CUADRO DE BENEFICIARIOS EXCEQUIAS</strong></td>
+                                          <td colspan="6" class="bg-gray text-center f15"><strong>CUADRO DE BENEFICIARIOS EXEQUIAS</strong></td>
                                         </tr>
                                     <tr>
                                           <td class="text-center"><strong>PRIMER APELLIDO</strong></td>
@@ -1358,98 +1412,8 @@ $fech_actual = Date('d-m-Y');
 
 
 <!-- JS para imprimir --> 
-
-
-
-
-
-
-
-<script type="text/javascript">
-
-
-
-	$(document).ready(function(){
-
-
-
-		 
-
-
-
-		$('.menu_mobile').click(function(){
-
-
-
-		$('#menuP_mobile').stop( true, false).slideToggle();
-
-
-
-		$('.mobile_menu').stop( true, false).toggleClass('active_m');
-
-
-
-	   });
-
-
+	</body>
+</html>
 
 	   
-
-
-
-	   
-
-
-
-	   $('.arrow_menu').click(function(){
-
-
-
-		   $('#submenu_mobile2').slideUp();
-
-
-
-		   $('.arrow_menu2').removeClass('arrow_menu_b2');
-
-
-
-		   $('#submenu_mobile').stop( true, false).slideToggle("slow");
-
-
-
-		   $('.arrow_menu').stop( true, false).toggleClass('arrow_menu_b');
-
-
-
-	   });
-
-
-
-	   
-
-
-
-	   
-
-
-
-	   $('.arrow_menu2').click(function(){
-
-
-
-		   $('#submenu_mobile').slideUp();
-
-
-
-		   $('.arrow_menu').removeClass('arrow_menu_b');
-
-
-
-		   $('#submenu_mobile2').stop( true, false).slideToggle("slow");
-
-
-
-		   $('.arrow_menu2').stop( true, false).toggleClass('arrow_menu_b2');
-
-
 
