@@ -321,7 +321,6 @@ input[type=checkbox], input[type=radio] {
     margin: 0 10px 0 0;
     vertical-align: middle;
     padding-left: 30px;
-    white-space: nowrap;
 	font-weight:normal;
 }
 .content_checkboxes input[type="checkbox"]:checked + label span{
@@ -345,7 +344,9 @@ input[type=checkbox], input[type=radio] {
 	background-color:#fff;
 	width:100%;
 	min-width: 85px;
-    max-width: 275px;
+	height: auto;
+	padding: 0 10px;
+	border-radius: 0px;
 	}
 
 .table_enfer td{
@@ -362,6 +363,9 @@ input[type=checkbox], input[type=radio] {
 	min-height:150px;
 	border-radius:8px;
 	}
+.form-table1{
+	white-space: normal !important;
+}
 
 @media (min-width: 768px) {
 .titulo_slide1{
