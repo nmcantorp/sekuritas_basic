@@ -694,93 +694,245 @@
 													 </table>											
 											</td>
 										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="main_table">
-                                
-                            </div>		
-							<div class="main_table">
-                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info form-table1">
-                                      <tbody>
-                                    <tr>
-                                          <td class="text-center" width="10%"><strong>TIPO ID</strong></td>
-                                          <td class="text-center" width="10%"><strong>NÚMERO ID</strong></td>
-                                          <td class="text-center" width="20%"><strong>NOMBRE</strong></td>
-                                          <td class="text-center" width="10%"><strong>% PARTICIPACIÓN</strong></td>
-                                          <td class="text-center" width="15%"><strong>¿Es Persona Jurídica que cotiza en Bolsa?</strong></td>
-                                          <td class="text-center" width="20%"><strong>¿Es Persona Públicamente Expuesta, o vinculado con una de ellas?, (aplica únicamente para personas naturales).</strong></td>
-                                          <td class="text-center" width="15%"><strong>¿Es sujeto de tributación en otro país u otro grupo de países?, Indique cual(es)</strong></td>
-                                        </tr>
-                                    	<tr>
-                                          <td>										
-											  <select name="" class="form-control">
-												<option>
-													Seleccionar
-												</option>
-											</select>
-										  </td>
-                                          <td><input type="text"  name="numero_id"/></td>
-                                          <td><input type="text"  name="nombre1"/></td>
-                                          <td><input type="text"  name="participacion"/></td>
-                                          <td>
-										  	<select name="" class="form-control">
-												<option>
-													Seleccionar
-												</option>
-											</select>
-										  </td>
-                                          <td>
-											<select name="" class="form-control">
-												<option>
-													Seleccionar
-												</option>
-											</select>
-										  </td>
-										<td>
-											<input type="text"  name=" " class="datepicker" readonly />	
-										</td>
-                                        </tr>
-                                    	<tr>
-                                          <td>										
-											  <select name="" class="form-control">
-												<option>
-													Seleccionar
-												</option>
-											</select>
-										  </td>
-                                          <td><input type="text"  name="numero_id"/></td>
-                                          <td><input type="text"  name="nombre1"/></td>
-                                          <td><input type="text"  name="participacion"/></td>
-                                          <td>
-										  	<select name="" class="form-control">
-												<option>
-													Seleccionar
-												</option>
-											</select>
-										  </td>
-                                          <td>
-										  	<select name="" class="form-control">
-												<option>
-													Seleccionar
-												</option>
-											</select>											
-											</td>
-											<td>
-												<input type="text"  name=" " class="datepicker" readonly />	
-											</td>
-										</tr>
-										  <tr>
-										  	<td>
+										<tr>
+										  	<td class="paddingtop10 paddingbottom10">
 												<strong>Persona Expuesta Públicamente (PEP):</strong> i) las personas expuestas políticamente-conforme al (Decreto 1674 de 2016)-, ii) los representantes legales de organizaciones internacionales y iii) las personas que gozan de reconocimiento público. Se entiende por persona políticamente expuesta (Decreto 1674 / 2016) los individuos que desempeñan o han desempeñado funciones públicas destacadas como jefes de Estado, políticos de alta jerarquía, funcionarios gubernamentales, judiciales o militares de alta jerarquía, altos ejecutivos (directores y gerentes) de empresas sociales, industriales y comerciales del estado y de sociedades de economía mixta, unidades administrativas especiales, y funcionarios importantes de partidos políticos. <br>
 												<strong>Administradores (Ley 222 de 1995, art.22):</strong> Son administradores, el representante legal, el liquidador, el factor, los miembros de juntas o consejos directivos y quienes de acuerdo con los estatutos ejerzan o detenten esas funciones. <br>
 												<strong>Vinculados:</strong> las personas que tengan sociedad conyugal, de hecho o de derecho, con las personas públicamente expuestas, los familiares hasta el segundo grado de consanguinidad, segundo de afinidad y primero civil de las personas públicamente expuestas. <br>
 												<strong>Nota interpretativa Recomendación 24-GAFI:</strong> Como parte del proceso para asegurar que exista una transparencia adecuada sobre las personas jurídicas, los países deben contar con mecanismos que o Identifiquen y describan los diferentes tipos, formas y características básicas de las personas jurídicas en el país. o Identifiquen y describan los procesos para: (i) la creación de esas personas jurídicas; y (ii) la obtención y registro de información básica y sobre el beneficiario final; o pongan a disposición del público la anterior información; y o evalúen los riesgos de lavado de activos y financiamiento del terrorismo asociados a diferentes tipos de personas jurídicas creadas en el país.											  
 											 </td>
 										  </tr>
-                                  	</tbody>
-                                 </table>
-                            </div>							
+									</tbody>
+								</table>
+							</div>	
+							<div class="main_table">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info table-responsive form-table1">
+									<thead>
+										<tr>
+											<td class="text-center">
+												Conocimiento mejorado de Personas Expuestas Públicamente
+											</td>
+										</tr>
+									</thead>
+								  <tbody>
+									<tr>
+									  <td>En cumplimiento del Decreto 1674, se relacionan los siguientes campos en caso de ser considerado como persona politícamente expuesta o vínculado:</td>
+									</tr>									  
+									<tr>
+									  <td>
+										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info form-table1">
+										  <tbody>
+											<tr>
+											  <td class="text-center"><strong>Vinculo/Relación*</strong></td>
+											  <td class="text-center"><strong>Nombre</strong></td>
+											  <td class="text-center"><strong>Tipo de Identificación</strong></td>
+											  <td class="text-center"><strong>No de Identificación</strong></td>
+											  <td class="text-center"><strong>Nacionalidad</strong></td>
+											  <td class="text-center"><strong>Entidad</strong></td>
+											  <td class="text-center"><strong>Cargo</strong></td>
+											  <td class="text-center"><strong>Fecha Desvinculación</strong></td>
+											</tr>
+											<tr>
+											  <td>										
+												  <select name="" class="form-control">
+													<option>
+														Seleccionar
+													</option>
+												</select>
+											  </td>
+											  <td><input type="text"  name="nombre"/></td>
+											  <td>
+												<select name="" class="form-control">
+													<option>
+														Seleccionar
+													</option>
+												</select>
+												</td>
+											  <td><input type="text"  name="n-identificacion"/></td>
+											  <td>
+												<input type="text"  name="nacionalidad"/>
+											  </td>
+											  <td>
+												<input type="text"  name="entidad"/>
+											  </td>
+											<td>
+												<input type="text"  name="cargo"/>
+											</td>
+											  <td>										
+												  <input type="text"  name="fecha-desvinculacion"/>
+											  </td>												
+											</tr>
+																						<tr>
+											  <td>										
+												  <select name="" class="form-control">
+													<option>
+														Seleccionar
+													</option>
+												</select>
+											  </td>
+											  <td><input type="text"  name="nombre"/></td>
+											  <td>
+												<select name="" class="form-control">
+													<option>
+														Seleccionar
+													</option>
+												</select>
+												</td>
+											  <td><input type="text"  name="n-identificacion"/></td>
+											  <td>
+												<input type="text"  name="nacionalidad"/>
+											  </td>
+											  <td>
+												<input type="text"  name="entidad"/>
+											  </td>
+											<td>
+												<input type="text"  name="cargo"/>
+											</td>
+											  <td>										
+												  <input type="text"  name="fecha-desvinculacion"/>
+											  </td>												
+											</tr>
+
+										</tbody>
+									 	</table>										
+									  </td>
+									</tr>
+									<tr>
+									  <td>
+											* Vinculo/Relación<br>
+										  1. Representantes legales<br>
+										  2. Miembros de la Junta Directiva<br>
+										  3. Accionistas
+									  </td>
+									</tr>
+								  </tbody>
+								</table>
+                                
+                            </div>	
+							<div class="main_table">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info table-responsive form-table1">
+									<thead>
+										<tr>
+											<td class="text-center" colspan="6">
+												Conocimiento ampliado de Accionistas y Beneficiarios Finales
+											</td>
+										</tr>
+									</thead>
+								  	<tbody>
+										<tr>
+										  <td class="text-center"><strong>TIPO IDENTIFICACIÓN</strong></td>
+										  <td class="text-center"><strong>No de Identificación</strong></td>
+										  <td class="text-center"><strong>RAZÓN SOCIAL/ NOMBRES APELLIDOS</strong></td>
+										  <td class="text-center"><strong>% PARTICIPACIÓN</strong></td>
+										  <td class="text-center"><strong>NOMBRE/RAZÓN SOCIAL DE LA SOCIEDAD DE LA QUE ES ACCIONISTA</strong></td>
+										  <td class="text-center"><strong>NIT</strong></td>
+										</tr>
+										<tr>
+										  <td>										
+											  <select name="" class="form-control">
+												<option>
+													Seleccionar
+												</option>
+											  </select>
+										  </td>
+										  <td><input type="text"  name="nombre"/></td>
+										  <td>
+											<input type="text"  name=""/>
+											</td>
+										  <td><input type="text"  name="n-identificacion"/></td>
+										  <td>
+											<input type="text"  name="nacionalidad"/>
+										  </td>
+										  <td>
+											<input type="text"  name="entidad"/>
+										  </td>											
+										</tr>
+																					
+										<tr>
+										  <td>										
+											  <select name="" class="form-control">
+												<option>
+													Seleccionar
+												</option>
+											  </select>
+										  </td>
+										  <td><input type="text"  name="nombre"/></td>
+										  <td>
+											<input type="text"  name=""/>
+											</td>
+										  <td><input type="text"  name="n-identificacion"/></td>
+										  <td>
+											<input type="text"  name="nacionalidad"/>
+										  </td>
+										  <td>
+											<input type="text"  name="entidad"/>
+										  </td>												
+										</tr>										
+									</tbody>
+								</table>
+							</div>
+							<div class="main_table">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info table-responsive form-table1">
+									<thead>
+										<tr>
+											<td class="text-center" colspan="6">
+												Conocimiento ampliado de Accionistas y Beneficiarios Finales
+											</td>
+										</tr>
+									</thead>
+								  	<tbody>
+										<tr>
+										  <td class="text-center"><strong>TIPO IDENTIFICACIÓN</strong></td>
+										  <td class="text-center"><strong>No de Identificación</strong></td>
+										  <td class="text-center"><strong>RAZÓN SOCIAL/ NOMBRES APELLIDOS</strong></td>
+										  <td class="text-center"><strong>% PARTICIPACIÓN</strong></td>
+										  <td class="text-center"><strong>NOMBRE/RAZÓN SOCIAL DE LA SOCIEDAD DE LA QUE ES ACCIONISTA</strong></td>
+										  <td class="text-center"><strong>NIT</strong></td>
+										</tr>
+										<tr>
+										  <td>										
+											  <select name="" class="form-control">
+												<option>
+													Seleccionar
+												</option>
+											  </select>
+										  </td>
+										  <td><input type="text"  name="nombre"/></td>
+										  <td>
+											<input type="text"  name=""/>
+											</td>
+										  <td><input type="text"  name="n-identificacion"/></td>
+										  <td>
+											<input type="text"  name="nacionalidad"/>
+										  </td>
+										  <td>
+											<input type="text"  name="entidad"/>
+										  </td>											
+										</tr>
+																					
+										<tr>
+										  <td>										
+											  <select name="" class="form-control">
+												<option>
+													Seleccionar
+												</option>
+											  </select>
+										  </td>
+										  <td><input type="text"  name="nombre"/></td>
+										  <td>
+											<input type="text"  name=""/>
+											</td>
+										  <td><input type="text"  name="n-identificacion"/></td>
+										  <td>
+											<input type="text"  name="nacionalidad"/>
+										  </td>
+										  <td>
+											<input type="text"  name="entidad"/>
+										  </td>												
+										</tr>										
+									</tbody>
+								</table>
+							</div>							
 						</div>
 					</div>
                         <div class="row">
