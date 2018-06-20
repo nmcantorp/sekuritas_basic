@@ -45,11 +45,6 @@
     </head>
 
     <body>
-<?php 
-
-$fech_actual = Date('d-m-Y');
-
-?>
 <form id="form">
 <input type="hidden" name="ac" value="saveFormulario">
 <div class="container">
@@ -81,25 +76,25 @@ $fech_actual = Date('d-m-Y');
 											Fecha Diligenciamiento
 										</td> 
 										<td>
-											<input type="text"  name="f-diligenciamiento"/>
+											<input type="text"  name="f-diligenciamiento" class="form-control" />
 										</td> 
 										<td>
 											Ciudad
 										</td> 
 										<td>
-											<input type="text"  name="ciudad"/>
+											<input type="text"  name="ciudad" class="form-control" />
 										</td> 
 										<td>
 											Sucursal
 										</td> 
 										<td>
-											<input type="text"  name="sucursal"/>
+											<input type="text"  name="sucursal" class="form-control" />
 										</td> 
 										<td>
 											Tipo Solicitud
 										</td> 
 										<td>
-											<select name="tipo-solicitud">
+											<select name="tipo-solicitud" class="form-control" >
 												<option>Select</option>
 											</select>
 										</td> 		
@@ -161,13 +156,13 @@ $fech_actual = Date('d-m-Y');
 											Otro
 										</td> 	
 										<td>
-											<input type="text" name="otro" />
+											<input type="text" name="otro" class="form-control" />
 										</td> 	
 								 	</tr>
 									 <tr>
 										 <td>Residencia de la Sociedad</td>
 										<td colspan="8">
-											<select name="tipo-solicitud">
+											<select name="" class="form-control" >
 												<option>Seleccionar</option>
 											</select>
 										</td>
@@ -217,7 +212,7 @@ $fech_actual = Date('d-m-Y');
 											Cual
 										</td> 	
 										<td>
-											<input type="text" name="cual" />
+											<input type="text" name="cual" class="form-control" />
 										</td> 	
 								 	</tr>
 								 	<tr>
@@ -252,7 +247,7 @@ $fech_actual = Date('d-m-Y');
 											Cual
 										</td> 	
 										<td>
-											<input type="text" name="cual2" />
+											<input type="text" name="cual2" class="form-control" />
 										</td> 	
 								 	</tr>	
 									<tr>
@@ -287,7 +282,7 @@ $fech_actual = Date('d-m-Y');
 											Cual
 										</td> 	
 										<td>
-											<input type="text" name="cual3" />
+											<input type="text" name="cual3" class="form-control" />
 										</td> 	
 								 	</tr>									 
 								 </tbody>
@@ -304,7 +299,7 @@ $fech_actual = Date('d-m-Y');
 									</thead>
 									<tbody>
 										<tr>
-											<td>
+											<td class="padding0 border0">
 												<table width="100%" border="0" cellspacing="0" cellpadding="0">
 												  <tbody>
 													<tr>
@@ -314,7 +309,7 @@ $fech_actual = Date('d-m-Y');
 													  </td>
 													  <td>TIPO DE DOCUMENTO</td>
 													  <td>		
-														  <select name="tipo-solicitud">
+														  <select name="tipo-documento" class="form-control">
 															<option>Seleccionar</option>
 														</select>
 														</td>
@@ -324,7 +319,7 @@ $fech_actual = Date('d-m-Y');
 											</td>
 										</tr>
 										<tr>
-											<td>
+											<td class="padding0 border0">
 												<table width="100%" border="0" cellspacing="0" cellpadding="0">
 												  <tbody>
 													<tr>
@@ -346,19 +341,19 @@ $fech_actual = Date('d-m-Y');
 											</td>											
 										</tr>		
 										<tr>
-											<td>
+											<td class="padding0 border0">
 												<table width="100%" border="0" cellspacing="0" cellpadding="0">
 												  <tbody>
 													<tr>
 													  <td>CIU</td>
-													  <td><select name="tipo-solicitud">
+													  <td><select name="tipo-solicitud" class="form-control" >
 															<option>Seleccionar</option>
 														</select></td>
 													  <td>CIIU (Cod)</td>
 													  <td><input type="text" class="form-control" id="" placeholder=""></td>
 													  <td>SECTOR</td>
 													  <td>
-														  <select name="tipo-solicitud">
+														  <select name="tipo-solicitud" class="form-control" >
 															<option>Seleccionar</option>
 														</select>
 													  </td>
@@ -368,12 +363,12 @@ $fech_actual = Date('d-m-Y');
 											</td>											
 										</tr>		
 										<tr>
-											<td>
+											<td class="padding0 border0">
 												<table width="100%" border="0" cellspacing="0" cellpadding="0">
 												  <tbody>
 													<tr>
 													  <td>DEPARTAMENTO</td>
-													  <td><select name="tipo-solicitud">
+													  <td><select name="tipo-solicitud" class="form-control" >
 															<option>Seleccionar</option>
 														</select></td>
 													  <td>CIUDAD</td>
@@ -391,7 +386,7 @@ $fech_actual = Date('d-m-Y');
 											</td>											
 										</tr>	
 										<tr>
-											<td>
+											<td class="padding0 border0">
 												<table width="100%" border="0" cellspacing="0" cellpadding="0">
 												  <tbody>
 													<tr>
@@ -399,7 +394,7 @@ $fech_actual = Date('d-m-Y');
 													  <td><input type="text" class="form-control" id="" placeholder=""></td>
 													  <td>DEPARTAMENTO</td>
 													  <td>
-														<select name="departamento">
+														<select name="departamento" class="form-control" >
 														<option>Seleccionar</option>
 														</select></td>
 													  <td>CIUDAD</td>
@@ -428,7 +423,7 @@ $fech_actual = Date('d-m-Y');
 									</thead>
 									<tbody>
 										<tr>
-											<td>
+											<td class="padding0 border0">
 												<table width="100%" border="0" cellspacing="0" cellpadding="0">
 												  <tbody>
 													<tr>
@@ -450,12 +445,12 @@ $fech_actual = Date('d-m-Y');
 											</td>
 										</tr>
 										<tr>
-											<td>
+											<td class="padding0 border0">
 												<table width="100%" border="0" cellspacing="0" cellpadding="0">
 												  <tbody>
 													<tr>
 													  <td>TIPO DE DOCUMENTO</td>
-													  <td><select name="tipo-documento">
+													  <td><select name="tipo-documento" class="form-control" >
 															<option>Seleccionar</option>
 														</select></td>
 													  <td>NÚMERO</td>
@@ -474,12 +469,12 @@ $fech_actual = Date('d-m-Y');
 											</td>											
 										</tr>		
 										<tr>
-											<td>
+											<td class="padding0 border0">
 												<table width="100%" border="0" cellspacing="0" cellpadding="0">
 												  <tbody>
 													<tr>
 													  <td>FECHA DE NACIMIENTO</td>
-													  <td><input type="text" class="form-control ui-datepicker" id="" placeholder=""></td>
+													  <td><input type="text" class="form-control datepicker" id="" placeholder=""></td>
 													  <td>NACIONALIDAD 1</td>
 													  <td><input type="text" class="form-control" id="" placeholder=""></td>
 													  <td>NACIONALIDAD 2</td>
@@ -492,7 +487,7 @@ $fech_actual = Date('d-m-Y');
 											</td>											
 										</tr>		
 										<tr>
-											<td>
+											<td class="padding0 border0">
 												<table width="100%" border="0" cellspacing="0" cellpadding="0">
 												  <tbody>
 													<tr>
@@ -510,13 +505,13 @@ $fech_actual = Date('d-m-Y');
 											</td>											
 										</tr>	
 										<tr>
-											<td>
+											<td class="padding0 border0">
 												<table width="100%" border="0" cellspacing="0" cellpadding="0">
 												  <tbody>
 													<tr>
 													  <td>DEPARTAMENTO</td>
 													  <td>
-														<select name="departamento">
+														<select name="departamento" class="form-control" >
 														<option>Seleccionar</option>
 														</select></td>
 													  <td>PAÍS</td>
@@ -536,7 +531,7 @@ $fech_actual = Date('d-m-Y');
 											</td>
 										</tr>	
 										<tr>
-											<td>
+											<td class="padding0 border0">
 												<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table1">
 												  <tbody>
 													<tr>
@@ -561,22 +556,43 @@ $fech_actual = Date('d-m-Y');
 													  <td>
 														  ¿Por su cargo o actividad, alguno de los administradores (Representantes legales, miembros de la Junta Directiva) administra recursos públicos?
 														</td>
-													  <td>&nbsp;</td>
-													  <td>&nbsp;</td>
+													  <td>													   <div class="content_checkboxes">
+														  <input type="checkbox" id="" name="si" value="si"/>
+											  			  <label for="si" ><span>SI</span></label>
+														</div>	</td>
+													  <td>
+														  <div class="content_checkboxes">
+														  <input type="checkbox" id="" name="no" value="no"/>
+											  			  <label for="no" ><span>NO</span></label>
+														</div>		
+													  </td>
+														  <td></td>
 													</tr>													  
 													  <tr>
 													  <td>
 														  ¿Por su cargo o actividad, alguno de los administradores (Representantes legales, miembros de la Junta Directiva) administra recursos públicos?
 														</td>
-													  <td>&nbsp;</td>
-													  <td>&nbsp;</td>
+													  <td>													   <div class="content_checkboxes">
+														  <input type="checkbox" id="" name="si" value="si"/>
+											  			  <label for="si" ><span>SI</span></label>
+														</div>	</td>
+														  
+													  <td>
+												      	<div class="content_checkboxes">
+														  <input type="checkbox" id="" name="no" value="no"/>
+											  			  <label for="no" ><span>NO</span></label>
+														</div>		
+													  </td>
+														  <td></td>
 													</tr>													  
 													  <tr>
 													  <td>
 														  ¿Es usted sujeto de obligaciones tributarias en otro país o grupo de países?
 														</td>
-													  <td>&nbsp;</td>
-													  <td>&nbsp;</td>
+													  <td>Indique:</td>
+													  <td colspan="2">
+														<input type="text" class="form-control" id="" placeholder=""> 
+													  </td>
 													</tr>
 												  </tbody>
 												</table>
@@ -584,7 +600,187 @@ $fech_actual = Date('d-m-Y');
 										</tr>
 									</tbody>
 								</table> 
-							</div>							
+							</div>
+							<div class="main_table">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info table-responsive form-table1">
+									<thead>
+										<tr>
+											<td class="text-center">
+												Accionistas
+											</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												Instrucciones de diligenciamiento: 1) Por favor relacione los accionistas o 
+												asociados que tengan directa o indirectamente mas del 5% del Capital Social, aporte o participación. <br>
+												2) Si el accionista o asociado relacionado en la siguiente sección es una persona Jurídica que no cotiza en bolsa, por favor relacione la información de su composición accionaria en la sección para el conocimiento ampliado de Accionistas y Beneficiarios Finales, y suministre esta información para todos los accionistas/asociados indirectos que cumplan esta condición hasta relacionar la persona natural que ejerce control final sobre la entidad. (En caso de requerir mas espacio debe anexar una relación por separado) <br>
+												3) Si alguno de los accionistas o asociados (personas naturales) es una Persona Expuesta Públicamente , sírvase diligenciar la sección correspondiente (abajo dispuesta)
+											</td>
+										</tr>
+										<tr>
+											<td class="padding0 border0">
+												<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info form-table1">
+                                     			 <tbody>
+													<tr>
+														  <td class="text-center" width="10%"><strong>TIPO ID</strong></td>
+														  <td class="text-center" width="10%"><strong>NÚMERO ID</strong></td>
+														  <td class="text-center" width="20%"><strong>NOMBRE</strong></td>
+														  <td class="text-center" width="10%"><strong>% PARTICIPACIÓN</strong></td>
+														  <td class="text-center" width="15%"><strong>¿Es Persona Jurídica que cotiza en Bolsa?</strong></td>
+														  <td class="text-center" width="20%"><strong>¿Es Persona Públicamente Expuesta, o vinculado con una de ellas?, (aplica únicamente para personas naturales).</strong></td>
+														  <td class="text-center" width="15%"><strong>¿Es sujeto de tributación en otro país u otro grupo de países?, Indique cual(es)</strong></td>
+														</tr>
+														<tr>
+															  <td>										
+																  <select name="" class="form-control">
+																	<option>
+																		Seleccionar
+																	</option>
+																</select>
+															  </td>
+															  <td><input type="text"  name="numero_id"/></td>
+															  <td><input type="text"  name="nombre1"/></td>
+															  <td><input type="text"  name="participacion"/></td>
+															  <td>
+																<select name="" class="form-control">
+																	<option>
+															Seleccionar
+																	</option>
+																</select>
+															  </td>
+															  <td>
+																<select name="" class="form-control">
+																	<option>
+																		Seleccionar
+																	</option>
+																</select>
+															  </td>
+															<td>
+																<input type="text"  name=" " class="datepicker" readonly />	
+															</td>
+															</tr>
+															<tr>
+															  <td>										
+																  <select name="" class="form-control">
+																	<option>
+																		Seleccionar
+																	</option>
+																</select>
+															  </td>
+															  <td><input type="text"  name="numero_id"/></td>
+															  <td><input type="text"  name="nombre1"/></td>
+															  <td><input type="text"  name="participacion"/></td>
+															  <td>
+																<select name="" class="form-control">
+																	<option>
+																		Seleccionar
+																	</option>
+																</select>
+															  </td>
+															  <td>
+																<select name="" class="form-control">
+																	<option>
+																		Seleccionar
+																	</option>
+																</select>											
+																</td>
+																<td>
+																	<input type="text"  name=" " class="datepicker" readonly />	
+																</td>
+															</tr>
+													  </tbody>
+													 </table>											
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="main_table">
+                                
+                            </div>		
+							<div class="main_table">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info form-table1">
+                                      <tbody>
+                                    <tr>
+                                          <td class="text-center" width="10%"><strong>TIPO ID</strong></td>
+                                          <td class="text-center" width="10%"><strong>NÚMERO ID</strong></td>
+                                          <td class="text-center" width="20%"><strong>NOMBRE</strong></td>
+                                          <td class="text-center" width="10%"><strong>% PARTICIPACIÓN</strong></td>
+                                          <td class="text-center" width="15%"><strong>¿Es Persona Jurídica que cotiza en Bolsa?</strong></td>
+                                          <td class="text-center" width="20%"><strong>¿Es Persona Públicamente Expuesta, o vinculado con una de ellas?, (aplica únicamente para personas naturales).</strong></td>
+                                          <td class="text-center" width="15%"><strong>¿Es sujeto de tributación en otro país u otro grupo de países?, Indique cual(es)</strong></td>
+                                        </tr>
+                                    	<tr>
+                                          <td>										
+											  <select name="" class="form-control">
+												<option>
+													Seleccionar
+												</option>
+											</select>
+										  </td>
+                                          <td><input type="text"  name="numero_id"/></td>
+                                          <td><input type="text"  name="nombre1"/></td>
+                                          <td><input type="text"  name="participacion"/></td>
+                                          <td>
+										  	<select name="" class="form-control">
+												<option>
+													Seleccionar
+												</option>
+											</select>
+										  </td>
+                                          <td>
+											<select name="" class="form-control">
+												<option>
+													Seleccionar
+												</option>
+											</select>
+										  </td>
+										<td>
+											<input type="text"  name=" " class="datepicker" readonly />	
+										</td>
+                                        </tr>
+                                    	<tr>
+                                          <td>										
+											  <select name="" class="form-control">
+												<option>
+													Seleccionar
+												</option>
+											</select>
+										  </td>
+                                          <td><input type="text"  name="numero_id"/></td>
+                                          <td><input type="text"  name="nombre1"/></td>
+                                          <td><input type="text"  name="participacion"/></td>
+                                          <td>
+										  	<select name="" class="form-control">
+												<option>
+													Seleccionar
+												</option>
+											</select>
+										  </td>
+                                          <td>
+										  	<select name="" class="form-control">
+												<option>
+													Seleccionar
+												</option>
+											</select>											
+											</td>
+											<td>
+												<input type="text"  name=" " class="datepicker" readonly />	
+											</td>
+										</tr>
+										  <tr>
+										  	<td>
+												<strong>Persona Expuesta Públicamente (PEP):</strong> i) las personas expuestas políticamente-conforme al (Decreto 1674 de 2016)-, ii) los representantes legales de organizaciones internacionales y iii) las personas que gozan de reconocimiento público. Se entiende por persona políticamente expuesta (Decreto 1674 / 2016) los individuos que desempeñan o han desempeñado funciones públicas destacadas como jefes de Estado, políticos de alta jerarquía, funcionarios gubernamentales, judiciales o militares de alta jerarquía, altos ejecutivos (directores y gerentes) de empresas sociales, industriales y comerciales del estado y de sociedades de economía mixta, unidades administrativas especiales, y funcionarios importantes de partidos políticos. <br>
+												<strong>Administradores (Ley 222 de 1995, art.22):</strong> Son administradores, el representante legal, el liquidador, el factor, los miembros de juntas o consejos directivos y quienes de acuerdo con los estatutos ejerzan o detenten esas funciones. <br>
+												<strong>Vinculados:</strong> las personas que tengan sociedad conyugal, de hecho o de derecho, con las personas públicamente expuestas, los familiares hasta el segundo grado de consanguinidad, segundo de afinidad y primero civil de las personas públicamente expuestas. <br>
+												<strong>Nota interpretativa Recomendación 24-GAFI:</strong> Como parte del proceso para asegurar que exista una transparencia adecuada sobre las personas jurídicas, los países deben contar con mecanismos que o Identifiquen y describan los diferentes tipos, formas y características básicas de las personas jurídicas en el país. o Identifiquen y describan los procesos para: (i) la creación de esas personas jurídicas; y (ii) la obtención y registro de información básica y sobre el beneficiario final; o pongan a disposición del público la anterior información; y o evalúen los riesgos de lavado de activos y financiamiento del terrorismo asociados a diferentes tipos de personas jurídicas creadas en el país.											  
+											 </td>
+										  </tr>
+                                  	</tbody>
+                                 </table>
+                            </div>							
 						</div>
 					</div>
                         <div class="row">

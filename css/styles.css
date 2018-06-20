@@ -110,7 +110,7 @@ a, a:hover, a:focus {
     background-color: rgba(0,0,0,0.5);
     border-top: gray solid 3px;
 	}	
-
+.border0{ border:none !important;}
 .bordertop {border-top:1px solid #424242;}	
 
 .bordertop-red {border-top:1px solid #f21818;}	.bg-4 {background-color: #e5e5e5;}	
@@ -344,7 +344,6 @@ input[type=checkbox], input[type=radio] {
 	background-color:#fff;
 	width:100%;
 	min-width: 85px;
-	height: auto;
 	padding: 0 10px;
 	border-radius: 0px;
 	}
