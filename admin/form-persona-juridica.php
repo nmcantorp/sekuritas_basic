@@ -61,8 +61,7 @@
             <div class="row margin0">
                 <div class="col-md-12">
                     <div class="main_title">
-                        <div class="main_title_icon"> <img src="../images/icon_2.png" class="img-responsive" alt="" /> </div>
-                        <div class="main_title_text bold f26 upper"> Formulario de conocimiento del cliente persona juridica-sector asegurador</div>
+                        <div class="bold f26 upper"> Formulario de conocimiento del cliente persona juridica-sector asegurador</div>
                     </div>
                     <div class="separator"></div>
                     
@@ -106,8 +105,8 @@
 							 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info table-responsive">
 								 <thead>
 									 <tr>
-									 	<td colspan="9" class="white-n">
-										EN EL EVENTO EN QUE EL POTENCIAL CLIENTE NO CUENTE CON LA INFORMACIÓN SOLICITADA EN ESTE FORMULARIO, DEBERÁ CONSIGNAR DICHA CIRCUNSTANCIA EN EL ESPACIO CORRESPONDIENTE.
+									 	<td colspan="9" class="white-n ">
+										En el evento en que el potencial cliente no cuente con la información solicitada en este formulario, deberá consignar dicha circunstancia en el espacio correspondiente.
 										</td>
 									 </tr>
 								 </thead>
@@ -161,11 +160,12 @@
 								 	</tr>
 									 <tr>
 										 <td>Residencia de la Sociedad</td>
-										<td colspan="8">
+										<td colspan="4">
 											<select name="" class="form-control" >
 												<option>Seleccionar</option>
 											</select>
 										</td>
+										 <td colspan="4"></td>
 									 </tr>
 								 </tbody>
 							</table>
@@ -175,7 +175,7 @@
 								 <thead>
 									 <tr>
 									 	<td colspan="7">
-										INDIQUE LOS VÍNCULOS EXISTENTES ENTRE TOMADOR, ASEGURADO, AFIANZADO Y BENEFICIARIO: (INDIVIDUALIZACION DEL PRODUCTO).
+										Indique los vínculos existentes entre tomador, asegurado, afianzado y beneficiario: (individualización del producto).
 										</td>
 									 </tr>
 								 </thead>
@@ -186,25 +186,25 @@
 										</td> 
 										<td>
 											<div class="content_checkboxes">
-											  <input type="radio" id="" name="familiar" value="familiar"/>
+											  <input type="radio" id="familiar" name="familiar" value="familiar"/>
 											  <label for="familiar" ><span>Familiar</span></label>
 											</div>
 										</td> 
 										<td>
 											<div class="content_checkboxes">
-											  <input type="radio" id="" name="comercial" value="comercial"/>
+											  <input type="radio" id="comercial" name="comercial" value="comercial"/>
 											  <label for="comercial" ><span>Comercial</span></label>
 											</div>
 										</td> 
 										<td>
 											<div class="content_checkboxes">
-											  <input type="radio" id="" name="laboral" value="laboral"/>
+											  <input type="radio" id="laboral" name="laboral" value="laboral"/>
 											  <label for="laboral" ><span>Laboral</span></label>
 											</div>
 										</td> 
 										<td>
 											<div class="content_checkboxes">
-											  <input type="radio" id="" name="" value="otra"/>
+											  <input type="radio" id="otra" name="" value="otra"/>
 											  <label for="otra" ><span>Otra</span></label>
 											</div>
 										</td> 
@@ -293,7 +293,7 @@
 									<thead>
 										<tr>
 											<td class="text-center">
-												1. INFORMACIÓN BÁSICA
+												1. Información básica
 											</td>
 										</tr>
 									</thead>
@@ -567,26 +567,7 @@
 														</div>		
 													  </td>
 														  <td></td>
-													</tr>													  
-													  <tr>
-													  <td>
-														  ¿Por su cargo o actividad, alguno de los administradores (Representantes legales, miembros de la Junta Directiva) administra recursos públicos?
-														</td>
-													  <td>													   
-														  <div class="content_checkboxes">
-														  <input type="checkbox" id="" name="si" value="si"/>
-											  			  <label for="si" ><span>SI</span></label>
-														</div>	
-													</td>
-														  
-													  <td>
-												      	<div class="content_checkboxes">
-														  <input type="checkbox" id="" name="no" value="no"/>
-											  			  <label for="no" ><span>NO</span></label>
-														</div>		
-													  </td>
-														  <td></td>
-													</tr>													  
+													</tr>												
 													  <tr>
 													  <td>
 														  ¿Es usted sujeto de obligaciones tributarias en otro país o grupo de países?
@@ -660,7 +641,7 @@
 																</select>
 															  </td>
 															<td>
-																<input type="text" name="" class="datepicker" readonly />	
+																<input type="text" name=""  class="form-control" />	
 															</td>
 															</tr>
 															<tr>
@@ -689,9 +670,95 @@
 																</select>											
 																</td>
 																<td>
-																	<input type="text" name="" class="datepicker" readonly />	
+																	<input type="text" name=""  class="form-control"  />	
 																</td>
 															</tr>
+<tr>
+															  <td>										
+																  <select name="" class="form-control">
+																	<option>
+																		Seleccionar
+																	</option>
+																</select>
+															  </td>
+															  <td><input type="text" class="form-control" name="numero_id"/></td>
+															  <td><input type="text" class="form-control" name="nombre1"/></td>
+															  <td><input type="text" class="form-control" name="participacion"/></td>
+															  <td>
+																<select name="" class="form-control">
+																	<option>
+																		Seleccionar
+																	</option>
+																</select>
+															  </td>
+															  <td>
+																<select name="" class="form-control">
+																	<option>
+																		Seleccionar
+																	</option>
+																</select>											
+																</td>
+																<td>
+																	<input type="text" name=""  class="form-control"  />	
+																</td>
+															</tr>
+<tr>
+															  <td>										
+																  <select name="" class="form-control">
+																	<option>
+																		Seleccionar
+																	</option>
+																</select>
+															  </td>
+															  <td><input type="text" class="form-control" name="numero_id"/></td>
+															  <td><input type="text" class="form-control" name="nombre1"/></td>
+															  <td><input type="text" class="form-control" name="participacion"/></td>
+															  <td>
+																<select name="" class="form-control">
+																	<option>
+																		Seleccionar
+																	</option>
+																</select>
+															  </td>
+															  <td>
+																<select name="" class="form-control">
+																	<option>
+																		Seleccionar
+																	</option>
+																</select>											
+																</td>
+																<td>
+																	<input type="text" name=""  class="form-control"  />	
+																</td>
+															</tr>			<tr>
+															  <td>										
+																  <select name="" class="form-control">
+																	<option>
+																		Seleccionar
+																	</option>
+																</select>
+															  </td>
+															  <td><input type="text" class="form-control" name="numero_id"/></td>
+															  <td><input type="text" class="form-control" name="nombre1"/></td>
+															  <td><input type="text" class="form-control" name="participacion"/></td>
+															  <td>
+																<select name="" class="form-control">
+																	<option>
+																		Seleccionar
+																	</option>
+																</select>
+															  </td>
+															  <td>
+																<select name="" class="form-control">
+																	<option>
+																		Seleccionar
+																	</option>
+																</select>											
+																</td>
+																<td>
+																	<input type="text" name=""  class="form-control"  />	
+																</td>
+															</tr>										 
 													  </tbody>
 													 </table>											
 											</td>
@@ -1044,7 +1111,7 @@
 									<thead>
 										<tr>
 											<td class="text-center" colspan="2">
-												2. DECLARACIÓN DE ORIGEN DE FONDOS
+												2. Declaración de origen de fondos
 											</td>
 										</tr>
 									</thead>
@@ -1076,7 +1143,7 @@
 									<thead>
 										<tr>
 											<td class="text-center" colspan="7">
-												3. ACTIVIDADES EN OPERACIONES INTERNACIONALES
+												3. Actividades en operaciones internacionales
 											</td>
 										</tr>
 									</thead>
@@ -1232,8 +1299,7 @@
 									<thead>
 										<tr>
 											<td class="text-center">
-												4. INFORMACIÓN SOBRE RECLAMACIONES EN SEGUROS
-¿HA PRESENTADO RECLAMACIONES O HA RECIBIDO INDEMNIZACIONES EN SEGUROS EN LOS DOS ÚLTIMOS AÑOS?
+												4. Información sobre reclamaciones en seguros ¿ha presentado reclamaciones o ha recibido indemnizaciones en seguros en los dos últimos años?
 												
 											</td>
 											
@@ -1296,7 +1362,7 @@
 									<thead>
 										<tr>
 											<td class="text-center" colspan="2">
-												5. CLÁUSULA DE AUTORIZACIÓN
+												5. Cláusula de autorización 
 											</td>
 										</tr>
 									</thead>

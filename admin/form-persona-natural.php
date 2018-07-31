@@ -61,8 +61,8 @@
             <div class="row margin0">
                 <div class="col-md-12">
                     <div class="main_title">
-                        <div class="main_title_icon"> <img src="../images/icon_2.png" class="img-responsive" alt="" /> </div>
-                        <div class="main_title_text bold f26"> FORMULARIO DE CONOCIMIENTO DEL CLIENTE PERSONA NATURAL- SECTOR ASEGURADOR</div>
+                        <div class="bold f26"> FORMULARIO DE CONOCIMIENTO DEL CLIENTE PERSONA NATURAL- SECTOR ASEGURADOR</div>
+						</div>
                     </div>
                     <div class="separator"></div>
                     
@@ -107,7 +107,7 @@
 								 <thead>
 									 <tr>
 									 	<td colspan="9" class="white-n">
-										EN EL EVENTO EN QUE EL POTENCIAL CLIENTE NO CUENTE CON LA INFORMACIÓN SOLICITADA EN ESTE FORMULARIO, DEBERÁ CONSIGNAR DICHA CIRCUNSTANCIA EN EL ESPACIO CORRESPONDIENTE.
+										En el evento en que el potencial cliente no cuente con la información solicitada en este formulario, deberá consignar dicha circunstancia en el espacio correspondiente.
 										</td>
 									 </tr>
 								 </thead>
@@ -167,7 +167,7 @@
 								 <thead>
 									 <tr>
 									 	<td colspan="7">
-										INDIQUE LOS VÍNCULOS EXISTENTES ENTRE TOMADOR, ASEGURADO, AFIANZADO Y BENEFICIARIO: (INDIVIDUALIZACION DEL PRODUCTO).
+										Indique los vínculos existentes entre tomador, asegurado, afianzado y beneficiario: (individualización del producto).
 										</td>
 									 </tr>
 								 </thead>
@@ -285,7 +285,7 @@
 									<thead>
 										<tr>
 											<td class="text-center">
-												1. INFORMACIÓN BÁSICA
+												1. Información básica
 											</td>
 										</tr>
 									</thead>
@@ -644,7 +644,7 @@
 								<thead>
 									<tr>
 										<td class="text-center" colspan="2">
-											2. DECLARACIÓN DE ORIGEN DE FONDOS
+											2. Declaración de origen de fondos
 										</td>
 									</tr>
 								</thead>
@@ -674,8 +674,7 @@
 									<thead>
 										<tr>
 											<td class="text-center">
-												4. INFORMACIÓN SOBRE RECLAMACIONES EN SEGUROS
-¿HA PRESENTADO RECLAMACIONES O HA RECIBIDO INDEMNIZACIONES EN SEGUROS EN LOS DOS ÚLTIMOS AÑOS?
+												4. Información sobre reclamaciones en seguros ¿ha presentado reclamaciones o ha recibido indemnizaciones en seguros en los dos últimos años?
 												
 											</td>
 											
@@ -748,7 +747,7 @@
 									<thead>
 										<tr>
 											<td class="text-center" colspan="2">
-												5. CLÁUSULA DE AUTORIZACIÓN
+												5. Cláusula de autorización
 											</td>
 										</tr>
 									</thead>

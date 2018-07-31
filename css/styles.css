@@ -301,7 +301,7 @@ a, a:hover, a:focus {
     border: solid #ffffff;
     border-width: 1px 0 0 1px;
     padding: 8px 5px;
-    text-transform: capitalize;
+	text-transform: inherit !important
 	}		
 
 .table_info	a {
