@@ -105,8 +105,8 @@
 							 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_info table-responsive">
 								 <thead>
 									 <tr>
-									 	<td colspan="9" class="white-n ">
-										En el evento en que el potencial cliente no cuente con la información solicitada en este formulario, deberá consignar dicha circunstancia en el espacio correspondiente.
+									 	<td colspan="9" class="white-n f12">
+										EN EL EVENTO EN QUE EL POTENCIAL CLIENTE NO CUENTE CON LA INFORMACIÓN SOLICITADA EN ESTE FORMULARIO, DEBERÁ CONSIGNAR DICHA CIRCUNSTANCIA EN EL ESPACIO CORRESPONDIENTE.
 										</td>
 									 </tr>
 								 </thead>
@@ -160,12 +160,12 @@
 								 	</tr>
 									 <tr>
 										 <td>Residencia de la Sociedad</td>
-										<td colspan="4">
+										<td colspan="2">
 											<select name="" class="form-control" >
 												<option>Seleccionar</option>
 											</select>
 										</td>
-										 <td colspan="4"></td>
+										 <td colspan="6"></td>
 									 </tr>
 								 </tbody>
 							</table>
@@ -175,7 +175,7 @@
 								 <thead>
 									 <tr>
 									 	<td colspan="7">
-										Indique los vínculos existentes entre tomador, asegurado, afianzado y beneficiario: (individualización del producto).
+										INDIQUE LOS VÍNCULOS EXISTENTES ENTRE TOMADOR, ASEGURADO, AFIANZADO Y BENEFICIARIO: (INDIVIDUALIZACION DEL PRODUCTO).
 										</td>
 									 </tr>
 								 </thead>
@@ -293,7 +293,7 @@
 									<thead>
 										<tr>
 											<td class="text-center">
-												1. Información básica
+												1. INFORMACIÓN BÁSICA
 											</td>
 										</tr>
 									</thead>
@@ -1111,7 +1111,7 @@
 									<thead>
 										<tr>
 											<td class="text-center" colspan="2">
-												2. Declaración de origen de fondos
+												2. DECLARACIÓN DE ORIGEN DE FONDOS
 											</td>
 										</tr>
 									</thead>
@@ -1143,7 +1143,7 @@
 									<thead>
 										<tr>
 											<td class="text-center" colspan="7">
-												3. Actividades en operaciones internacionales
+												3. ACTIVIDADES EN OPERACIONES INTERNACIONALES
 											</td>
 										</tr>
 									</thead>
@@ -1299,7 +1299,8 @@
 									<thead>
 										<tr>
 											<td class="text-center">
-												4. Información sobre reclamaciones en seguros ¿ha presentado reclamaciones o ha recibido indemnizaciones en seguros en los dos últimos años?
+												4. INFORMACIÓN SOBRE RECLAMACIONES EN SEGUROS
+¿HA PRESENTADO RECLAMACIONES O HA RECIBIDO INDEMNIZACIONES EN SEGUROS EN LOS DOS ÚLTIMOS AÑOS?
 												
 											</td>
 											
@@ -1362,7 +1363,7 @@
 									<thead>
 										<tr>
 											<td class="text-center" colspan="2">
-												5. Cláusula de autorización 
+												5. CLÁUSULA DE AUTORIZACIÓN
 											</td>
 										</tr>
 									</thead>
